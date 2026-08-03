@@ -1247,66 +1247,7 @@ ul {
   }
 }
 
-/* Max 768px (Tablets Vertical) */
-@media (max-width: 768px) {
-  .section {
-    padding: 6rem 0;
-  }
 
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: var(--bg-deep-navy);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8rem 3rem 3rem 3rem;
-    gap: 2rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-    transition: var(--transition-smooth);
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .mobile-toggle {
-    display: flex;
-    z-index: 1000;
-  }
-
-  .mobile-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-}
 
 /* Max 480px (Mobile Screens) */
 @media (max-width: 480px) {
@@ -1374,4 +1315,152 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+}
+
+
+
+.mobile-menu-extra {
+  display: none;
+}
+
+@media (max-width:991px) {
+
+  .mobile-menu-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+  }
+
+  .mobile-menu-extra .btn {
+    width: 100%;
+  }
+
+  .mobile-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .mobile-contact i {
+    color: var(--color-primary);
+    width: 20px;
+  }
+
+}
+
+
+/* ===========================
+   MOBILE NAVIGATION
+=========================== */
+
+@media (max-width: 991px) {
+
+  .mobile-toggle {
+    display: flex;
+    z-index: 1002;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    max-width: 75%;
+    height: 100vh;
+    background: #081221;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 75px 18px 20px;
+    overflow-y: auto;
+    transition: right .35s ease;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Login + Contact Section */
+  .mobile-menu-extra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    gap: 12px;
+  }
+
+  .mobile-menu-extra .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobile-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .mobile-contact i {
+    color: var(--color-primary);
+    width: 18px;
+    text-align: center;
+  }
+
+  /* Hide desktop buttons */
+  .nav-actions .btn {
+    display: none;
+  }
+}
+
+
+/* Lock page scrolling */
+html.menu-open,
+body.menu-open {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
+}
+
+/* Sidebar only scrolls */
+.nav-links {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }

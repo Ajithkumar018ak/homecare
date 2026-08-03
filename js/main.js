@@ -63,24 +63,43 @@ function injectHeaderFooter() {
        <a href="index.html" class="logo">
     <img src="assets/logo.webp" alt="AuraCare Logo" class="logo-img">
 </a>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link ${pageName === 'index.html' ? 'active' : ''}">Home</a>
-          <a href="about.html" class="nav-link ${pageName === 'about.html' ? 'active' : ''}">About</a>
-          <a href="services.html" class="nav-link ${pageName === 'services.html' ? 'active' : ''}">Services</a>
-          <a href="doctors.html" class="nav-link ${pageName === 'doctors.html' ? 'active' : ''}">Doctors</a>
-          <a href="blog.html" class="nav-link ${pageName === 'blog.html' ? 'active' : ''}">Blog</a>
-          <a href="careers.html" class="nav-link ${pageName === 'careers.html' ? 'active' : ''}">Careers</a>
-          <a href="contact.html" class="nav-link ${pageName === 'contact.html' ? 'active' : ''}">Contact</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="btn btn-outline-light btn-sm login-trigger" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Login</button>
-          <a href="contact.html#book" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Book Now</a>
-          <button class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+   <nav class="nav-links">
+  <a href="index.html" class="nav-link ${pageName === 'index.html' ? 'active' : ''}">Home</a>
+  <a href="about.html" class="nav-link ${pageName === 'about.html' ? 'active' : ''}">About</a>
+  <a href="services.html" class="nav-link ${pageName === 'services.html' ? 'active' : ''}">Services</a>
+  <a href="doctors.html" class="nav-link ${pageName === 'doctors.html' ? 'active' : ''}">Doctors</a>
+  <a href="blog.html" class="nav-link ${pageName === 'blog.html' ? 'active' : ''}">Blog</a>
+  <a href="careers.html" class="nav-link ${pageName === 'careers.html' ? 'active' : ''}">Careers</a>
+  <a href="contact.html" class="nav-link ${pageName === 'contact.html' ? 'active' : ''}">Contact</a>
+
+  <!-- Mobile Menu Extra -->
+  <div class="mobile-menu-extra">
+    <button class="btn btn-primary btn-sm login-trigger">
+      Login
+    </button>
+
+    <a href="mailto:stackly@healthcare.com" class="mobile-contact">
+      <i class="fa-solid fa-envelope"></i>
+      <span>stackly@healthcare.com</span>
+    </a>
+
+    <a href="tel:+919875409805" class="mobile-contact">
+      <i class="fa-solid fa-phone"></i>
+      <span>+91 98754-09805</span>
+    </a>
+  </div>
+</nav>
+
+<div class="nav-actions">
+  <button class="btn btn-outline-light btn-sm login-trigger" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Login</button>
+  <a href="contact.html#book" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Book Now</a>
+
+  <button class="mobile-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
       </div>
     `;
 
@@ -105,12 +124,35 @@ function injectHeaderFooter() {
     // Mobile menu toggle
     const toggle = headerContainer.querySelector('.mobile-toggle');
     const menu = headerContainer.querySelector('.nav-links');
+
     if (toggle && menu) {
+
       toggle.addEventListener('click', () => {
+
         toggle.classList.toggle('active');
         menu.classList.toggle('active');
+
+        // Lock / Unlock background scroll
+        document.body.classList.toggle('menu-open');
+
       });
+
+      // Close menu after clicking any menu item
+      menu.querySelectorAll('a').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+          toggle.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.classList.remove('menu-open');
+
+        });
+
+      });
+
     }
+
+
   }
 
   if (footerContainer) {
