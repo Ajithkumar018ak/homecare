@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraCare | Board-Certified Doctors & Telehealth Specialists</title>
+  <meta name="description"
+    content="View AuraCare's directory of specialist physicians, trauma experts, and geriatric doctors available for home visits and telehealth assessments.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <div class="pulse-ring"></div>
+      <div class="medical-icons-container">
+        <svg class="svg-preloader-graphic" viewBox="0 0 200 150">
+          <rect x="70" y="20" width="60" height="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="45" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="130" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="92" y="50" width="16" height="16" rx="2" fill="none" stroke="var(--color-primary)" stroke-width="2"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M100 45v26M87 58h26" fill="none" stroke="var(--color-primary)" stroke-width="3"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M10 115 h35 l8 -22 l8 44 l8 -58 l8 36 l6 -10 h107" fill="none" stroke="var(--color-accent)"
+            stroke-width="3" stroke-dasharray="350" stroke-dashoffset="350"
+            style="animation: dashOffset 2.5s linear infinite; stroke-linecap: round; stroke-linejoin: round;" />
+        </svg>
+      </div>
+      <div class="loading-progress">
+        <span class="loading-text">AURA PHYSICIAN VERIFICATION</span>
+        <span class="loading-percent">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="global-header" class="header "></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section bg-dark-blue" style="padding-top: 11rem; padding-bottom: 8rem;">
+      <div class="container grid grid-2" style="align-items: center; gap: 4rem;">
+
+        <!-- Left: Text + Trust indicators -->
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Board
+            Certified Physicians</span>
+          <h1 style="font-size: 3.2rem; font-weight: 700; margin-bottom: 1.5rem; color: white; line-height: 1.2;">
+            On-Call Home Specialists
+          </h1>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted-light); margin-bottom: 2rem;">
+            Our senior doctors carry out clinical evaluations, formulate personalized protocols, and provide daily
+            supervision to the bedside nursing staff.
+          </p>
+
+          <!-- Trust Indicators -->
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-top: 2rem;">
+            <div
+              style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: white;">
+              <i class="fa-solid fa-certificate" style="color: var(--color-secondary);"></i> 100% Board Certified
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: white;">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-secondary);"></i> Joint Commission Verified
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Search Box & Department Filter Panel -->
+        <div class="reveal-right">
+          <div class="glass-card"
+            style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: var(--border-radius-lg); border: 1px solid rgba(255, 255, 255, 0.1); margin: 0;">
+            <h3 style="font-size: 1.3rem; color: white; margin-bottom: 1.5rem; font-family: var(--font-heading);"><i
+                class="fa-solid fa-magnifying-glass" style="color: var(--color-accent); margin-right: 8px;"></i> Search
+              Specialist Directory</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+              <!-- Search Bar -->
+              <div>
+                <label
+                  style="color: var(--text-light); font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">Physician
+                  Name</label>
+                <div style="position: relative;">
+                  <i class="fa-solid fa-user-doctor"
+                    style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted-light);"></i>
+                  <input type="text" id="doc-search" placeholder="Type doctor name (e.g. Adrian)..."
+                    onkeyup="filterDoctors()"
+                    style="width: 100%; height: 3rem; padding-left: 2.8rem; padding-right: 1rem; border-radius: var(--border-radius-sm); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: white; font-size: 0.95rem;">
+                </div>
+              </div>
+
+              <!-- Department Filter -->
+              <div>
+                <label
+                  style="color: var(--text-light); font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">Filter
+                  Department</label>
+                <select id="dept-filter" onchange="filterDoctors()"
+                  style="width: 100%; height: 3rem; padding: 0 1rem; border-radius: var(--border-radius-sm); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: white; outline: none;">
+                  <option value="all">All Departments</option>
+                  <option value="cardiology">Cardiology</option>
+                  <option value="neurology">Neurology</option>
+                  <option value="pulmonology">Pulmonology</option>
+                  <option value="pediatrics">Pediatrics</option>
+                  <option value="orthopedics">Orthopedics</option>
+                  <option value="geriatrics">Geriatrics</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- DOCTOR CARDS (Light Blue Background) -->
+    <section class="section bg-light-blue">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Clinicians
+            Directory</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Meet Our Specialist Physicians</h2>
+          <p>Connect with accredited doctors dedicated to home-based diagnosis and therapy management.</p>
+        </div>
+
+        <!-- Department Selector Cards -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 4rem;"
+          class="reveal">
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-heart-pulse"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Cardiology</h4>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-brain"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Neurology</h4>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-accent); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-lungs"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Pulmonology</h4>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-baby"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Pediatrics</h4>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-bone"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Orthopedics</h4>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 1.5rem 1rem; text-align: center; border-radius: var(--border-radius-sm); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition-fast); cursor: pointer;">
+            <div style="color: var(--color-accent); font-size: 1.5rem; margin-bottom: 0.5rem;"><i
+                class="fa-solid fa-user-doctor"></i></div>
+            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-dark); font-weight: 600;">Geriatrics</h4>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Doctor 1 -->
+          <div class="personnel-card reveal-left">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#e0e7ff;">
+                <circle cx="100" cy="90" r="45" fill="#c7d2fe" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#a5b4fc" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Adrian Mercer, MD</h3>
+              <p class="personnel-dept">Cardiology & Emergency Care</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (140+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Supervises acute post-cardiac operations, coronary diagnostics, and emergency telemetry dispatching.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, Spanish<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Mon - Fri: 09:00 AM - 04:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $250 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>24 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>1,850+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+
+          <!-- Doctor 2 -->
+          <div class="personnel-card reveal">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#d1fae5;">
+                <circle cx="100" cy="90" r="45" fill="#a7f3d0" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#6ee7b7" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Evelyn Vance, MD</h3>
+              <p class="personnel-dept">Neurology & Cognitive Care</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.8 (120+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Leads physical therapy planning for stroke survivors, memory exercises, and cognitive therapies.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, French<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Tue - Thu: 10:00 AM - 06:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $280 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>18 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>1,200+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+
+          <!-- Doctor 3 -->
+          <div class="personnel-card reveal-right">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#e0f2fe;">
+                <circle cx="100" cy="90" r="45" fill="#bae6fd" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#7dd3fc" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Marcus Thorne, MD</h3>
+              <p class="personnel-dept">Pulmonology & Respiration</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (110+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Calibrates home ventilators, oxygen therapy plans, and emergency respiratory dispatch logs.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, German, Mandarin<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Mon - Wed: 08:00 AM - 12:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $260 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>15 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>950+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+
+          <!-- Doctor 4 -->
+          <div class="personnel-card reveal-left">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#fee2e2;">
+                <circle cx="100" cy="90" r="45" fill="#fecaca" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#fca5a5" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Sarah Jenkins, MD</h3>
+              <p class="personnel-dept">Pediatrics & Infant Care</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (95+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Leads development checks, post-natal baby growth checkups, and childhood immunization timelines.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, Spanish<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Mon - Thu: 09:00 AM - 05:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $220 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>12 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>1,100+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+
+          <!-- Doctor 5 -->
+          <div class="personnel-card reveal">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#fef3c7;">
+                <circle cx="100" cy="90" r="45" fill="#fde68a" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#fcd34d" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Jonathan Ross, MD</h3>
+              <p class="personnel-dept">Orthopedics & Rehab</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.8 (115+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Manages in-home bone density checkups, joint flexibilities, and post hip/knee replacement recovery.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, Italian<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Wed - Fri: 08:00 AM - 04:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $240 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>16 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>1,400+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+
+          <!-- Doctor 6 -->
+          <div class="personnel-card reveal-right">
+            <div class="personnel-image-wrapper">
+              <svg width="100%" height="100%" viewBox="0 0 200 240" fill="none" style="background:#e0f2fe;">
+                <circle cx="100" cy="90" r="45" fill="#bae6fd" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#7dd3fc" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge" style="background: var(--color-primary); color: white;">Available
+                On-Call</span>
+            </div>
+            <div class="personnel-info">
+              <h3 class="personnel-name">Dr. Clara Vance, MD</h3>
+              <p class="personnel-dept">General Medicine & Geriatrics</p>
+              <div style="color: var(--color-secondary); font-size: 0.85rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (135+ reviews)</div>
+              <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 0.8rem;">
+                Directs family primary care evaluations, chronic illness checks, and geriatric wellness guidelines.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1rem; line-height: 1.5;">
+                <i class="fa-solid fa-language" style="color: var(--color-primary); margin-right: 4px;"></i>
+                <strong>Languages:</strong> English, French, Japanese<br>
+                <i class="fa-solid fa-calendar-days" style="color: var(--color-primary); margin-right: 6px;"></i>
+                <strong>Timings:</strong> Mon - Fri: 08:00 AM - 05:00 PM<br>
+                <i class="fa-solid fa-hand-holding-dollar" style="color: var(--color-primary); margin-right: 5px;"></i>
+                <strong>Consultation:</strong> $230 / In-Home Consult
+              </div>
+              <div class="personnel-meta">
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-award" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>20 Yrs Exp</span>
+                </div>
+                <div class="personnel-meta-item">
+                  <i class="fa-solid fa-user-check" style="color: var(--color-primary); margin-right: 4px;"></i>
+                  <span>1,600+ Patients</span>
+                </div>
+              </div>
+            </div>
+            <div class="personnel-cta" style="display: flex; gap: 0.5rem; padding: 0 1.5rem 1.5rem 1.5rem;">
+              <a href="404.html" class="btn btn-primary ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">Book Consultation</a>
+              <a href="404.html" class="btn btn-outline-dark ripple"
+                style="flex: 1; padding: 0.8rem 0.5rem; font-size: 0.8rem; text-align: center;">View Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STANDARDS & WHY CHOOSE US (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container grid grid-2" style="gap: 5rem; align-items: center;">
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Patient-Centered
+            Care</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 2rem;">Why Choose Our Board-Certified Doctors</h2>
+          <p style="margin-bottom: 2.5rem; line-height: 1.7;">
+            AuraCare physicians are selected under strict clinical checks. We verify medical certifications, state
+            registry board status, and historical trauma clinical performance to ensure your home recovery is managed
+            under absolute safety guidelines.
+          </p>
+          <a href="404.html" class="btn btn-outline-dark">Review Our Verification Criteria</a>
+        </div>
+        <div class="reveal-right">
+          <div class="glass-card-light" style="background: white; border-color: rgba(0,0,0,0.06); padding: 3rem;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem;">Clinical Directives & Standards</h3>
+            <ul style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.95rem; line-height: 1.6;">
+              <li style="display: flex; gap: 0.8rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)"
+                  stroke-width="3" style="margin-top: 0.2rem;">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Direct home bedside checks to review recovery.</span>
+              </li>
+              <li style="display: flex; gap: 0.8rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)"
+                  stroke-width="3" style="margin-top: 0.2rem;">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Verify real-time vital telemetry parameters on active beds.</span>
+              </li>
+              <li style="display: flex; gap: 0.8rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)"
+                  stroke-width="3" style="margin-top: 0.2rem;">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Coordinate direct hospital admissions with trauma centers when thresholds trigger.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICAL ACHIEVEMENTS (Soft Light Blue Background) -->
+    <section class="section bg-light-blue">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Milestones</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Roster Clinical Achievements</h2>
+          <p>Our designated specialists lead the home healthcare sector in safe recovery ratios.</p>
+        </div>
+
+        <div class="grid grid-3" style="gap: 2rem;">
+          <div class="glass-card-light reveal-left"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 2.5rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-heart-circle-check"></i></div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">98.2%
+            </h3>
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Cardiac
+              Stabilization</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Successful vital
+              recovery sync logs for post-operative heart patients.</p>
+          </div>
+          <div class="glass-card-light reveal"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-secondary); font-size: 2.5rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-brain"></i></div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 0.5rem;">
+              1,200+</h3>
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Stroke
+              Rehab Audits</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Independent home
+              walking milestones accomplished via neurological plans.</p>
+          </div>
+          <div class="glass-card-light reveal-right"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-accent); font-size: 2.5rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-user-doctor"></i></div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem;">150,000+
+            </h3>
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Telemetry
+              Hours</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Active vital
+              tracking hours evaluated by our command specialists.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ON-CALL DOCTORS FAQ (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Roster
+            Inquiries</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">On-Call Doctor FAQ</h2>
+          <p>Common questions regarding clinical home supervision and scheduling consults.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 1.5rem;" class="reveal">
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start; border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--color-primary); font-size: 1.4rem; margin-top: 0.2rem;"><i
+                class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">How
+                often do supervisors visit the patient?</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">
+                Home visits occur 1-3 times weekly depending on patient acuity levels, while telehealth telemetry checks
+                are performed daily.
+              </p>
+            </div>
+          </div>
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start; border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--color-primary); font-size: 1.4rem; margin-top: 0.2rem;"><i
+                class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">Can I
+                request a specific physician?</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">
+                Yes, during your clinical intake review, you can choose any specialist from our certified roster subject
+                to regional dispatch coordinates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="global-footer" class="footer"></footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function filterDoctors() {
+      const searchVal = document.getElementById('doc-search')?.value.toLowerCase() || '';
+      const deptVal = document.getElementById('dept-filter')?.value.toLowerCase() || 'all';
+      const cards = document.querySelectorAll('.personnel-card');
+
+      cards.forEach(card => {
+        const nameEl = card.querySelector('.personnel-name');
+        const deptEl = card.querySelector('.personnel-dept');
+
+        if (!nameEl || !deptEl) return;
+
+        const name = nameEl.textContent.toLowerCase();
+        const dept = deptEl.textContent.toLowerCase();
+
+        const matchesSearch = name.includes(searchVal) || dept.includes(searchVal);
+        const matchesDept = deptVal === 'all' || dept.includes(deptVal);
+
+        if (matchesSearch && matchesDept) {
+          card.style.setProperty('display', 'block', 'important');
+        } else {
+          card.style.setProperty('display', 'none', 'important');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

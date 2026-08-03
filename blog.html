@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraCare | Medical News, Clinical Journals & Health Insights</title>
+  <meta name="description"
+    content="Read our clinical blog posts and medical journals regarding cardiac wellness telemetry, stroke rehabilitation, and daily senior health tips.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Asymmetric Blog Grid */
+    .blog-layout-grid {
+      display: grid;
+      grid-template-columns: 2.3fr 1fr;
+      gap: 3.5rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 1024px) {
+      .blog-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* Blog Card Layouts */
+    .blog-article-card {
+      background: white;
+      border-radius: var(--border-radius-lg);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .blog-article-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(0, 102, 255, 0.15);
+    }
+
+    .blog-article-horizontal {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .blog-article-horizontal .blog-img-box {
+      width: 42%;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .blog-article-horizontal .blog-content-box {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 768px) {
+      .blog-article-horizontal {
+        flex-direction: column;
+      }
+
+      .blog-article-horizontal .blog-img-box {
+        width: 100%;
+        height: 220px;
+      }
+
+      .blog-article-horizontal .blog-content-box {
+        padding: 2rem;
+      }
+    }
+
+    .blog-article-standard {
+      display: block;
+    }
+
+    .blog-article-standard .blog-img-box {
+      width: 100%;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-article-standard .blog-content-box {
+      padding: 2rem;
+    }
+
+    /* Compact Cards Grid */
+    .blog-compact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-compact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Action triggers */
+    .share-btn,
+    .bookmark-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted-dark);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    .share-btn:hover {
+      color: var(--color-primary);
+      background: rgba(0, 102, 255, 0.08);
+    }
+
+    .bookmark-btn:hover {
+      color: var(--color-secondary);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .bookmark-btn.active {
+      color: var(--color-secondary) !important;
+      background: rgba(16, 185, 129, 0.12);
+    }
+
+    /* Interactive tags */
+    .tag-cloud-btn {
+      background: rgba(0, 102, 255, 0.06);
+      color: var(--color-primary);
+      border: 1px solid rgba(0, 102, 255, 0.1);
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--border-pill);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .tag-cloud-btn:hover {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+
+    /* Pre-footer Call to Action */
+    .prefooter-cta-container {
+      background: linear-gradient(135deg, #07111F, #0B1D33);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--border-radius-lg);
+      padding: 4rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .prefooter-cta-container::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <div class="pulse-ring"></div>
+      <div class="medical-icons-container">
+        <svg class="svg-preloader-graphic" viewBox="0 0 200 150">
+          <rect x="70" y="20" width="60" height="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="45" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="130" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="92" y="50" width="16" height="16" rx="2" fill="none" stroke="var(--color-primary)" stroke-width="2"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M100 45v26M87 58h26" fill="none" stroke="var(--color-primary)" stroke-width="3"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M10 115 h35 l8 -22 l8 44 l8 -58 l8 36 l6 -10 h107" fill="none" stroke="var(--color-accent)"
+            stroke-width="3" stroke-dasharray="350" stroke-dashoffset="350"
+            style="animation: dashOffset 2.5s linear infinite; stroke-linecap: round; stroke-linejoin: round;" />
+        </svg>
+      </div>
+      <div class="loading-progress">
+        <span class="loading-text">AURA KNOWLEDGE ARCHIVE</span>
+        <span class="loading-percent">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="global-header" class="header"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section bg-dark-blue" style="padding-top: 11rem; padding-bottom: 8rem;">
+      <div class="container grid grid-2" style="align-items: center; gap: 4rem;">
+
+        <!-- Left: Headings + Search Bar + Category Selector -->
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Clinical
+            Insights</span>
+          <h1 style="font-size: 3.2rem; font-weight: 700; margin-bottom: 1.5rem; color: white; line-height: 1.25;">
+            Medical Journals & Wellness Tips
+          </h1>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted-light); margin-bottom: 2.5rem;">
+            Stay informed with cardiology research, stroke care milestones, telemetry device configurations, and daily
+            geriatric nutrition guidelines.
+          </p>
+
+          <!-- Search and Category Filters Panel -->
+          <div
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: var(--border-radius-md); display: flex; flex-direction: column; gap: 1rem; max-width: 550px;">
+            <div style="position: relative;">
+              <i class="fa-solid fa-magnifying-glass"
+                style="position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--text-muted-light); font-size: 1.1rem;"></i>
+              <input type="text" id="blog-search" placeholder="Search medical papers & articles..."
+                onkeyup="filterBlogs()"
+                style="width: 100%; height: 3.5rem; padding-left: 3rem; padding-right: 1.5rem; border-radius: var(--border-radius-sm); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: white; font-size: 1rem; box-shadow: var(--shadow-sm); outline: none;">
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <span style="color: var(--text-muted-light); font-size: 0.85rem;"><i class="fa-solid fa-sliders"></i>
+                Filter Category:</span>
+              <select id="blog-category-select" onchange="filterByCategory()"
+                style="flex: 1; height: 3rem; padding: 0 1rem; border-radius: var(--border-radius-sm); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: white; font-size: 0.95rem; outline: none; cursor: pointer;">
+                <option value="all">All Specialties</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Preventive">Preventive Care</option>
+                <option value="Mental">Mental Wellness</option>
+                <option value="Child">Child Care</option>
+                <option value="Women">Women's Health</option>
+                <option value="Senior">Senior Care</option>
+                <option value="Diabetes">Diabetes & Endocrinology</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Stats counters & Trending Card -->
+        <div class="reveal-right">
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+            <!-- Statistics Badges Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="glass-card"
+                style="padding: 1.5rem; margin: 0; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03);">
+                <div style="color: var(--color-accent); font-size: 2rem;"><i class="fa-solid fa-file-medical"></i></div>
+                <div>
+                  <h4 style="color: white; font-size: 1.4rem; font-weight: 700; margin: 0;">500+</h4>
+                  <p style="color: var(--text-muted-light); font-size: 0.75rem; margin: 0; text-transform: uppercase;">
+                    Articles</p>
+                </div>
+              </div>
+              <div class="glass-card"
+                style="padding: 1.5rem; margin: 0; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03);">
+                <div style="color: var(--color-secondary); font-size: 2rem;"><i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                  <h4 style="color: white; font-size: 1.4rem; font-weight: 700; margin: 0;">50+</h4>
+                  <p style="color: var(--text-muted-light); font-size: 0.75rem; margin: 0; text-transform: uppercase;">
+                    Doctors</p>
+                </div>
+              </div>
+              <div class="glass-card"
+                style="padding: 1.5rem; margin: 0; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03);">
+                <div style="color: var(--color-accent); font-size: 2rem;"><i class="fa-solid fa-users"></i></div>
+                <div>
+                  <h4 style="color: white; font-size: 1.4rem; font-weight: 700; margin: 0;">100K+</h4>
+                  <p style="color: var(--text-muted-light); font-size: 0.75rem; margin: 0; text-transform: uppercase;">
+                    Readers</p>
+                </div>
+              </div>
+              <div class="glass-card"
+                style="padding: 1.5rem; margin: 0; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03);">
+                <div style="color: var(--color-secondary); font-size: 2rem;"><i
+                    class="fa-solid fa-clock-rotate-left"></i></div>
+                <div>
+                  <h4 style="color: white; font-size: 1.4rem; font-weight: 700; margin: 0;">Daily</h4>
+                  <p style="color: var(--text-muted-light); font-size: 0.75rem; margin: 0; text-transform: uppercase;">
+                    Updated</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trending Topics Card -->
+            <div class="glass-card"
+              style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: var(--border-radius-lg); border: 1px solid rgba(255, 255, 255, 0.1); margin: 0;">
+              <h3 style="font-size: 1.1rem; color: white; margin-bottom: 1.2rem; font-family: var(--font-heading);"><i
+                  class="fa-solid fa-fire" style="color: var(--color-danger); margin-right: 8px;"></i> Hot / Trending
+                Hashtags</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+                <button onclick="setBlogTag('Cardiology')"
+                  style="background: rgba(0, 102, 255, 0.2); color: var(--color-accent); border: 1px solid rgba(0, 102, 255, 0.4); padding: 0.5rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">#Cardiology</button>
+                <button onclick="setBlogTag('Preventive')"
+                  style="background: rgba(16, 185, 129, 0.2); color: var(--color-secondary); border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.5rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">#Preventive</button>
+                <button onclick="setBlogTag('Mental')"
+                  style="background: rgba(56, 189, 248, 0.2); color: var(--color-accent); border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.5rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">#MentalHealth</button>
+                <button onclick="setBlogTag('Child')"
+                  style="background: rgba(0, 102, 255, 0.2); color: var(--color-accent); border: 1px solid rgba(0, 102, 255, 0.4); padding: 0.5rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">#ChildCare</button>
+                <button onclick="setBlogTag('all')"
+                  style="background: rgba(255,255,255,0.06); color: white; border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">Reset</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1: BLOG ASYMMETRICAL GRID (Light Blue Background) -->
+    <section class="section bg-light-blue" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <div class="container">
+
+        <div class="blog-layout-grid">
+
+          <!-- LEFT COLUMN: ARTICLES GRID (70% width) -->
+          <div style="display: flex; flex-direction: column; gap: 3rem;">
+
+            <!-- Article 1: Large Featured Card -->
+            <article class="blog-article-card blog-article-standard blog-article-card-featured reveal-left">
+              <div class="blog-img-box">
+                <svg width="100%" height="280" style="background: linear-gradient(135deg, #07111F, #0B1D33);"
+                  viewBox="0 0 400 200">
+                  <path
+                    d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 100,0 L 100,200 M 200,0 L 200,200 M 300,0 L 300,200"
+                    stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                  <path
+                    d="M 10,100 L 100,100 L 120,60 L 140,140 L 160,100 L 200,100 L 220,30 L 240,170 L 260,100 L 390,100"
+                    fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" style="filter: drop-shadow(0 0 6px var(--color-accent));" />
+                  <text x="20" y="35" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="10">STATUS:
+                    OK</text>
+                  <text x="320" y="35" fill="var(--color-secondary)" font-family="monospace" font-size="10">72
+                    BPM</text>
+                </svg>
+                <div
+                  style="position: absolute; top: 1.5rem; left: 1.5rem; background: var(--color-primary); color: white; padding: 0.4rem 1rem; border-radius: var(--border-pill); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">
+                  Featured Article
+                </div>
+              </div>
+              <div class="blog-content-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;"><i
+                      class="fa-solid fa-heart-pulse"></i> Cardiology</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted-dark); font-weight: 500;"><i
+                      class="fa-solid fa-calendar"></i> Aug 2026</span>
+                </div>
+                <h2 class="blog-title"
+                  style="font-size: 1.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.3;">
+                  Revolutionizing Post-Surgery Cardiac Rehab at Home</h2>
+                <p class="blog-desc"
+                  style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin-bottom: 1.5rem;">A
+                  complete look at how mobile ECG telemetry setups and active remote diagnostic consoles reduce
+                  emergency cardiology readmissions by up to 40% globally.</p>
+
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1.5rem; margin-top: 1rem;">
+                  <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div
+                      style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary);">
+                      AM</div>
+                    <div>
+                      <strong style="font-size: 0.9rem; color: var(--text-dark); display: block;">Dr. Adrian Mercer,
+                        MD</strong>
+                      <span style="font-size: 0.75rem; color: var(--text-muted-dark); display: block;"><i
+                          class="fa-solid fa-clock"></i> 8 Min Read</span>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 0.5rem;">
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)" title="Bookmark article"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                    <button class="share-btn" onclick="shareArticle('Revolutionizing Post-Surgery Cardiac Rehab')"
+                      title="Share article"><i class="fa-solid fa-share-nodes"></i></button>
+                    <a href="404.html" onclick="event.preventDefault(); showToast('Featured paper under review.');"
+                      class="btn btn-outline-dark btn-sm ripple">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 2: Horizontal Card layout -->
+            <article class="blog-article-card blog-article-horizontal reveal">
+              <div class="blog-img-box">
+                <svg width="100%" height="100%" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);"
+                  viewBox="0 0 200 150">
+                  <circle cx="100" cy="75" r="40" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="4" />
+                  <path d="M70,75 L130,75 M100,45 L100,105" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="blog-content-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;"><i
+                      class="fa-solid fa-user-shield"></i> Preventive</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted-dark); font-weight: 500;"><i
+                      class="fa-solid fa-calendar"></i> Aug 2026</span>
+                </div>
+                <h3 class="blog-title"
+                  style="font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem;">Benefits
+                  of Regular Diagnostic Checkups</h3>
+                <p class="blog-desc"
+                  style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">
+                  Analyzing how routine diagnostic screening, metabolic panels, and periodic nurse home visits prevent
+                  chronic re-hospitalizations.</p>
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;">
+                  <span style="font-size: 0.8rem; color: var(--text-muted-dark);"><i class="fa-solid fa-user"></i> Clara
+                    Vance, MD • 5 min</span>
+                  <div style="display: flex; gap: 0.4rem;">
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                    <button class="share-btn" onclick="shareArticle('Benefits of Regular Diagnostic Checkups')"><i
+                        class="fa-solid fa-share-nodes"></i></button>
+                    <a href="404.html" onclick="event.preventDefault(); showToast('Article queued.');"
+                      class="btn btn-outline-dark btn-sm ripple">Read</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 3: Horizontal Card layout (Reversed style/content) -->
+            <article class="blog-article-card blog-article-horizontal reveal">
+              <div class="blog-img-box">
+                <svg width="100%" height="100%" style="background: linear-gradient(135deg, #0f172a, #334155);"
+                  viewBox="0 0 200 150">
+                  <path d="M 20,75 L 180,75 M 100,20 L 100,130" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+                  <path d="M 40,90 Q 100,20 160,90" fill="none" stroke="var(--color-secondary)" stroke-width="4" />
+                </svg>
+              </div>
+              <div class="blog-content-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem;"><i
+                      class="fa-solid fa-brain"></i> Mental Wellness</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted-dark); font-weight: 500;"><i
+                      class="fa-solid fa-calendar"></i> July 2026</span>
+                </div>
+                <h3 class="blog-title"
+                  style="font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem;">Managing
+                  Stress Effectively in Geriatrics</h3>
+                <p class="blog-desc"
+                  style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">
+                  Scientific relaxation techniques to regulate chronic cortisol levels, incorporating breathing
+                  biofeedback monitors.</p>
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;">
+                  <span style="font-size: 0.8rem; color: var(--text-muted-dark);"><i class="fa-solid fa-user"></i>
+                    Evelyn Vance, PhD • 7 min</span>
+                  <div style="display: flex; gap: 0.4rem;">
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                    <button class="share-btn" onclick="shareArticle('Managing Stress Effectively')"><i
+                        class="fa-solid fa-share-nodes"></i></button>
+                    <a href="404.html" onclick="event.preventDefault(); showToast('Article queued.');"
+                      class="btn btn-outline-dark btn-sm ripple">Read</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Compact Articles Grid Row (Articles 4 & 5 side by side) -->
+            <div class="blog-compact-grid">
+
+              <!-- Article 4: Compact Grid Card -->
+              <article class="blog-article-card blog-article-standard reveal-left">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #065f46, #10b981);"
+                    viewBox="0 0 200 150">
+                    <rect x="50" y="30" width="100" height="90" rx="10" fill="none" stroke="white" stroke-width="3" />
+                    <path d="M70,75 H130" stroke="white" stroke-width="3" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                    <span class="blog-category"
+                      style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase;"><i
+                        class="fa-solid fa-baby"></i> Child Care</span>
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);"><i
+                        class="fa-solid fa-calendar"></i> July 2026</span>
+                  </div>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
+                    Pediatric Growth Milestones</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Essential developmental checkpoints for infants, pediatric vaccine calendars, and nutritional
+                    guidelines.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Sarah Jenkins, MD • 6 min</span>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                          class="fa-regular fa-bookmark"></i></button>
+                      <a href="404.html" onclick="event.preventDefault(); showToast('Queued.');"
+                        class="btn btn-outline-dark btn-sm ripple"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Read</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article 5: Compact Grid Card -->
+              <article class="blog-article-card blog-article-standard reveal-right">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #b91c1c, #f87171);"
+                    viewBox="0 0 200 150">
+                    <path d="M100,30 L170,120 H30 Z" fill="none" stroke="white" stroke-width="3" />
+                    <circle cx="100" cy="85" r="15" fill="white" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                    <span class="blog-category"
+                      style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase;"><i
+                        class="fa-solid fa-person-dress"></i> Women</span>
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);"><i
+                        class="fa-solid fa-calendar"></i> June 2026</span>
+                  </div>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
+                    Women's Health & Bone Density</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Key post-menopausal indicators, osteoporosis screenings, and customized joint physical therapy
+                    guides.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Clara Vance, MD • 8 min</span>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                          class="fa-regular fa-bookmark"></i></button>
+                      <a href="404.html" onclick="event.preventDefault(); showToast('Queued.');"
+                        class="btn btn-outline-dark btn-sm ripple"
+                        style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Read</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Standard Grid Cards (Articles 6 to 10) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+              <!-- Article 6: Grid style -->
+              <article class="blog-article-card blog-article-standard reveal-left">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #111827, #4b5563);"
+                    viewBox="0 0 200 150">
+                    <line x1="20" y1="120" x2="180" y2="120" stroke="white" stroke-width="4" />
+                    <circle cx="100" cy="60" r="25" fill="none" stroke="white" stroke-width="3" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;"><i
+                      class="fa-solid fa-hospital-user"></i> Senior Care</span>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
+                    Geriatric Mobility Safety</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Managing environmental hazards at home to prevent elderly fall accidents and fractures.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Adrian Mercer • 7 min</span>
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article 7: Grid style -->
+              <article class="blog-article-card blog-article-standard reveal">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #0b132b, #1c2541);"
+                    viewBox="0 0 200 150">
+                    <path d="M40,110 L80,50 L120,90 L160,30" fill="none" stroke="white" stroke-width="3" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;"><i
+                      class="fa-solid fa-droplet"></i> Diabetes</span>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
+                    Glucose Telemetry Logs</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Analyzing how active glucose monitoring patterns prevent post-meal glycemic shock.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Clara Vance • 6 min</span>
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article 8: Grid style -->
+              <article class="blog-article-card blog-article-standard reveal-right">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #4338ca, #6366f1);"
+                    viewBox="0 0 200 150">
+                    <rect x="40" y="40" width="120" height="70" rx="6" fill="none" stroke="white" stroke-width="3" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;"><i
+                      class="fa-solid fa-wind"></i> Pulmonology</span>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">Oxygen
+                    Cuff Calibrations</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Best practices for cleaning and calibrating home ventilators and oxygen delivery kits.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Evelyn Vance • 7 min</span>
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article 9: Grid style -->
+              <article class="blog-article-card blog-article-standard reveal-left">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #1e1b4b, #312e81);"
+                    viewBox="0 0 200 150">
+                    <circle cx="100" cy="75" r="30" fill="none" stroke="white" stroke-width="4" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;"><i
+                      class="fa-solid fa-heart-pulse"></i> Cardiology</span>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">Atrial
+                    Fibrillation Dispatch</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Intelligent telemetry alerts that trigger automatic clinical nursing dispatches during arrhythmias.
+                  </p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Adrian Mercer • 8 min</span>
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article 10: Grid style -->
+              <article class="blog-article-card blog-article-standard reveal">
+                <div class="blog-img-box">
+                  <svg width="100%" height="100%" style="background: linear-gradient(135deg, #022c22, #065f46);"
+                    viewBox="0 0 200 150">
+                    <path d="M60,40 C80,80 120,80 140,40" stroke="white" stroke-width="3" fill="none" />
+                  </svg>
+                </div>
+                <div class="blog-content-box">
+                  <span class="blog-category"
+                    style="font-size: 0.8rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;"><i
+                      class="fa-solid fa-user-shield"></i> Preventive</span>
+                  <h3 class="blog-title"
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">
+                    Biomarkers for Longevity</h3>
+                  <p class="blog-desc"
+                    style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                    Tracking key metabolic indicators to customize home elder care nutritional layouts.</p>
+                  <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.8rem;">
+                    <span style="font-size: 0.75rem; color: var(--text-muted-dark);">Clara Vance • 5 min</span>
+                    <button class="bookmark-btn" onclick="toggleBookmark(this)"><i
+                        class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: SIDEBAR (30% width) -->
+          <aside style="display: flex; flex-direction: column; gap: 2rem;">
+
+            <!-- Author Spotlight Widget -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3
+                style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.6rem;">
+                Author Spotlight</h3>
+              <div style="text-align: center;">
+                <div
+                  style="width: 5rem; height: 5rem; border-radius: 50%; background: #e0e7ff; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; color: var(--color-primary);">
+                  AM</div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.2rem; color: var(--text-dark);">Dr. Adrian Mercer, MD
+                </h4>
+                <span
+                  style="color: var(--color-accent); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 0.8rem;">Chief
+                  Medical Officer</span>
+                <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                  Former Emergency Medicine Director at Bellevue. Supervises all home clinical telemetry dispatch
+                  algorithms.</p>
+                <div style="font-size: 0.8rem; color: var(--text-muted-dark); font-weight: 500;">Harvard Medical School
+                  • 24 Yrs Exp</div>
+              </div>
+            </div>
+
+            <!-- Free Health Assessment CTA Widget -->
+            <div class="glass-card-light"
+              style="background: linear-gradient(135deg, var(--color-primary), #004ecc); color: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: none;">
+              <h3 style="font-size: 1.2rem; color: white; font-weight: 700; margin-bottom: 0.8rem;"><i
+                  class="fa-solid fa-clipboard-question"></i> Free Vitals Check</h3>
+              <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 1.5rem;">
+                Take our quick 2-minute online assessment to evaluate your home healthcare or device telemetry
+                eligibility.</p>
+              <a href="404.html"
+                onclick="event.preventDefault(); showToast('Launching clinical intake questionnaire...');"
+                class="btn btn-secondary ripple" style="width: 100%; text-align: center;">Start Online Checkup</a>
+            </div>
+
+            <!-- Categories with Article Counts Widget -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3
+                style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.6rem;">
+                Care Categories</h3>
+              <ul
+                style="display: flex; flex-direction: column; gap: 0.8rem; padding: 0; list-style: none; margin: 0; font-size: 0.9rem;">
+                <li
+                  style="display: flex; justify-content: space-between; color: var(--text-muted-dark); cursor: pointer;"
+                  onclick="setBlogTag('Cardiology')">
+                  <span><i class="fa-solid fa-heart-pulse" style="color: var(--color-primary); margin-right: 6px;"></i>
+                    Cardiology</span>
+                  <strong>(4)</strong>
+                </li>
+                <li
+                  style="display: flex; justify-content: space-between; color: var(--text-muted-dark); cursor: pointer;"
+                  onclick="setBlogTag('Preventive')">
+                  <span><i class="fa-solid fa-user-shield" style="color: var(--color-primary); margin-right: 6px;"></i>
+                    Preventive Care</span>
+                  <strong>(6)</strong>
+                </li>
+                <li
+                  style="display: flex; justify-content: space-between; color: var(--text-muted-dark); cursor: pointer;"
+                  onclick="setBlogTag('Mental')">
+                  <span><i class="fa-solid fa-brain" style="color: var(--color-primary); margin-right: 6px;"></i> Mental
+                    Wellness</span>
+                  <strong>(3)</strong>
+                </li>
+                <li
+                  style="display: flex; justify-content: space-between; color: var(--text-muted-dark); cursor: pointer;"
+                  onclick="setBlogTag('Child')">
+                  <span><i class="fa-solid fa-baby" style="color: var(--color-primary); margin-right: 6px;"></i> Child
+                    Care</span>
+                  <strong>(2)</strong>
+                </li>
+                <li
+                  style="display: flex; justify-content: space-between; color: var(--text-muted-dark); cursor: pointer;"
+                  onclick="setBlogTag('Senior')">
+                  <span><i class="fa-solid fa-hospital-user"
+                      style="color: var(--color-primary); margin-right: 6px;"></i> Senior Care</span>
+                  <strong>(5)</strong>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Emergency Care Banner Widget -->
+            <div class="glass-card-light"
+              style="background: rgba(239, 68, 68, 0.04); border: 1px solid rgba(239, 68, 68, 0.2); padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+              <h3 style="font-size: 1.1rem; color: #b91c1c; font-weight: 700; margin-bottom: 0.8rem;"><i
+                  class="fa-solid fa-triangle-exclamation"></i> Emergency Dispatch</h3>
+              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">For
+                acute chest pain, oxygen saturation drops, or telemetry alarms, call our dispatch line immediately.</p>
+              <a href="tel:+18005557788"
+                style="background: #b91c1c; color: white; display: block; text-align: center; padding: 0.8rem; border-radius: var(--border-radius-sm); text-decoration: none; font-weight: 700; font-size: 0.95rem;"><i
+                  class="fa-solid fa-phone"></i> +1 (800) 555-7788</a>
+            </div>
+
+            <!-- Download Healthcare Guide Widget -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;"><i
+                  class="fa-solid fa-file-pdf" style="color: #b91c1c;"></i> Free Medical Guides</h3>
+              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">Get
+                our clinical 2026 Home Telehealth Calibration & Setup Manual (PDF) free.</p>
+              <button onclick="showToast('Downloading Telehealth Setup Manual (PDF)...')"
+                class="btn btn-outline-dark ripple" style="width: 100%;"><i class="fa-solid fa-download"></i> Download
+                Manual</button>
+            </div>
+
+            <!-- Doctor Recommendation Card -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Recommended
+                On-Call Doctor</h3>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                <div
+                  style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #d1fae5; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #047857;">
+                  EV</div>
+                <div>
+                  <h4 style="font-size: 0.95rem; margin: 0; color: var(--text-dark);">Dr. Evelyn Vance, PhD</h4>
+                  <span
+                    style="font-size: 0.75rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase;">Telemetry
+                    Specialist</span>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted-dark); margin-bottom: 1rem;">MIT
+                Bioengineering. Designs vital monitors and telemetry security systems for home ICUs.</p>
+              <a href="404.html" class="btn btn-outline-dark btn-sm ripple"
+                style="width: 100%; text-align: center;">View Doctor Profile</a>
+            </div>
+
+            <!-- Popular Tags Cloud Widget -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3
+                style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.6rem;">
+                Popular Tags</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <button class="tag-cloud-btn" onclick="setBlogTag('Cardiology')">Cardiology</button>
+                <button class="tag-cloud-btn" onclick="setBlogTag('Preventive')">Preventive</button>
+                <button class="tag-cloud-btn" onclick="setBlogTag('Telemetry')">Telemetry</button>
+                <button class="tag-cloud-btn" onclick="setBlogTag('ICU')">Home ICU</button>
+                <button class="tag-cloud-btn" onclick="setBlogTag('Geriatrics')">Geriatrics</button>
+                <button class="tag-cloud-btn" onclick="setBlogTag('Rehab')">Rehabilitation</button>
+              </div>
+            </div>
+
+            <!-- Social Follow Card -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+              <h3
+                style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.6rem;">
+                Connect With Us</h3>
+              <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem;">
+                <a href="404.html" onclick="event.preventDefault();"
+                  style="display: flex; justify-content: space-between; text-decoration: none; color: var(--text-muted-dark);">
+                  <span><i class="fa-brands fa-linkedin"
+                      style="color: #0077b5; font-size: 1.1rem; margin-right: 6px;"></i> LinkedIn Network</span>
+                  <strong>12k Followers</strong>
+                </a>
+                <a href="404.html" onclick="event.preventDefault();"
+                  style="display: flex; justify-content: space-between; text-decoration: none; color: var(--text-muted-dark);">
+                  <span><i class="fa-brands fa-youtube"
+                      style="color: #ff0000; font-size: 1.1rem; margin-right: 6px;"></i> YouTube Channel</span>
+                  <strong>45k Subscribers</strong>
+                </a>
+                <a href="404.html" onclick="event.preventDefault();"
+                  style="display: flex; justify-content: space-between; text-decoration: none; color: var(--text-muted-dark);">
+                  <span><i class="fa-brands fa-square-x-twitter"
+                      style="color: #000; font-size: 1.1rem; margin-right: 6px;"></i> X / Twitter Feed</span>
+                  <strong>8.5k Followers</strong>
+                </a>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PREMIUM SECTIONS BELOW THE BLOG GRID -->
+
+    <!-- 1. FEATURED MEDICAL RESEARCH (bg-soft-white) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Research
+            Reports</span>
+          <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem;">Featured Medical Research</h2>
+          <p style="color: var(--text-muted-dark);">Evaluating post-intake outcomes and telemetry readmission
+            reductions.</p>
+        </div>
+
+        <div class="grid grid-3" style="gap: 2rem;">
+          <div class="glass-card-light reveal-left"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-heart-pulse"></i></div>
+            <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.8rem;">ECG Telemetry Trial</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">A
+              study of 1,200 post-coronary bypass operations monitored at home via 5G telemetry hubs.</p>
+            <span
+              style="font-size: 0.8rem; color: var(--color-secondary); font-weight: 700; text-transform: uppercase;">40%
+              Readmission Drop</span>
+          </div>
+          <div class="glass-card-light reveal"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-secondary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-brain"></i></div>
+            <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.8rem;">Neuro-Rehab Milestones</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">
+              Tracking home mobility and speech coordinates for patients during active stroke rehabilitation.</p>
+            <span
+              style="font-size: 0.8rem; color: var(--color-secondary); font-weight: 700; text-transform: uppercase;">92%
+              Recovery Success</span>
+          </div>
+          <div class="glass-card-light reveal-right"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-accent); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-hospital-user"></i></div>
+            <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.8rem;">Geriatric Care Studies</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1.2rem;">A
+              validation analysis of fall-prevention safety protocols and medication timers on elderly compliance.</p>
+            <span
+              style="font-size: 0.8rem; color: var(--color-secondary); font-weight: 700; text-transform: uppercase;">98%
+              Adherence Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HEALTH TIPS, WELLNESS & PREVENTIVE GUIDE (bg-light-blue) -->
+    <section class="section bg-light-blue">
+      <div class="container grid grid-2" style="gap: 5rem; align-items: center;">
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Preventive
+            Guide</span>
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-dark);">Preventive Healthcare &
+            Wellness Checklist</h2>
+          <p style="color: var(--text-muted-dark); line-height: 1.7; margin-bottom: 2rem;">Preventive home evaluations
+            form the bedrock of safe recoveries. By implementing checks early, you bypass emergency visits.</p>
+
+          <ul
+            style="display: flex; flex-direction: column; gap: 1rem; padding: 0; list-style: none; font-size: 0.95rem; color: var(--text-muted-dark);">
+            <li style="display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fa-solid fa-circle-check"
+                style="color: var(--color-secondary); margin-top: 0.2rem;"></i> <span><strong>Vitals Logging:</strong>
+                Track blood pressure and pulse twice daily at uniform coordinates.</span></li>
+            <li style="display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fa-solid fa-circle-check"
+                style="color: var(--color-secondary); margin-top: 0.2rem;"></i> <span><strong>Dietary Balance:</strong>
+                Structure low-sodium meals to prevent cardiac fluid weight shifts.</span></li>
+            <li style="display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fa-solid fa-circle-check"
+                style="color: var(--color-secondary); margin-top: 0.2rem;"></i> <span><strong>Mobility Clears:</strong>
+                Eliminate rugs, clutter, and low-lighting areas in main hallways.</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal-right">
+          <div class="glass-card-light"
+            style="background: white; padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+            <h3 style="font-size: 1.3rem; color: var(--text-dark); margin-bottom: 1.5rem;"><i
+                class="fa-solid fa-stethoscope" style="color: var(--color-primary);"></i> Daily Doctor Recommendations
+            </h3>
+            <ul
+              style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem; color: var(--text-muted-dark); padding: 0; list-style: none;">
+              <li style="border-left: 3px solid var(--color-secondary); padding-left: 1rem;">
+                <strong>Cardiology Note:</strong> Patients recovering from stents must avoid lifting weight over 10 lbs
+                during the first 14 days post-discharge.
+              </li>
+              <li style="border-left: 3px solid var(--color-secondary); padding-left: 1rem;">
+                <strong>Endocrinology Note:</strong> Calibrate blood glucose sensors before breakfast to ensure accurate
+                baseline insulin checks.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SUCCESS STORIES, MEDICAL FAQ & RESOURCES (bg-soft-white) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+
+        <div class="grid grid-2" style="gap: 5rem;">
+
+          <!-- Home Healthcare Success Stories -->
+          <div class="reveal-left">
+            <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: var(--text-dark);">Bedside Success Stories</h2>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div class="glass-card-light"
+                style="background: white; padding: 2rem; border-radius: var(--border-radius-md);">
+                <p
+                  style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                  "AuraCare's home ICU setup saved my father. The remote ECG monitor automatically flagged an
+                  arrhythmia, triggering a dispatch nurse who arrived in 12 minutes."</p>
+                <strong style="font-size: 0.9rem; color: var(--text-dark);">Robert Chen, Son of Patient</strong>
+              </div>
+              <div class="glass-card-light"
+                style="background: white; padding: 2rem; border-radius: var(--border-radius-md);">
+                <p
+                  style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted-dark); margin-bottom: 1rem;">
+                  "Recovering from my stroke at home with their neuro-nursing team allowed me to regain my speech in
+                  comfortable, familiar surroundings. Truly world-class."</p>
+                <strong style="font-size: 0.9rem; color: var(--text-dark);">Margaret Reynolds, Recovered Stroke
+                  Patient</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frequently Asked Health Questions Accordion -->
+          <div class="reveal-right">
+            <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: var(--text-dark);">Health Questions FAQ</h2>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="accordion-item"
+                style="background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: var(--border-radius-sm); overflow: hidden;">
+                <div class="accordion-header"
+                  style="padding: 1.2rem; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text-dark);">
+                  <span>What parameters does the telemetry hub track?</span>
+                  <i class="fa-solid fa-chevron-down" style="font-size: 0.85rem; color: var(--color-primary);"></i>
+                </div>
+                <div class="accordion-content"
+                  style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                  <p
+                    style="padding: 0 1.2rem 1.2rem 1.2rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">
+                    Our telehealth hub tracks real-time ECG waveforms, blood pressure, oxygen saturation levels, and
+                    respiration patterns. These logs are transmitted encrypted to our Command Center.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item"
+                style="background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: var(--border-radius-sm); overflow: hidden;">
+                <div class="accordion-header"
+                  style="padding: 1.2rem; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text-dark);">
+                  <span>Are telemetry devices covered by medical insurance?</span>
+                  <i class="fa-solid fa-chevron-down" style="font-size: 0.85rem; color: var(--color-primary);"></i>
+                </div>
+                <div class="accordion-content"
+                  style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                  <p
+                    style="padding: 0 1.2rem 1.2rem 1.2rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">
+                    Yes, most of our clinical monitoring devices are fully covered under major insurance policies during
+                    home recovery bounds. Our billing desk reviews coordination details directly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PREMIUM PREFOOTER CALL TO ACTION (Full-Width) -->
+    <section class="section bg-light-blue" style="padding-top: 2rem; padding-bottom: 6rem;">
+      <div class="container">
+
+        <div class="prefooter-cta-container reveal">
+          <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+
+            <!-- Left Column: Heading, description, trust row -->
+            <div>
+              <span
+                style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Get
+                In Touch</span>
+              <h2 style="font-size: 2.8rem; font-weight: 700; color: white; margin-bottom: 1.5rem; line-height: 1.2;">
+                Need Professional Home Healthcare?</h2>
+              <p style="color: var(--text-muted-light); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+                Speak with a clinical coordination director today to evaluate your recovery parameters and set up
+                telemetry logistics.</p>
+
+              <!-- Patient Satisfaction Row -->
+              <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+                <div>
+                  <h4 style="font-size: 1.8rem; font-weight: 800; color: var(--color-accent); margin: 0;">99.8%</h4>
+                  <p style="font-size: 0.75rem; color: var(--text-muted-light); text-transform: uppercase; margin: 0;">
+                    Satisfaction Ratio</p>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.8rem; font-weight: 800; color: var(--color-secondary); margin: 0;">Joint
+                    Commission</h4>
+                  <p style="font-size: 0.75rem; color: var(--text-muted-light); text-transform: uppercase; margin: 0;">
+                    Gold Seal Accredited</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Buttons + Quick Hotline Card -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <a href="404.html" class="btn btn-primary ripple"
+                  style="text-align: center; height: 3.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;">Book
+                  Appointment</a>
+                <a href="404.html" onclick="event.preventDefault(); showToast('Directing to WhatsApp support line...');"
+                  class="btn btn-outline-light ripple"
+                  style="text-align: center; height: 3.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; border-color: #25d366; color: #25d366;"><i
+                    class="fa-brands fa-whatsapp" style="font-size: 1.2rem; margin-right: 8px;"></i> Message
+                  WhatsApp</a>
+              </div>
+
+              <div class="glass-card"
+                style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); padding: 1.5rem; margin: 0; display: flex; align-items: center; gap: 1.2rem;">
+                <div style="color: var(--color-secondary); font-size: 1.8rem;"><i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div>
+                  <span
+                    style="font-size: 0.75rem; color: var(--text-muted-light); display: block; text-transform: uppercase;">Direct
+                    Coordinator desk</span>
+                  <a href="tel:+18005557788"
+                    style="color: white; font-size: 1.3rem; font-weight: 700; text-decoration: none;">+1 (800)
+                    555-7788</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="global-footer" class="footer"></footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Robust client-side search & category filtering script
+    function filterBlogs() {
+      const searchVal = document.getElementById('blog-search')?.value.toLowerCase() || '';
+      const catVal = document.getElementById('blog-category-select')?.value.toLowerCase() || 'all';
+      const cards = document.querySelectorAll('.blog-article-card');
+
+      cards.forEach(card => {
+        const titleEl = card.querySelector('.blog-title');
+        const categoryEl = card.querySelector('.blog-category');
+        const descEl = card.querySelector('.blog-desc');
+
+        if (!titleEl || !categoryEl || !descEl) return;
+
+        const title = titleEl.textContent.toLowerCase();
+        const category = categoryEl.textContent.toLowerCase();
+        const desc = descEl.textContent.toLowerCase();
+
+        const matchesSearch = title.includes(searchVal) || category.includes(searchVal) || desc.includes(searchVal);
+        const matchesCat = catVal === 'all' || category.includes(catVal);
+
+        if (matchesSearch && matchesCat) {
+          // Check if card is configured as horizontal or standard block
+          if (card.classList.contains('blog-article-horizontal')) {
+            card.style.setProperty('display', 'flex', 'important');
+          } else {
+            card.style.setProperty('display', 'block', 'important');
+          }
+        } else {
+          card.style.setProperty('display', 'none', 'important');
+        }
+      });
+    }
+
+    function setBlogTag(tagName) {
+      const searchEl = document.getElementById('blog-search');
+      if (searchEl) {
+        if (tagName === 'all') {
+          searchEl.value = '';
+        } else {
+          searchEl.value = tagName;
+        }
+      }
+      filterBlogs();
+    }
+
+    function filterByCategory() {
+      filterBlogs();
+    }
+
+    // Toggle Bookmark status
+    function toggleBookmark(btn) {
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      if (btn.classList.contains('active')) {
+        icon.className = 'fa-solid fa-bookmark';
+        showToast('Article bookmarked to patient profile.');
+      } else {
+        icon.className = 'fa-regular fa-bookmark';
+        showToast('Bookmark removed.');
+      }
+    }
+
+    // Share mock callback
+    function shareArticle(title) {
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          url: window.location.href
+        }).catch(err => console.log(err));
+      } else {
+        showToast('Link copied to clipboard for: ' + title);
+      }
+    }
+  </script>
+</body>
+
+</html>

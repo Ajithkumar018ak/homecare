@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraCare | Premium Home Healthcare Operations & Clinical Services</title>
+  <meta name="description"
+    content="AuraCare brings elite clinical teams, certified home ICU systems, and dedicated nurses directly to your home. Contact our 24/7 medical dispatcher.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <!-- HEALTHCARE PRELOADER -->
+  <div id="preloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <div class="pulse-ring"></div>
+      <div class="medical-icons-container">
+        <svg class="svg-preloader-graphic" viewBox="0 0 200 150">
+          <rect x="70" y="20" width="60" height="90" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="45" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="130" y="55" width="25" height="55" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+          <rect x="92" y="50" width="16" height="16" rx="2" fill="none" stroke="var(--color-primary)" stroke-width="2"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M100 45v26M87 58h26" fill="none" stroke="var(--color-primary)" stroke-width="3"
+            style="animation: heartbeat 2.2s infinite ease-in-out;" />
+          <path d="M10 115 h35 l8 -22 l8 44 l8 -58 l8 36 l6 -10 h107" fill="none" stroke="var(--color-accent)"
+            stroke-width="3" stroke-dasharray="350" stroke-dashoffset="350"
+            style="animation: dashOffset 2.5s linear infinite; stroke-linecap: round; stroke-linejoin: round;" />
+        </svg>
+      </div>
+      <div class="loading-progress">
+        <span class="loading-text">Healthcare CHECK</span>
+        <span class="loading-percent">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="global-header" class="header"></header>
+
+  <main>
+    <!-- PREMIUM HERO SECTION (Dark Navy Background) -->
+    <section class="section bg-deep-navy" style="padding-top: 10rem; padding-bottom: 9rem;">
+      <div class="container grid grid-2" style="align-items: center; gap: 4rem; margin-bottom: 6rem;">
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Elite
+            In-Home Clinical Services</span>
+          <h1 style="font-size: 4rem; font-weight: 700; line-height: 1.15; margin-bottom: 2rem; letter-spacing: -1px;">
+            Compassionate <br><span style="color: var(--color-primary);">Clinical Care</span>,<br>Delivered Safely.
+          </h1>
+          <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 3rem;">
+            AuraCare bridges the gap between elite hospital expertise and home luxury. We provide state-of-the-art
+            medical monitoring, board-certified physicians, and specialized clinical teams tailored to your recovery
+            environment.
+          </p>
+          <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+            <a href="404.html" class="btn btn-primary ripple">Schedule Clinical Consultation</a>
+            <a href="tel:+18005557788" class="btn btn-emergency ripple">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>Call Emergency Dispatch</span>
+            </a>
+            <a href="404.html" class="btn btn-outline-light">
+              <span>View Clinical Standards</span>
+            </a>
+          </div>
+
+          <!-- Animated statistics row -->
+          <div
+            style="display: flex; gap: 3rem; margin-top: 3.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+            <div>
+              <h4 style="font-size: 1.8rem; font-weight: 700; color: white; margin: 0;">15k+</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted-light); margin: 0; text-transform: uppercase;">
+                Patients Treated</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--color-secondary); margin: 0;">99.8%</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted-light); margin: 0; text-transform: uppercase;">Safety
+                Record</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1.8rem; font-weight: 700; color: var(--color-accent); margin: 0;">24/7</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted-light); margin: 0; text-transform: uppercase;">
+                Command Control</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right floating" style="position: relative;">
+          <!-- Floating Vital Telemetry Widget (Top-Left) -->
+          <div class="glass-card"
+            style="position: absolute; top: -1.5rem; left: -2rem; padding: 1rem 1.5rem; border-radius: var(--border-radius-sm); background: rgba(7, 17, 31, 0.8); backdrop-filter: blur(10px); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,255,255,0.15); z-index: 10; box-shadow: var(--shadow-lg);">
+            <div style="color: var(--color-danger); font-size: 1.5rem;"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div>
+              <span
+                style="font-size: 0.75rem; color: var(--text-muted-light); display: block; text-transform: uppercase;">Real-Time
+                ECG</span>
+              <strong style="color: white; font-size: 1rem; font-family: monospace;">72 BPM • Stable</strong>
+            </div>
+          </div>
+
+          <!-- Floating Staff Alert Widget (Bottom-Right) -->
+          <div class="glass-card"
+            style="position: absolute; bottom: 3rem; right: -1.5rem; padding: 1rem 1.5rem; border-radius: var(--border-radius-sm); background: rgba(7, 17, 31, 0.8); backdrop-filter: blur(10px); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,255,255,0.15); z-index: 10; box-shadow: var(--shadow-lg);">
+            <div style="color: var(--color-secondary); font-size: 1.5rem;"><i class="fa-solid fa-user-doctor"></i></div>
+            <div>
+              <span
+                style="font-size: 0.75rem; color: var(--text-muted-light); display: block; text-transform: uppercase;">Medical
+                Lead</span>
+              <strong style="color: white; font-size: 0.95rem;">Dr. Mercer [On-Duty]</strong>
+            </div>
+          </div>
+
+          <div
+            style="position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/hero_care.png" alt="Clinical caregiver monitoring senior patient at home"
+              style="width: 100%; border-radius: var(--border-radius-lg); filter: brightness(0.95);">
+            <div class="glass-card"
+              style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.2rem; border-radius: var(--border-radius-md); display: flex; align-items: center; gap: 1.2rem; background: rgba(7, 17, 31, 0.7); backdrop-filter: blur(10px);">
+              <div
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-secondary); animation: heartbeat 1.5s infinite;">
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 600; color: white;">Interactive Live Monitoring</h4>
+                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted-light);">Telemetry link to AuraCare HQ
+                  active.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- HERO HIGHLIGHT CARDS -->
+      <div class="container">
+        <div class="grid grid-3" style="gap: 2.5rem;">
+          <!-- Card 1: Emergency Care -->
+          <div class="glass-card reveal-left"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-danger); font-size: 2rem; margin-bottom: 1.5rem;"><i
+                class="fa-solid fa-truck-medical"></i></div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.3rem;">Emergency Care Card</h3>
+            <p style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Direct coordination with telemetry squad dispatches. ICU units reach your residence within 12 minutes.
+            </p>
+            <a href="404.html"
+              style="color: var(--color-accent); font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              Dial Emergency Dispatch <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </div>
+          <!-- Card 2: Book Appointment -->
+          <div class="glass-card reveal"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1.5rem;"><i
+                class="fa-solid fa-calendar-check"></i></div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.3rem;">Book Appointment Card</h3>
+            <p style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Schedule diagnostic screening checks, home nursing visits, or telemetry consultations online.
+            </p>
+            <a href="404.html"
+              style="color: var(--color-accent); font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              Request Assessment <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </div>
+          <!-- Card 3: Trusted by Patients -->
+          <div class="glass-card reveal-right"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-secondary); font-size: 2rem; margin-bottom: 1.5rem;"><i
+                class="fa-solid fa-shield-medical"></i></div>
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.3rem;">Trusted by Patients Card</h3>
+            <p style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Over 50,000+ vitals tracked and managed bedside. Joint Commission accredited safety guidelines.
+            </p>
+            <a href="404.html"
+              style="color: var(--color-accent); font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              Read Success Audits <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTICS BANNER (Soft Light Blue Background) -->
+    <section class="section bg-light-blue" style="padding: 6rem 0;">
+      <div class="container">
+        <div class="grid grid-4" style="text-align: center; gap: 3rem;">
+          <!-- Stat 1 -->
+          <div class="glass-card-light scale-up"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-user-injured"></i></div>
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;"><span
+                class="counter-value" data-target="50000">0</span>+</h2>
+            <p
+              style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted-dark); letter-spacing: 1px;">
+              Patients Handled</p>
+          </div>
+          <!-- Stat 2 -->
+          <div class="glass-card-light scale-up delay-100"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-user-doctor"></i></div>
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;"><span
+                class="counter-value" data-target="250">0</span>+</h2>
+            <p
+              style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted-dark); letter-spacing: 1px;">
+              Certified Physicians</p>
+          </div>
+          <!-- Stat 3 -->
+          <div class="glass-card-light scale-up delay-200"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-hospital"></i></div>
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;"><span
+                class="counter-value" data-target="40">0</span>+</h2>
+            <p
+              style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted-dark); letter-spacing: 1px;">
+              Medical Clinics</p>
+          </div>
+          <!-- Stat 4 -->
+          <div class="glass-card-light scale-up delay-300"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md);">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-award"></i></div>
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;"><span
+                class="counter-value" data-target="15">0</span>+</h2>
+            <p
+              style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted-dark); letter-spacing: 1px;">
+              Years Vetted</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE CATEGORIES / HEALTHCARE EXCELLENCE CARDS (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Clinical
+            Excellence</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Clinical Home Healthcare Programs</h2>
+          <p>We deploy medical ecosystems designed to manage everything from sudden illness responses to complete home
+            support configurations.</p>
+        </div>
+        <div class="grid grid-3">
+          <!-- Card 1 -->
+          <div class="service-card reveal-left">
+            <div class="service-card-icon icon-blue">
+              <i class="fa-solid fa-user-nurse"></i>
+            </div>
+            <h3>Home Nursing</h3>
+            <p>24/7 bedside nursing care for recovering patients, managed directly by critical care specialists.</p>
+            <a href="404.html" class="service-card-link">View Program Details <i class="fa-solid fa-chevron-right"
+                style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          </div>
+          <!-- Card 2 -->
+          <div class="service-card reveal">
+            <div class="service-card-icon icon-emerald">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <h3>Doctor On-Call Visits</h3>
+            <p>Elite specialist consultations and diagnostic assessments conducted directly in the comfort of your room.
+            </p>
+            <a href="404.html" class="service-card-link">View Program Details <i class="fa-solid fa-chevron-right"
+                style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          </div>
+          <!-- Card 3 -->
+          <div class="service-card reveal-right">
+            <div class="service-card-icon icon-sky">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>Home ICU Systems</h3>
+            <p>Deploying state-of-the-art telemetry monitors, life support gear, and specialist staff inside your room.
+            </p>
+            <a href="404.html" class="service-card-link">View Program Details <i class="fa-solid fa-chevron-right"
+                style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Medical Departments preview -->
+        <div style="text-align: center; max-width: 700px; margin: 6rem auto 4rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Clinical
+            Verticals</span>
+          <h2 style="font-size: 2.4rem; margin-bottom: 1.5rem;">Our Medical Departments</h2>
+          <p>We orchestrate multi-disciplinary roster units spanning major medical specialties.</p>
+        </div>
+        <div class="grid grid-4" style="gap: 1.5rem;">
+          <!-- Dept 1 -->
+          <div class="glass-card-light reveal-left"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-heart-pulse"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Cardiology
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Comprehensive
+              telemetry checking and cardiac recovery.</p>
+          </div>
+          <!-- Dept 2 -->
+          <div class="glass-card-light reveal"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-secondary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-brain"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Neurology
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Stroke rehab,
+              sensory therapies, and cognitive coordination.</p>
+          </div>
+          <!-- Dept 3 -->
+          <div class="glass-card-light reveal"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-accent); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-lungs"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">
+              Pulmonology</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Ventilator
+              integration and active home oxygen management.</p>
+          </div>
+          <!-- Dept 4 -->
+          <div class="glass-card-light reveal-right"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); text-align: center;">
+            <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-user-doctor"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Geriatrics
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Care guidelines,
+              medication adherence, and age-related support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY FEATURES GRID (Soft Ice Blue Background) -->
+    <section class="section bg-light-blue">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">System
+            Features</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">AuraCare Core Clinical Features</h2>
+          <p>Real-time technical failovers, hospital-grade devices, and immediate dispatch channels.</p>
+        </div>
+        <div class="grid grid-3">
+          <!-- Feature 1 -->
+          <div class="glass-card-light reveal-left"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-signal"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">Active
+              Bio-Telemetry</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">Continuous sync of
+              blood pressure, blood glucose, and respiratory metrics directly to coordinators.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="glass-card-light reveal"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-secondary); font-size: 1.8rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-plug"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">Redundant
+              Cellular Power</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">Equipped with
+              cellular backups and redundant batteries to ensure vital ventilators never stop.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="glass-card-light reveal-right"
+            style="background: white; padding: 2.5rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-shield-check"></i></div>
+            <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">Accredited
+              Safety Standards</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">Strict enforcement
+              of ISO clinical cleaning protocols for all equipment delivered to residences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED DOCTORS PREVIEW (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Expert
+            Team</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Our Featured Specialists</h2>
+          <p>Our board-certified doctors provide daily clinical supervision, telemetry checking, and custom home care
+            protocols.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Doctor 1 -->
+          <div class="personnel-card reveal-left"
+            style="background: var(--bg-light-blue); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div class="personnel-image-wrapper" style="position: relative;">
+              <svg width="100%" height="220" viewBox="0 0 200 240" fill="none"
+                style="background:#e0e7ff; display: block;">
+                <circle cx="100" cy="90" r="45" fill="#c7d2fe" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#a5b4fc" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge"
+                style="background: var(--color-primary); color: white; position: absolute; top: 1rem; right: 1rem; padding: 0.3rem 0.8rem; font-size: 0.75rem; border-radius: var(--border-pill); font-weight: 600;">Cardiology</span>
+            </div>
+            <div class="personnel-info" style="padding: 2rem; background: white;">
+              <div style="color: var(--color-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (140+ reviews)</div>
+              <h3 class="personnel-name"
+                style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-dark);">Dr. Adrian
+                Mercer, MD</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Supervises acute post-cardiac operations, coronary diagnostics, and emergency telemetry dispatching.</p>
+              <a href="404.html" class="btn btn-outline-dark btn-sm"
+                style="width: 100%; text-align: center; display: block;">View Roster Profile</a>
+            </div>
+          </div>
+          <!-- Doctor 2 -->
+          <div class="personnel-card reveal"
+            style="background: var(--bg-light-blue); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div class="personnel-image-wrapper" style="position: relative;">
+              <svg width="100%" height="220" viewBox="0 0 200 240" fill="none"
+                style="background:#d1fae5; display: block;">
+                <circle cx="100" cy="90" r="45" fill="#a7f3d0" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#6ee7b7" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge"
+                style="background: var(--color-primary); color: white; position: absolute; top: 1rem; right: 1rem; padding: 0.3rem 0.8rem; font-size: 0.75rem; border-radius: var(--border-pill); font-weight: 600;">Neurology</span>
+            </div>
+            <div class="personnel-info" style="padding: 2rem; background: white;">
+              <div style="color: var(--color-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.8 (120+ reviews)</div>
+              <h3 class="personnel-name"
+                style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-dark);">Dr. Evelyn
+                Vance, MD</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Leads physical therapy planning for stroke survivors, memory exercises, and cognitive therapies.</p>
+              <a href="404.html" class="btn btn-outline-dark btn-sm"
+                style="width: 100%; text-align: center; display: block;">View Roster Profile</a>
+            </div>
+          </div>
+          <!-- Doctor 3 -->
+          <div class="personnel-card reveal-right"
+            style="background: var(--bg-light-blue); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div class="personnel-image-wrapper" style="position: relative;">
+              <svg width="100%" height="220" viewBox="0 0 200 240" fill="none"
+                style="background:#fee2e2; display: block;">
+                <circle cx="100" cy="90" r="45" fill="#fecaca" />
+                <path d="M30 210c0-40 30-70 70-70s70 30 70 70v30H30v-30Z" fill="#fca5a5" />
+                <path d="M85 105 h30 M100 90 v30" stroke="white" stroke-width="4" stroke-linecap="round" />
+              </svg>
+              <span class="personnel-badge"
+                style="background: var(--color-primary); color: white; position: absolute; top: 1rem; right: 1rem; padding: 0.3rem 0.8rem; font-size: 0.75rem; border-radius: var(--border-pill); font-weight: 600;">Pediatrics</span>
+            </div>
+            <div class="personnel-info" style="padding: 2rem; background: white;">
+              <div style="color: var(--color-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;"><i
+                  class="fa-solid fa-star"></i> 4.9 (95+ reviews)</div>
+              <h3 class="personnel-name"
+                style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-dark);">Dr. Sarah
+                Jenkins, MD</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Leads development checks, post-natal baby growth checkups, and childhood immunization timelines.</p>
+              <a href="404.html" class="btn btn-outline-dark btn-sm"
+                style="width: 100%; text-align: center; display: block;">View Roster Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS STORIES CARDS (Deep Navy Background) -->
+    <section class="section bg-deep-navy">
+      <div class="container">
+        <div style="max-width: 700px; margin-bottom: 5rem;" class="reveal">
+          <span
+            style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Patient
+            Voice</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem; color: white;">Success Stories Cards</h2>
+          <p style="color: var(--text-muted-light);">Trusted by families recovering from cardiology surgery and
+            neurological impairments.</p>
+        </div>
+        <div class="grid grid-3">
+          <!-- Story 1 -->
+          <div class="glass-card reveal-left"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-quote-left"></i></div>
+            <p
+              style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 2rem;">
+              "During my father's post-stroke recovery, the home ICU setup was a lifesaver. The telemetry alarms and
+              on-site RN gave our family complete clinical confidence."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div
+                style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem;">
+                MH</div>
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 600; color: white; margin: 0;">Margaret Hamilton</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted-light);">Daughter of Cardiac Patient</span>
+              </div>
+            </div>
+          </div>
+          <!-- Story 2 -->
+          <div class="glass-card reveal"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-quote-left"></i></div>
+            <p
+              style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 2rem;">
+              "The physical therapist coordinated orthopedics rehab sessions in my living room. I was walking
+              independently weeks before the hospital predicted."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div
+                style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem;">
+                JD</div>
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 600; color: white; margin: 0;">John Davis</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted-light);">Orthopedic Rehab Client</span>
+              </div>
+            </div>
+          </div>
+          <!-- Story 3 -->
+          <div class="glass-card reveal-right"
+            style="background: rgba(15, 26, 44, 0.6); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 1.2rem;"><i
+                class="fa-solid fa-quote-left"></i></div>
+            <p
+              style="color: var(--text-muted-light); font-size: 0.95rem; line-height: 1.7; font-style: italic; margin-bottom: 2rem;">
+              "Having a registered nurse verify my blood sugar daily and coordinate prescriptions saved us countless
+              stressful drives to the emergency ward."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div
+                style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem;">
+                EC</div>
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 600; color: white; margin: 0;">Elena Chang</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted-light);">Geriatric Program Sponsor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSURANCE & PARTNERS SECTION (Pure White Background) -->
+    <section class="section bg-soft-white" style="padding: 6rem 0;">
+      <div class="container" style="text-align: center;">
+        <h4
+          style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; color: var(--text-muted-dark); margin-bottom: 3rem;">
+          Affiliated Clinical Partners & Insurance Networks</h4>
+        <div
+          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; align-items: center; opacity: 0.85;"
+          class="scale-up">
+          <div
+            style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.4rem; color: var(--text-dark);">
+            <i class="fa-solid fa-clinic-medical" style="color: var(--color-primary);"></i> Mayo Clinic
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.4rem; color: var(--text-dark);">
+            <i class="fa-solid fa-hospital-user" style="color: var(--color-primary);"></i> Cleveland Clinical
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.4rem; color: var(--text-dark);">
+            <i class="fa-solid fa-shield-heart" style="color: var(--color-secondary);"></i> Blue Cross
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.4rem; color: var(--text-dark);">
+            <i class="fa-solid fa-heart-pulse" style="color: var(--color-danger);"></i> Aetna Care
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US (Soft Light Blue Background) -->
+    <section class="section bg-light-blue">
+      <div class="container grid grid-2" style="align-items: center; gap: 5rem;">
+        <div class="reveal-left">
+          <div style="border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/elder_care.png" alt="Happy senior woman with a clinical caretaker"
+              style="width: 100%; border-radius: var(--border-radius-lg);">
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Elite
+            Quality Assured</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 2rem;">Why AuraCare Commands Respect</h2>
+          <p style="margin-bottom: 3rem; line-height: 1.8;">
+            AuraCare is built on clinical integrity. We do not just send a sitter; we install full-scale, tech-enabled
+            medical solutions with constant clinical telemetry to AuraCare operations headquarters.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <!-- Box 1 -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div style="color: var(--color-primary); font-size: 1.8rem; margin-top: 0.2rem;"><i
+                  class="fa-solid fa-award"></i></div>
+              <div>
+                <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-dark);">Joint
+                  Commission Accredited</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">Recognized for
+                  outstanding safety benchmarks, our staff follows strict protocols equivalent to top international
+                  hospitals.</p>
+              </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="glass-card-light"
+              style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div style="color: var(--color-secondary); font-size: 1.8rem; margin-top: 0.2rem;"><i
+                  class="fa-solid fa-laptop-medical"></i></div>
+              <div>
+                <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-dark);">
+                  Continuous Bio-Telemetry Cuffs</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted-dark); margin: 0;">Each patient
+                  gets connected to a medical hub streaming vital telemetry (blood pressure, heart rate, blood oxygen)
+                  to our dispatch office.</p>
+              </div>
+            </div>
+
+            <!-- Trust Badges & Certifications Row -->
+            <div
+              style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 3rem; align-items: center; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 2rem;">
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">
+                <i class="fa-solid fa-circle-check" style="color: var(--color-secondary);"></i> Joint Commission Gold
+                Seal
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">
+                <i class="fa-solid fa-circle-check" style="color: var(--color-secondary);"></i> HIPAA Compliant
+                Infrastructure
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">
+                <i class="fa-solid fa-circle-check" style="color: var(--color-secondary);"></i> ISO 9001:2015 Safety
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREATMENT PROCESS CARDS (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 6rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Deployment
+            Routine</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">How AuraCare Clinical Action Works</h2>
+          <p>We configure complex home setups within hours of authorization.</p>
+        </div>
+        <div class="grid grid-4" style="gap: 2.5rem; position: relative;">
+          <!-- Card 1 -->
+          <div class="glass-card-light scale-up"
+            style="background: white; padding: 2.2rem; position: relative; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-clipboard-user"></i></div>
+            <div
+              style="font-size: 2.5rem; font-weight: 800; color: rgba(0, 102, 255, 0.08); position: absolute; right: 2rem; top: 1.5rem;">
+              01</div>
+            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Clinical
+              Review</h4>
+            <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">A supervising
+              physician evaluates the patient history and constructs a daily therapy layout.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="glass-card-light scale-up delay-100"
+            style="background: white; padding: 2.2rem; position: relative; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-satellite-dish"></i></div>
+            <div
+              style="font-size: 2.5rem; font-weight: 800; color: rgba(0, 102, 255, 0.08); position: absolute; right: 2rem; top: 1.5rem;">
+              02</div>
+            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Telemetry
+              Setup</h4>
+            <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">We deliver and
+              calibrate oxygen equipment, monitors, and telemetry bands on-site.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="glass-card-light scale-up delay-200"
+            style="background: white; padding: 2.2rem; position: relative; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-house-medical"></i></div>
+            <div
+              style="font-size: 2.5rem; font-weight: 800; color: rgba(0, 102, 255, 0.08); position: absolute; right: 2rem; top: 1.5rem;">
+              03</div>
+            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Team
+              Deployment</h4>
+            <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">A designated nurse
+              is assigned to the household to lead scheduled physical tasks.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="glass-card-light scale-up delay-300"
+            style="background: white; padding: 2.2rem; position: relative; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <div style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 1rem;"><i
+                class="fa-solid fa-chart-line"></i></div>
+            <div
+              style="font-size: 2.5rem; font-weight: 800; color: rgba(0, 102, 255, 0.08); position: absolute; right: 2rem; top: 1.5rem;">
+              04</div>
+            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark);">Supervised
+              Recovery</h4>
+            <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">Physicians verify
+              dashboards and refine protocols via telehealth daily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGENCY CONTACT BANNER (Dynamic Red Highlight) -->
+    <section class="section"
+      style="background: linear-gradient(135deg, #7f1d1d, #450a0a); color: white; padding: 5rem 0;">
+      <div class="container"
+        style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 3rem;">
+        <div class="reveal-left" style="max-width: 700px;">
+          <span
+            style="background-color: var(--color-danger); color: white; font-weight: 700; padding: 0.4rem 1rem; border-radius: var(--border-pill); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 1.2rem;">Urgent
+            Critical Care Dispatch</span>
+          <h2 style="font-size: 2.4rem; color: white; font-weight: 700; margin-bottom: 1rem;">Require Ambulance or ICU
+            Intervention?</h2>
+          <p style="color: var(--text-muted-light); font-size: 1.05rem;">Our mobile units carry ventilator setups and
+            diagnostic tools. Dispatched instantly in under 12 minutes.</p>
+        </div>
+        <div class="reveal-right" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+          <a href="tel:+18005557788" class="btn btn-emergency ripple"
+            style="font-size: 1.1rem; padding: 1.2rem 2.6rem;">
+            <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>
+            <span>Dial Emergency Command: +1 (800) 555-7788</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Common
+            Inquiries</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+          <p>Learn more about our home clinical coordination and telehealth telemetry solutions.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 1.5rem;" class="reveal">
+          <!-- Item 1 -->
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="color: var(--color-primary); font-size: 1.4rem; margin-top: 0.2rem;"><i
+                class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">What
+                regions do AuraCare mobile teams cover?</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">
+                Our active clinical coordination desks serve the Greater New York Metropolitan area, central London
+                districts, Singapore clinics, and the Toronto metro region. We dispatch registered nurses and equipment
+                vans directly from our regional hubs.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="color: var(--color-primary); font-size: 1.4rem; margin-top: 0.2rem;"><i
+                class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">Is
+                home-based clinical ICU care covered by health insurance?</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">
+                Yes, AuraCare is an in-network provider with premium insurance plans including Aetna, Blue Cross
+                Alliance, and Cigna. Home ICU setups and active telehealth monitoring require a physician referral and
+                insurance pre-authorization.
+              </p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="color: var(--color-primary); font-size: 1.4rem; margin-top: 0.2rem;"><i
+                class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--text-dark);">How are
+                telemetry alerts and diagnostics handled at home?</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted-dark); margin: 0;">
+                Every active bed is equipped with a digital telemetry hub that monitors vitals like blood pressure,
+                oxygen saturation, and heart rate. If any metric crosses safe thresholds, our central Telehealth Control
+                Room receives an automated alert and dispatches mobile units immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CTA (Light Slate Background) -->
+    <section class="section bg-light-blue" style="padding: 6rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <div class="container grid grid-2" style="align-items: center; gap: 4rem;">
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Healthcare
+            Tips</span>
+          <h2 style="font-size: 2.4rem; margin-bottom: 1rem;">AuraCare Monthly Journal</h2>
+          <p style="margin: 0; line-height: 1.6; color: var(--text-muted-dark);">Subscribe to receive audited clinical
+            digests, heart-health tips, and post-surgery care guidelines directly from our medical directors.</p>
+        </div>
+        <div class="reveal-right">
+          <div class="glass-card-light"
+            style="background: white; padding: 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm);">
+            <form onsubmit="event.preventDefault(); showToast('Subscription registered securely.');"
+              style="display: flex; gap: 1rem;">
+              <input type="email" placeholder="Enter clinical email..."
+                style="background: var(--bg-soft-white); border: 1px solid rgba(0,0,0,0.1); padding: 1rem 1.5rem; border-radius: var(--border-radius-sm); font-size: 0.95rem; flex-grow: 1; color: var(--text-dark);"
+                required>
+              <button type="submit" class="btn btn-primary ripple" style="padding: 0 2rem;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEALTH TIPS PREVIEW (Pure White Background) -->
+    <section class="section bg-soft-white">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;" class="reveal">
+          <span
+            style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">Preventive
+            Care</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Latest Clinical Health Tips</h2>
+          <p>Read trending post-operative care logs and healthy lifestyle guides compiled by our medical directors.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Article 1 -->
+          <div class="glass-card-light reveal-left"
+            style="background: white; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden; padding: 0; display: flex; flex-direction: column;">
+            <div
+              style="background: var(--color-primary); padding: 3rem 2rem; color: white; text-align: center; position: relative;">
+              <i class="fa-solid fa-heart-pulse"
+                style="font-size: 3rem; opacity: 0.15; position: absolute; right: 1rem; top: 1rem;"></i>
+              <span
+                style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: var(--border-pill); font-size: 0.75rem; text-transform: uppercase; font-weight: 600;">Cardiology</span>
+              <h4 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; color: white; line-height: 1.4;">10
+                Critical Guidelines for In-Home Heart Recovery</h4>
+            </div>
+            <div
+              style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Managing salt reduction targets, ECG vitals checks, and safe daily walking limits after surgery.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted-dark); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+                <span><i class="fa-solid fa-clock"></i> 5 min read</span>
+                <a href="404.html" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">Read
+                  Article</a>
+              </div>
+            </div>
+          </div>
+          <!-- Article 2 -->
+          <div class="glass-card-light reveal"
+            style="background: white; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden; padding: 0; display: flex; flex-direction: column;">
+            <div
+              style="background: var(--color-secondary); padding: 3rem 2rem; color: white; text-align: center; position: relative;">
+              <i class="fa-solid fa-brain"
+                style="font-size: 3rem; opacity: 0.15; position: absolute; right: 1rem; top: 1rem;"></i>
+              <span
+                style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: var(--border-pill); font-size: 0.75rem; text-transform: uppercase; font-weight: 600;">Neurology</span>
+              <h4 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; color: white; line-height: 1.4;">
+                Cognitive Support for Early Dementia</h4>
+            </div>
+            <div
+              style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Structured memory tasks, sensory calibration, and safety adjustments for elderly home care.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted-dark); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+                <span><i class="fa-solid fa-clock"></i> 7 min read</span>
+                <a href="404.html" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">Read
+                  Article</a>
+              </div>
+            </div>
+          </div>
+          <!-- Article 3 -->
+          <div class="glass-card-light reveal-right"
+            style="background: white; border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); overflow: hidden; padding: 0; display: flex; flex-direction: column;">
+            <div
+              style="background: var(--color-primary); padding: 3rem 2rem; color: white; text-align: center; position: relative;">
+              <i class="fa-solid fa-plate-wheat"
+                style="font-size: 3rem; opacity: 0.15; position: absolute; right: 1rem; top: 1rem;"></i>
+              <span
+                style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: var(--border-pill); font-size: 0.75rem; text-transform: uppercase; font-weight: 600;">Nutrition</span>
+              <h4 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; color: white; line-height: 1.4;">
+                Diabetes Care & Nutritional Balance</h4>
+            </div>
+            <div
+              style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <p style="font-size: 0.9rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                Managing glycemic index trends, insulin dose verification, and carbohydrate control strategies.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted-dark); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1rem;">
+                <span><i class="fa-solid fa-clock"></i> 6 min read</span>
+                <a href="404.html" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">Read
+                  Article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="404.html" class="btn btn-outline-dark">Explore AuraCare Medical Journal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOK APPOINTMENT FORM (Slate Navy Background) -->
+    <section id="book" class="section bg-deep-navy">
+      <div class="container grid grid-2" style="gap: 5rem; align-items: center;">
+        <div class="reveal-left">
+          <span
+            style="color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1.2rem;">Reserve
+            Medical Slots</span>
+          <h2 style="font-size: 3rem; margin-bottom: 2rem;">Secure healthCare Support</h2>
+          <p style="margin-bottom: 3rem; line-height: 1.8;">
+            Schedule an initial consultation. Our clinical assessment team will perform on-site vitals tests and draft a
+            specialized nursing itinerary suited for your wellness goals.
+          </p>
+          <div class="footer-contact-info" style="gap: 2rem;">
+            <div class="footer-contact-item">
+              <i style="color: var(--color-primary); font-size: 1.4rem;"><i
+                  class="fa-solid fa-map-location-dot"></i></i>
+              <div>
+                <strong
+                  style="color: white; display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.2rem;">Headquarters</strong>
+                <span style="color: var(--text-muted-light);">3/12,chennai,india</span>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i style="color: var(--color-primary); font-size: 1.4rem;"><i
+                  class="fa-solid fa-envelope-open-text"></i></i>
+              <div>
+                <strong
+                  style="color: white; display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.2rem;">Consultation
+                  Dispatch</strong>
+                <a href="mailto:assessment@auracare.com"
+                  style="color: var(--text-muted-light);">stackly@healthCare.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <div class="glass-card"
+            style="background: rgba(255,255,255,0.05); padding: 3.5rem; border-radius: var(--border-radius-lg);">
+            <h3 style="font-size: 1.6rem; margin-bottom: 2.2rem; font-family: var(--font-heading);">Schedule Assessment
+              Consultation</h3>
+            <form id="appointment-form">
+              <div class="form-group">
+                <label style="color: var(--text-light);">Patient Name</label>
+                <div class="form-control-wrapper">
+                  <i style="color: var(--text-muted-light);"><i class="fa-solid fa-user"></i></i>
+                  <input type="text" class="form-control"
+                    style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white;"
+                    required>
+                </div>
+              </div>
+              <div class="grid grid-2" style="gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="color: var(--text-light);">Contact Mobile</label>
+                  <div class="form-control-wrapper">
+                    <i style="color: var(--text-muted-light);"><i class="fa-solid fa-phone"></i></i>
+                    <input type="tel" class="form-control"
+                      style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white;"
+                      required>
+                  </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="color: var(--text-light);">Service Program</label>
+                  <div class="form-control-wrapper">
+                    <select class="form-control"
+                      style="background: var(--bg-slate-navy); border-color: rgba(255,255,255,0.1); color: white; padding-left: 1.2rem; cursor: pointer;"
+                      required>
+                      <option value="">Choose Service</option>
+                      <option value="nursing">Home Critical Nursing</option>
+                      <option value="doctor">Physician On-Call Visit</option>
+                      <option value="icu">Full Telemetry Home ICU</option>
+                      <option value="rehab">Orthopedic Rehabilitation</option>
+                      <option value="elder">Elder Care Operations</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 2.5rem;">
+                <label style="color: var(--text-light);">Diagnosis Notes / Requirements</label>
+                <textarea rows="3" class="form-control" placeholder="Describe clinical challenges or symptoms..."
+                  style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white; padding-left: 1.5rem;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary ripple" style="width: 100%;">Transmit Booking
+                Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="global-footer" class="footer"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
