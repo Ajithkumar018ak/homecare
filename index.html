@@ -95,46 +95,18 @@
 
         <div class="reveal-right floating" style="position: relative;">
           <!-- Floating Vital Telemetry Widget (Top-Left) -->
-          <div class="glass-card"
-            style="position: absolute; top: -1.5rem; left: -2rem; padding: 1rem 1.5rem; border-radius: var(--border-radius-sm); background: rgba(7, 17, 31, 0.8); backdrop-filter: blur(10px); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,255,255,0.15); z-index: 10; box-shadow: var(--shadow-lg);">
-            <div style="color: var(--color-danger); font-size: 1.5rem;"><i class="fa-solid fa-heart-pulse"></i></div>
-            <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted-light); display: block; text-transform: uppercase;">Real-Time
-                ECG</span>
-              <strong style="color: white; font-size: 1rem; font-family: monospace;">72 BPM • Stable</strong>
-            </div>
-          </div>
+
 
           <!-- Floating Staff Alert Widget (Bottom-Right) -->
-          <div class="glass-card"
-            style="position: absolute; bottom: 3rem; right: -1.5rem; padding: 1rem 1.5rem; border-radius: var(--border-radius-sm); background: rgba(7, 17, 31, 0.8); backdrop-filter: blur(10px); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,255,255,0.15); z-index: 10; box-shadow: var(--shadow-lg);">
-            <div style="color: var(--color-secondary); font-size: 1.5rem;"><i class="fa-solid fa-user-doctor"></i></div>
-            <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted-light); display: block; text-transform: uppercase;">Medical
-                Lead</span>
-              <strong style="color: white; font-size: 0.95rem;">Dr. Mercer [On-Duty]</strong>
-            </div>
-          </div>
 
           <div
             style="position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
             <img src="assets/h1.webp" alt="Clinical caregiver monitoring senior patient at home"
               style="width: 100%; border-radius: var(--border-radius-lg); filter: brightness(0.95);">
-            <div class="glass-card"
-              style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.2rem; border-radius: var(--border-radius-md); display: flex; align-items: center; gap: 1.2rem; background: rgba(7, 17, 31, 0.7); backdrop-filter: blur(10px);">
-              <div
-                style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-secondary); animation: heartbeat 1.5s infinite;">
-              </div>
-              <div>
-                <h4 style="font-size: 1rem; font-weight: 600; color: white;">Interactive Live Monitoring</h4>
-                <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted-light);">Telemetry link to AuraCare HQ
-                  active.</p>
-              </div>
-            </div>
+
           </div>
         </div>
+      </div>
       </div>
 
 
@@ -950,7 +922,7 @@
                 <label style="color: var(--text-light);">Patient Name</label>
                 <div class="form-control-wrapper">
                   <i style="color: var(--text-muted-light);"><i class="fa-solid fa-user"></i></i>
-                  <input type="text" class="form-control"
+                  <input type="text" class="form-control alphabet-only"
                     style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white;"
                     required>
                 </div>
@@ -960,7 +932,7 @@
                   <label style="color: var(--text-light);">Contact Mobile</label>
                   <div class="form-control-wrapper">
                     <i style="color: var(--text-muted-light);"><i class="fa-solid fa-phone"></i></i>
-                    <input type="tel" class="form-control"
+                    <input type="tel" class="form-control phone-only"
                       style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white;"
                       required>
                   </div>

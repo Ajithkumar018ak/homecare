@@ -821,3 +821,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+
+document.addEventListener("input", function (e) {
+
+  // Name - Alphabets only
+  if (e.target.classList.contains("name-only")) {
+    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+  }
+
+
+  // Phone - Numbers only
+  if (e.target.classList.contains("phone-only")) {
+    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+  }
+
+});
