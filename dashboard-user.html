@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/dashboard-premium.css">
 </head>
+
 <body id="user-dashboard-root" style="overflow-y: auto; background-color: #f1f5f9;">
 
   <!-- MOBILE OVERLAY -->
@@ -21,20 +23,30 @@
         <h3 id="video-call-practitioner">Dr. Adrian Mercer</h3>
         <p>Telemetry Consultation (Video Feed SECURE)</p>
       </div>
-      <div style="width: 100%; height: 180px; background-color: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; margin: 1rem 0;">
+      <div
+        style="width: 100%; height: 180px; background-color: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; margin: 1rem 0;">
         <!-- Simulated camera feeds -->
-        <span style="color: var(--text-muted-light); font-size: 0.8rem; font-weight: 600;">Dr. Mercer camera feed active...</span>
-        <div style="position: absolute; bottom: 8px; right: 8px; width: 60px; height: 45px; background-color: #475569; border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1.5px solid white;">
+        <span style="color: var(--text-muted-light); font-size: 0.8rem; font-weight: 600;">Dr. Mercer camera feed
+          active...</span>
+        <div
+          style="position: absolute; bottom: 8px; right: 8px; width: 60px; height: 45px; background-color: #475569; border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1.5px solid white;">
           <span style="color: white; font-size: 0.6rem;">You</span>
         </div>
       </div>
       <div class="call-timer">00:00</div>
       <div class="call-controls">
         <button class="call-ctrl-btn mute" aria-label="Mute mic">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+            <line x1="12" x2="12" y1="19" y2="22" />
+          </svg>
         </button>
         <button class="call-ctrl-btn end" aria-label="End call">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z" />
+          </svg>
         </button>
       </div>
     </div>
@@ -48,14 +60,22 @@
         <h3 id="voice-call-practitioner">Sarah Jenkins, RN</h3>
         <p>Primary Health Room Audio Dispatch</p>
       </div>
-      <div style="margin: 2rem 0; color: var(--color-accent); font-weight: 700; letter-spacing: 2px;">SECURE AUDIO CONNECTED</div>
+      <div style="margin: 2rem 0; color: var(--color-accent); font-weight: 700; letter-spacing: 2px;">SECURE AUDIO
+        CONNECTED</div>
       <div class="call-timer">00:00</div>
       <div class="call-controls">
         <button class="call-ctrl-btn mute" aria-label="Mute mic">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+            <line x1="12" x2="12" y1="19" y2="22" />
+          </svg>
         </button>
         <button class="call-ctrl-btn end" aria-label="End call">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z" />
+          </svg>
         </button>
       </div>
     </div>
@@ -64,13 +84,17 @@
   <!-- QUICK CHECKOUT PAY MODAL -->
   <div class="checkout-modal-overlay" id="checkout-modal-overlay">
     <div class="checkout-modal-box animate-scale-in">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem; margin-bottom: 1.5rem;">
         <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-dark);">Secure Bank Billing Checkout</h4>
-        <span style="font-size: 1.5rem; font-weight: 700; color: var(--text-muted-dark); cursor: pointer;" id="checkout-cancel-btn">&times;</span>
+        <span style="font-size: 1.5rem; font-weight: 700; color: var(--text-muted-dark); cursor: pointer;"
+          id="checkout-cancel-btn">&times;</span>
       </div>
-      <div style="background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+      <div
+        style="background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
         <p style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted-dark);">INVOICE IDENTIFIER</p>
-        <h5 style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark);" id="checkout-invoice-id-span">INV-2026-004</h5>
+        <h5 style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark);" id="checkout-invoice-id-span">
+          INV-2026-004</h5>
       </div>
       <form id="checkout-form-inner">
         <div class="form-group">
@@ -83,14 +107,17 @@
         </div>
         <div class="form-group">
           <label>CARD HOLDER NAME</label>
-          <input type="text" class="form-control" placeholder="John Doe" style="padding-left: 1rem; background: white;" required>
+          <input type="text" class="form-control" placeholder="John Doe" style="padding-left: 1rem; background: white;"
+            required>
         </div>
         <div class="form-group">
           <label>CARD DETAILS</label>
-          <input type="text" class="form-control" placeholder="4111 2222 3333 4444" style="padding-left: 1rem; background: white;" required>
+          <input type="text" class="form-control" placeholder="4111 2222 3333 4444"
+            style="padding-left: 1rem; background: white;" required>
         </div>
         <div style="display: flex; gap: 1rem; margin-top: 1.8rem;">
-          <button type="submit" class="btn btn-primary" style="flex: 1; padding: 0.8rem 1rem; font-size: 0.88rem; border-radius: 8px;">Transmit Payment</button>
+          <button type="submit" class="btn btn-primary"
+            style="flex: 1; padding: 0.8rem 1rem; font-size: 0.88rem; border-radius: 8px;">Transmit Payment</button>
         </div>
       </form>
     </div>
@@ -101,39 +128,63 @@
     <aside class="dashboard-sidebar">
       <div class="sidebar-brand">
         <a href="index.html" class="logo">
-          <i class="logo-cross" style="color: var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></i>
-          <span style="color: white; font-size: 1.4rem;">AuraCare Hub</span>
+          <img src="assets/logo.webp" alt="AuraCare Hub Logo" class="logo-img">
+
+
         </a>
       </div>
       <nav class="sidebar-menu">
         <div class="sidebar-item active" data-section="sec-overview">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="7" height="9" x="3" y="3" rx="1" />
+            <rect width="7" height="5" x="14" y="3" rx="1" />
+            <rect width="7" height="9" x="14" y="12" rx="1" />
+            <rect width="7" height="5" x="3" y="16" rx="1" />
+          </svg>
           <span>Health Overview</span>
         </div>
         <div class="sidebar-item" data-section="sec-appointments">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <line x1="16" x2="16" y1="2" y2="6" />
+            <line x1="8" x2="8" y1="2" y2="6" />
+            <line x1="3" x2="21" y1="10" y2="10" />
+          </svg>
           <span>Appointments</span>
         </div>
         <div class="sidebar-item" data-section="sec-reports">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
           <span>Medical Reports</span>
         </div>
         <div class="sidebar-item" data-section="sec-meds">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
           <span>Medication Tracker</span>
         </div>
         <div class="sidebar-item" data-section="sec-messages">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
           <span>Clinical Chat</span>
         </div>
         <div class="sidebar-item" data-section="sec-billing">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="14" x="2" y="5" rx="2" />
+            <line x1="2" x2="22" y1="10" y2="10" />
+          </svg>
           <span>Billing & Invoices</span>
         </div>
       </nav>
       <div class="sidebar-footer">
-        <a href="index.html" class="sidebar-item" style="color: var(--color-danger); background: transparent; box-shadow: none;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        <a href="index.html" class="sidebar-item"
+          style="color: var(--color-danger); background: transparent; box-shadow: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+          </svg>
           <span>Sign Out Hub</span>
         </a>
       </div>
@@ -150,14 +201,20 @@
             <span></span>
             <span></span>
           </button>
-          
+
           <!-- Breadcrumb & Date -->
           <div class="header-breadcrumb-area">
             <div class="breadcrumb" id="header-breadcrumb">
-              <span class="breadcrumb-item">AuraCare</span> / <span class="breadcrumb-item active" id="current-page-breadcrumb">Health Overview</span>
+              <span class="breadcrumb-item">AuraCare</span> / <span class="breadcrumb-item active"
+                id="current-page-breadcrumb">Health Overview</span>
             </div>
             <div class="current-date-badge" id="current-date-display">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
               <span id="live-date">August 03, 2026</span>
             </div>
           </div>
@@ -165,26 +222,46 @@
 
         <!-- Search Bar -->
         <div class="header-search-bar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
           <input type="text" id="global-dashboard-search" placeholder="Search vitals, records, bills...">
         </div>
 
         <div class="topbar-actions">
           <!-- Theme Switch Placeholder -->
-          <div class="theme-switch-btn" id="theme-switch-placeholder" onclick="showToast('Theme switching is preset to light mode for optimal clinical readability.');">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <div class="theme-switch-btn" id="theme-switch-placeholder"
+            onclick="showToast('Theme switching is preset to light mode for optimal clinical readability.');">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
           </div>
 
           <!-- Messages Shortcut -->
           <div class="message-badge" onclick="document.querySelector('[data-section=\'sec-messages\']').click();">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
             <span class="badge-dot"></span>
           </div>
 
           <!-- Notifications -->
-          <div class="notification-badge" id="notification-bell-btn" onclick="showToast('Roster changes: Nurse Jenkins shifted check-in time to 14:00.');">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-            
+          <div class="notification-badge" id="notification-bell-btn"
+            onclick="showToast('Roster changes: Nurse Jenkins shifted check-in time to 14:00.');">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+
             <!-- Dropdown list -->
             <div class="notifications-dropdown" id="notifications-dropdown-menu">
               <div class="dropdown-header">
@@ -194,7 +271,12 @@
               <div class="dropdown-items">
                 <div class="dropdown-item unread">
                   <div class="item-icon">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                      <line x1="16" x2="16" y1="2" y2="6" />
+                      <line x1="8" x2="8" y1="2" y2="6" />
+                      <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
                   </div>
                   <div class="item-content">
                     <p>New consult with Dr. Mercer scheduled</p>
@@ -203,7 +285,9 @@
                 </div>
                 <div class="dropdown-item">
                   <div class="item-icon">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
                   </div>
                   <div class="item-content">
                     <p>Medication Lisinopril refill due soon</p>
@@ -212,7 +296,10 @@
                 </div>
                 <div class="dropdown-item">
                   <div class="item-icon">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="20" height="14" x="2" y="5" rx="2" />
+                      <line x1="2" x2="22" y1="10" y2="10" />
+                    </svg>
                   </div>
                   <div class="item-content">
                     <p>Invoice INV-2026-004 is pending payment</p>
@@ -224,12 +311,17 @@
           </div>
 
           <!-- Settings Shortcut -->
-          <div class="settings-shortcut-btn" onclick="showToast('Profile settings, security codes and credentials dashboard loading...');">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <div class="settings-shortcut-btn"
+            onclick="showToast('Profile settings, security codes and credentials dashboard loading...');">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
           </div>
 
           <!-- User Profile Menu -->
-      
+
         </div>
       </div>
 
@@ -238,11 +330,14 @@
         <!-- Welcome Banner -->
         <div class="welcome-banner-card" style="margin-bottom: 2rem;">
           <div class="welcome-banner-content">
-            <h2>Welcome back, John Doe</h2>
-            <p>Your AuraCare patient health indexes are steady today. You have completed 2 out of your 3 primary treatment checklist steps. Keep up the great progress!</p>
+            <h2>Welcome back, user</h2>
+            <p>Your AuraCare patient health indexes are steady today. You have completed 2 out of your 3 primary
+              treatment checklist steps. Keep up the great progress!</p>
             <div class="welcome-banner-actions" style="margin-top: 1.2rem;">
-              <button class="btn btn-outline-light btn-sm" onclick="document.querySelector('[data-section=\'sec-appointments\']').click();">Book Consult</button>
-              <button class="btn btn-secondary btn-sm" onclick="document.querySelector('[data-section=\'sec-meds\']').click();">Track Intake</button>
+              <button class="btn btn-outline-light btn-sm"
+                onclick="document.querySelector('[data-section=\'sec-appointments\']').click();">Book Consult</button>
+              <button class="btn btn-secondary btn-sm"
+                onclick="document.querySelector('[data-section=\'sec-meds\']').click();">Track Intake</button>
             </div>
           </div>
           <div class="health-score-circle-container">
@@ -258,20 +353,28 @@
         </div>
 
         <!-- Health Alerts Warning Panel -->
-        <div class="premium-info-card smooth-hover-glow" style="border-left: 4px solid var(--color-warning); margin-bottom: 2rem;">
+        <div class="premium-info-card smooth-hover-glow"
+          style="border-left: 4px solid var(--color-warning); margin-bottom: 2rem;">
           <div style="display: flex; gap: 1rem; align-items: flex-start;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-warning)" stroke-width="2" style="flex-shrink: 0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-warning)" stroke-width="2"
+              style="flex-shrink: 0;">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <line x1="12" x2="12" y1="9" y2="13" />
+              <line x1="12" x2="12.01" y1="17" y2="17" />
+            </svg>
             <div>
-              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.2rem;">Active Clinical Health Alerts</h4>
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.2rem;">Active
+                Clinical Health Alerts</h4>
               <p style="font-size: 0.82rem; color: var(--text-muted-dark); line-height: 1.5;">
-                Your seasonal influenza vaccination booster is enqueued. Additionally, telemetry logs detected a minor BP elevation (135/88 mmHg) yesterday evening. Continue monitoring twice daily as recommended.
+                Your seasonal influenza vaccination booster is enqueued. Additionally, telemetry logs detected a minor
+                BP elevation (135/88 mmHg) yesterday evening. Continue monitoring twice daily as recommended.
               </p>
             </div>
           </div>
         </div>
 
         <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">Daily Health Summary</h3>
-        
+
         <!-- Metrics Rows (12 metrics total) -->
         <div class="metrics-row" style="margin-bottom: 2rem;">
           <div class="metric-card smooth-hover-glow">
@@ -280,7 +383,10 @@
               <h3>72 <span style="font-size: 0.95rem; font-weight: 500;">BPM</span></h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -289,7 +395,9 @@
               <h3>120/80 <span style="font-size: 0.95rem; font-weight: 500;">mmHg</span></h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -298,7 +406,9 @@
               <h3>98%</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -307,7 +417,9 @@
               <h3>65%</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-3-6-7-10-4 4-7 8-7 10a7 7 0 0 0 7 7Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22a7 7 0 0 0 7-7c0-2-3-6-7-10-4 4-7 8-7 10a7 7 0 0 0 7 7Z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -319,7 +431,9 @@
               <h3>98.6 <span style="font-size: 0.95rem; font-weight: 500;">°F</span></h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -328,7 +442,9 @@
               <h3>16 <span style="font-size: 0.95rem; font-weight: 500;">/min</span></h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -337,7 +453,10 @@
               <h3>22.4</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17v-4h6v4"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <path d="M9 17v-4h6v4" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -346,7 +465,9 @@
               <h3>74 <span style="font-size: 0.95rem; font-weight: 500;">kg</span></h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -358,7 +479,9 @@
               <h3>7.5 <span style="font-size: 0.95rem; font-weight: 500;">hrs</span></h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -367,7 +490,9 @@
               <h3>2.1 <span style="font-size: 0.95rem; font-weight: 500;">/ 3L</span></h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-3-6-7-10-4 4-7 8-7 10a7 7 0 0 0 7 7Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22a7 7 0 0 0 7-7c0-2-3-6-7-10-4 4-7 8-7 10a7 7 0 0 0 7 7Z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -376,7 +501,10 @@
               <h3>420 <span style="font-size: 0.95rem; font-weight: 500;">Kcal</span></h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 3.5 3.5z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 3.5 3.5z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -385,7 +513,10 @@
               <h3>Low <span style="font-size: 0.95rem; font-weight: 500;">18%</span></h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+              </svg>
             </div>
           </div>
         </div>
@@ -544,7 +675,9 @@
                     <span class="faq-accordion-icon">+</span>
                   </div>
                   <div class="faq-accordion-content">
-                    Vitals (heart rate, blood pressure, oxygen levels) are synced automatically every 6 hours via your wearable AuraCare hub device or blood pressure cuff accessory. You can also manual log entries using the Quick Actions menu.
+                    Vitals (heart rate, blood pressure, oxygen levels) are synced automatically every 6 hours via your
+                    wearable AuraCare hub device or blood pressure cuff accessory. You can also manual log entries using
+                    the Quick Actions menu.
                   </div>
                 </div>
                 <div class="faq-accordion-item">
@@ -553,7 +686,9 @@
                     <span class="faq-accordion-icon">+</span>
                   </div>
                   <div class="faq-accordion-content">
-                    When active prescriptions fall below 15 days of remaining tablets, a Refill Alert card triggers. Clicking the refill button instantly dispatches a request code to your prescribing clinical coordinator.
+                    When active prescriptions fall below 15 days of remaining tablets, a Refill Alert card triggers.
+                    Clicking the refill button instantly dispatches a request code to your prescribing clinical
+                    coordinator.
                   </div>
                 </div>
                 <div class="faq-accordion-item">
@@ -562,7 +697,8 @@
                     <span class="faq-accordion-icon">+</span>
                   </div>
                   <div class="faq-accordion-content">
-                    Claims are automatically generated upon publication of diagnostic reports or consult completion. They are electronically dispatched directly to BlueShield or UnitedHealth for coverage processing.
+                    Claims are automatically generated upon publication of diagnostic reports or consult completion.
+                    They are electronically dispatched directly to BlueShield or UnitedHealth for coverage processing.
                   </div>
                 </div>
               </div>
@@ -574,13 +710,17 @@
             <div class="premium-info-card smooth-hover-glow">
               <div class="card-title-header">
                 <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                  </svg>
                   Latest Doctor Recommendations
                 </h4>
               </div>
               <div class="notes-content">
                 <strong>Dr. Adrian Mercer:</strong><br>
-                "Keep monitoring blood pressure levels twice daily. Pill intakes of Lisinopril should remain strict at 08:00 AM with water. Schedule a follow-up metabolic ECG calibration panel by next week."
+                "Keep monitoring blood pressure levels twice daily. Pill intakes of Lisinopril should remain strict at
+                08:00 AM with water. Schedule a follow-up metabolic ECG calibration panel by next week."
               </div>
             </div>
 
@@ -588,7 +728,11 @@
             <div class="premium-info-card smooth-hover-glow">
               <div class="card-title-header">
                 <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
                   Wellness Targets progress
                 </h4>
               </div>
@@ -626,7 +770,8 @@
                     <span id="overview-adherence-percent-badge">33%</span>
                   </div>
                   <div class="progress-bar-base">
-                    <div class="progress-bar-fill-premium progress-bar-fill-emerald" id="overview-adherence-progress-bar" style="width: 33%;"></div>
+                    <div class="progress-bar-fill-premium progress-bar-fill-emerald"
+                      id="overview-adherence-progress-bar" style="width: 33%;"></div>
                   </div>
                 </div>
               </div>
@@ -636,22 +781,28 @@
             <div class="premium-info-card smooth-hover-glow">
               <div class="card-title-header">
                 <h4>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
                   Daily Vitals Timeline
                 </h4>
               </div>
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">08:00 AM</span>
-                  <div class="timeline-desc">Administered Lisinopril 10mg <p>Hydration: 350ml cup</p></div>
+                  <div class="timeline-desc">Administered Lisinopril 10mg <p>Hydration: 350ml cup</p>
+                  </div>
                 </div>
                 <div class="timeline-node completed">
                   <span class="timeline-meta">08:30 AM</span>
-                  <div class="timeline-desc">Vitals sync telemetry ok <p>BP: 120/80, HR: 72 BPM</p></div>
+                  <div class="timeline-desc">Vitals sync telemetry ok <p>BP: 120/80, HR: 72 BPM</p>
+                  </div>
                 </div>
                 <div class="timeline-node">
                   <span class="timeline-meta">04:00 PM</span>
-                  <div class="timeline-desc">Daily Walk Checkpoint <p>Target: 45 min cardio</p></div>
+                  <div class="timeline-desc">Daily Walk Checkpoint <p>Target: 45 min cardio</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -662,22 +813,33 @@
                 <h4>Vaccination Alerts</h4>
               </div>
               <div style="display: flex; gap: 0.8rem; align-items: center;">
-                <div class="metric-icon icon-blue" style="width: 40px; height: 40px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                <div class="metric-icon icon-blue" style="width: 40px; height: 40px;"><svg width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg></div>
                 <div>
-                  <h5 style="font-size: 0.88rem; font-weight: 700; color: var(--text-dark);">Seasonal Influenza Shot</h5>
-                  <p style="font-size: 0.75rem; color: var(--text-muted-dark);">Scheduled Booster Vaccine due by Sept 15, 2026</p>
+                  <h5 style="font-size: 0.88rem; font-weight: 700; color: var(--text-dark);">Seasonal Influenza Shot
+                  </h5>
+                  <p style="font-size: 0.75rem; color: var(--text-muted-dark);">Scheduled Booster Vaccine due by Sept
+                    15, 2026</p>
                 </div>
               </div>
             </div>
 
             <!-- Health Insights -->
-            <div class="premium-info-card smooth-hover-glow" style="background: var(--bg-light-blue); border-color: rgba(0, 102, 255, 0.15);">
-              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <div class="premium-info-card smooth-hover-glow"
+              style="background: var(--bg-light-blue); border-color: rgba(0, 102, 255, 0.15);">
+              <h5
+                style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
                 Clinical Insight Engine
               </h5>
               <p style="font-size: 0.82rem; line-height: 1.5; color: var(--text-dark); margin: 0;">
-                Your telemetry ECG reading has dropped to a relaxed 72 BPM compared to yesterday. A 4% cardiovascular strain improvement detected. Continue maintaining sleep consistency.
+                Your telemetry ECG reading has dropped to a relaxed 72 BPM compared to yesterday. A 4% cardiovascular
+                strain improvement detected. Continue maintaining sleep consistency.
               </p>
             </div>
 
@@ -704,9 +866,13 @@
 
             <!-- Health Report Downloader -->
             <div class="premium-info-card smooth-hover-glow" style="text-align: center; padding: 1.5rem 1rem;">
-              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.4rem;">Complete Health Record Summary</h5>
-              <p style="font-size: 0.78rem; color: var(--text-muted-dark); margin-bottom: 1rem;">Export all telemetry readings, diagnoses, and compliance scores.</p>
-              <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="showToast('Assembling health summary... Dispatched telemetry download.');">Download Health Report</button>
+              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.4rem;">Complete
+                Health Record Summary</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted-dark); margin-bottom: 1rem;">Export all telemetry
+                readings, diagnoses, and compliance scores.</p>
+              <button class="btn btn-primary btn-sm" style="width: 100%;"
+                onclick="showToast('Assembling health summary... Dispatched telemetry download.');">Download Health
+                Report</button>
             </div>
           </div>
         </div>
@@ -714,10 +880,13 @@
 
       <!-- SECTION: APPOINTMENTS -->
       <div id="sec-appointments" class="dashboard-section animate-fade-up" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <h3 style="font-size: 1.4rem; font-weight: 700;">Manage Roster Appointments</h3>
           <div style="display: flex; gap: 1rem;">
-            <button class="btn btn-primary btn-sm" onclick="document.getElementById('dash-book-panel').style.display='block'; this.style.display='none';">Book New Appointment</button>
+            <button class="btn btn-primary btn-sm"
+              onclick="document.getElementById('dash-book-panel').style.display='block'; this.style.display='none';">Book
+              New Appointment</button>
           </div>
         </div>
 
@@ -729,7 +898,12 @@
               <h3>3</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -738,7 +912,10 @@
               <h3 style="color: var(--color-secondary);">1</h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -747,7 +924,10 @@
               <h3 style="color: var(--color-warning);">1</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -756,7 +936,11 @@
               <h3 style="color: var(--color-danger);">1</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" x2="9" y1="9" y2="15" />
+                <line x1="9" x2="15" y1="9" y2="15" />
+              </svg>
             </div>
           </div>
         </div>
@@ -768,7 +952,8 @@
             <div class="grid grid-2">
               <div class="form-group">
                 <label>Select Doctor/Nurse</label>
-                <select id="dash-book-doctor" class="form-control" style="padding-left:1rem; background:white;" required>
+                <select id="dash-book-doctor" class="form-control" style="padding-left:1rem; background:white;"
+                  required>
                   <option value="Dr. Adrian Mercer">Dr. Adrian Mercer (Cardiology)</option>
                   <option value="Dr. Evelyn Vance">Dr. Evelyn Vance (Neurology)</option>
                   <option value="Sarah Jenkins, RN">Sarah Jenkins, RN (Bedside Nurse)</option>
@@ -786,16 +971,19 @@
             <div class="grid grid-2">
               <div class="form-group">
                 <label>Desired Date</label>
-                <input type="date" id="dash-book-date" class="form-control" style="padding-left:1rem; background:white;" required>
+                <input type="date" id="dash-book-date" class="form-control" style="padding-left:1rem; background:white;"
+                  required>
               </div>
               <div class="form-group">
                 <label>Desired Time Slot</label>
-                <input type="time" id="dash-book-time" class="form-control" style="padding-left:1rem; background:white;" required>
+                <input type="time" id="dash-book-time" class="form-control" style="padding-left:1rem; background:white;"
+                  required>
               </div>
             </div>
             <div style="display: flex; gap: 1rem; margin-top: 1rem;">
               <button type="submit" class="btn btn-primary btn-sm">Confirm Booking</button>
-              <button type="button" class="btn btn-outline-dark btn-sm" onclick="document.getElementById('dash-book-panel').style.display='none'; document.querySelector('[onclick*=\'dash-book-panel\']').style.display='inline-flex';">Cancel</button>
+              <button type="button" class="btn btn-outline-dark btn-sm"
+                onclick="document.getElementById('dash-book-panel').style.display='none'; document.querySelector('[onclick*=\'dash-book-panel\']').style.display='inline-flex';">Cancel</button>
             </div>
           </form>
         </div>
@@ -858,10 +1046,13 @@
             </div>
 
             <!-- Patient Instructions -->
-            <div class="premium-info-card" style="background-color: var(--bg-light-blue); border-left: 4px solid var(--color-primary);">
-              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.4rem;">Pre-Consultation Instructions</h5>
+            <div class="premium-info-card"
+              style="background-color: var(--bg-light-blue); border-left: 4px solid var(--color-primary);">
+              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.4rem;">
+                Pre-Consultation Instructions</h5>
               <p style="font-size: 0.78rem; line-height: 1.5; color: var(--text-dark); margin: 0;">
-                For telehealth appointments: ensure your wearable ECG sensor is paired. For lab draws: please remain fasting for 8 hours prior to check-in.
+                For telehealth appointments: ensure your wearable ECG sensor is paired. For lab draws: please remain
+                fasting for 8 hours prior to check-in.
               </p>
             </div>
 
@@ -894,11 +1085,13 @@
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">July 15, 2026</span>
-                  <div class="timeline-desc">Physical Rehabilitation with Sarah Jenkins, RN <p>Completed</p></div>
+                  <div class="timeline-desc">Physical Rehabilitation with Sarah Jenkins, RN <p>Completed</p>
+                  </div>
                 </div>
                 <div class="timeline-node">
                   <span class="timeline-meta">August 10, 2026</span>
-                  <div class="timeline-desc">Telehealth Cardiology with Dr. Mercer <p>Upcoming (10:00 AM)</p></div>
+                  <div class="timeline-desc">Telehealth Cardiology with Dr. Mercer <p>Upcoming (10:00 AM)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -909,8 +1102,12 @@
         <div class="table-card">
           <div class="search-filter-controls-row">
             <div class="search-field-wrapper">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-              <input type="text" placeholder="Search appointments..." oninput="showToast('Filtering appointment tables...');">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input type="text" placeholder="Search appointments..."
+                oninput="showToast('Filtering appointment tables...');">
             </div>
             <div class="filter-selectors-right">
               <select class="filter-select-element" onchange="showToast('Filtering appointment status...');">
@@ -935,21 +1132,27 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Dr. Adrian Mercer</strong><br><small style="color: var(--text-muted-dark);">Telehealth Vitals Review</small></td>
+                  <td><strong>Dr. Adrian Mercer</strong><br><small style="color: var(--text-muted-dark);">Telehealth
+                      Vitals Review</small></td>
                   <td>2026-08-10</td>
                   <td>10:00 AM</td>
                   <td><span class="status-badge status-scheduled">Scheduled</span></td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm cancel-apt-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Cancel</button>
-                    <button class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 4px;" onclick="showToast('Connecting reschedule coordinator...');">Reschedule</button>
+                    <button class="btn btn-outline-dark btn-sm cancel-apt-btn"
+                      style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Cancel</button>
+                    <button class="btn btn-secondary btn-sm"
+                      style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 4px;"
+                      onclick="showToast('Connecting reschedule coordinator...');">Reschedule</button>
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Sarah Jenkins, RN</strong><br><small style="color: var(--text-muted-dark);">Home Visit Dressing Check</small></td>
+                  <td><strong>Sarah Jenkins, RN</strong><br><small style="color: var(--text-muted-dark);">Home Visit
+                      Dressing Check</small></td>
                   <td>2026-08-05</td>
                   <td>09:00 AM</td>
                   <td><span class="status-badge status-completed">Completed</span></td>
-                  <td><button class="btn btn-outline-dark btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;" disabled>Review Vitals</button></td>
+                  <td><button class="btn btn-outline-dark btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;"
+                      disabled>Review Vitals</button></td>
                 </tr>
               </tbody>
             </table>
@@ -976,28 +1179,43 @@
               <p>Lab Reports</p>
               <h3>8</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                <polyline points="14 2 14 8 20 8" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>MRI / CT Scans</p>
               <h3>2</h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <circle cx="12" cy="12" r="3" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>ECG Tests</p>
               <h3>4</h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Total Documents</p>
               <h3>14</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg></div>
           </div>
         </div>
 
@@ -1009,7 +1227,11 @@
                 <h4>Transmission Gate</h4>
               </div>
               <div class="report-upload-dropzone" id="reports-drag-zone">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" x2="12" y1="3" y2="15" />
+                </svg>
                 <p>Drag medical records file here or <br><strong>click to select from computer</strong></p>
                 <input type="file" id="reports-file-picker" style="display: none;" accept=".pdf,.png,.jpg,.jpeg">
               </div>
@@ -1031,7 +1253,9 @@
                 </div>
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                   <span>Urine culture swab</span>
-                  <span class="status-badge status-scheduled" style="font-size: 0.7rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">In Review</span>
+                  <span class="status-badge status-scheduled"
+                    style="font-size: 0.7rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">In
+                    Review</span>
                 </div>
               </div>
             </div>
@@ -1045,15 +1269,18 @@
             <div class="timeline-list">
               <div class="timeline-node completed">
                 <span class="timeline-meta">June 12, 2026</span>
-                <div class="timeline-desc">Tdap Booster Vaccine administered <p>Health Center A &bull; Verified</p></div>
+                <div class="timeline-desc">Tdap Booster Vaccine administered <p>Health Center A &bull; Verified</p>
+                </div>
               </div>
               <div class="timeline-node completed">
                 <span class="timeline-meta">March 20, 2026</span>
-                <div class="timeline-desc">Flu shot seasonal immunization <p>AuraCare Clinic Hub &bull; Verified</p></div>
+                <div class="timeline-desc">Flu shot seasonal immunization <p>AuraCare Clinic Hub &bull; Verified</p>
+                </div>
               </div>
               <div class="timeline-node completed">
                 <span class="timeline-meta">January 15, 2026</span>
-                <div class="timeline-desc">Cardiology baseline ultrasound <p>Dr. Adrian Mercer &bull; Verified</p></div>
+                <div class="timeline-desc">Cardiology baseline ultrasound <p>Dr. Adrian Mercer &bull; Verified</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1119,7 +1346,8 @@
                   <td>July 28, 2026</td>
                   <td>Dr. Adrian Mercer</td>
                   <td>
-                    <button class="btn btn-primary btn-sm download-report-btn" data-report="ECG_Telemetry_July28.pdf" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Download PDF</button>
+                    <button class="btn btn-primary btn-sm download-report-btn" data-report="ECG_Telemetry_July28.pdf"
+                      style="padding: 0.5rem 1rem; font-size: 0.8rem;">Download PDF</button>
                   </td>
                 </tr>
                 <tr>
@@ -1127,7 +1355,8 @@
                   <td>July 15, 2026</td>
                   <td>Cleveland Clinical Lab Desk</td>
                   <td>
-                    <button class="btn btn-primary btn-sm download-report-btn" data-report="Metabolic_Blood_July15.pdf" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Download PDF</button>
+                    <button class="btn btn-primary btn-sm download-report-btn" data-report="Metabolic_Blood_July15.pdf"
+                      style="padding: 0.5rem 1rem; font-size: 0.8rem;">Download PDF</button>
                   </td>
                 </tr>
               </tbody>
@@ -1147,28 +1376,42 @@
               <p>Active Prescriptions</p>
               <h3>2</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Morning Doses</p>
               <h3>1 <span style="font-size: 0.95rem; font-weight: 500;">Tablet</span></h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="2" y2="22"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" x2="12" y1="2" y2="22" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Night Doses</p>
               <h3>1 <span style="font-size: 0.95rem; font-weight: 500;">Tablet</span></h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Refill Requests</p>
               <h3>0</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg></div>
           </div>
         </div>
 
@@ -1177,14 +1420,24 @@
           <div class="time-slot-meds-section">
             <div class="time-slot-block animate-scale-in">
               <div class="time-slot-title-header">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v2M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2v2M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                </svg>
                 Morning Intakes (08:00 AM)
               </div>
               <div class="meds-schedule-list">
                 <div class="med-schedule-item">
                   <div class="med-item-checkbox-side">
                     <div class="med-custom-checkbox" aria-label="Mark taken">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </div>
                     <div class="med-item-details-box">
                       <h5>Lisinopril 10mg</h5>
@@ -1198,14 +1451,23 @@
 
             <div class="time-slot-block animate-scale-in" style="animation-delay: 0.1s;">
               <div class="time-slot-title-header">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                </svg>
                 Afternoon Intakes (02:00 PM)
               </div>
               <div class="meds-schedule-list">
                 <div class="med-schedule-item">
                   <div class="med-item-checkbox-side">
                     <div class="med-custom-checkbox" aria-label="Mark taken">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </div>
                     <div class="med-item-details-box">
                       <h5>Vitamin D3 2000 IU</h5>
@@ -1219,14 +1481,22 @@
 
             <div class="time-slot-block animate-scale-in" style="animation-delay: 0.15s;">
               <div class="time-slot-title-header">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="m16.24 7.76-1.41 1.41"/><path d="m12 2v3"/><path d="m7.76 7.76 1.41 1.41"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="m16.24 7.76-1.41 1.41" />
+                  <path d="m12 2v3" />
+                  <path d="m7.76 7.76 1.41 1.41" />
+                </svg>
                 Evening Intakes (06:00 PM)
               </div>
               <div class="meds-schedule-list">
                 <div class="med-schedule-item">
                   <div class="med-item-checkbox-side">
                     <div class="med-custom-checkbox" aria-label="Mark taken">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </div>
                     <div class="med-item-details-box">
                       <h5>Omega-3 Fish Oil 1000mg</h5>
@@ -1240,14 +1510,19 @@
 
             <div class="time-slot-block animate-scale-in" style="animation-delay: 0.2s;">
               <div class="time-slot-title-header">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
                 Night Intakes (09:00 PM)
               </div>
               <div class="meds-schedule-list">
                 <div class="med-schedule-item">
                   <div class="med-item-checkbox-side">
                     <div class="med-custom-checkbox" aria-label="Mark taken">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                     </div>
                     <div class="med-item-details-box">
                       <h5>Atorvastatin 20mg</h5>
@@ -1318,10 +1593,13 @@
                 <h4>Intake Adherence Meter</h4>
               </div>
               <div style="text-align: center; padding: 1rem 0;">
-                <h3 style="font-size: 2.5rem; font-weight: 800; font-family: var(--font-heading);" id="med-adherence-percent">0% Compliance</h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1.5rem;">Intake logs verified for today</p>
+                <h3 style="font-size: 2.5rem; font-weight: 800; font-family: var(--font-heading);"
+                  id="med-adherence-percent">0% Compliance</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted-dark); margin-bottom: 1.5rem;">Intake logs
+                  verified for today</p>
                 <div class="progress-bar-base" style="height: 8px;">
-                  <div class="progress-bar-fill-premium progress-bar-fill-emerald" id="med-adherence-progress" style="width: 0%;"></div>
+                  <div class="progress-bar-fill-premium progress-bar-fill-emerald" id="med-adherence-progress"
+                    style="width: 0%;"></div>
                 </div>
               </div>
             </div>
@@ -1332,31 +1610,41 @@
                 <h4>Refill Alerts Check</h4>
               </div>
               <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background-color: #f8fafc; border-radius: 8px;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background-color: #f8fafc; border-radius: 8px;">
                   <div>
                     <h5 style="font-size: 0.88rem; font-weight: 700;">Lisinopril 10mg</h5>
                     <p style="font-size: 0.75rem; color: var(--text-muted-dark);">60 tablets remaining</p>
                   </div>
                   <span class="status-badge status-completed" style="font-size: 0.72rem;">60 Days Left</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background-color: #f8fafc; border-radius: 8px;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background-color: #f8fafc; border-radius: 8px;">
                   <div>
                     <h5 style="font-size: 0.88rem; font-weight: 700;">Atorvastatin 20mg</h5>
                     <p style="font-size: 0.75rem; color: var(--text-muted-dark);">15 tablets remaining</p>
                   </div>
-                  <span class="status-badge status-scheduled" style="font-size: 0.72rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">15 Days Left</span>
+                  <span class="status-badge status-scheduled"
+                    style="font-size: 0.72rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">15
+                    Days Left</span>
                 </div>
               </div>
             </div>
 
             <!-- Drug side effects alert card -->
             <div class="premium-info-card" style="border-left: 4px solid var(--color-warning); background: #fffcf8;">
-              <h5 style="font-size: 0.88rem; font-weight: 700; color: var(--color-warning); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+              <h5
+                style="font-size: 0.88rem; font-weight: 700; color: var(--color-warning); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                  <line x1="12" x2="12" y1="9" y2="13" />
+                  <line x1="12" x2="12.01" y1="17" y2="17" />
+                </svg>
                 Known Prescription Side Effects
               </h5>
               <p style="font-size: 0.78rem; line-height: 1.5; color: var(--text-dark); margin: 0;">
-                <strong>Lisinopril:</strong> May cause dry cough or mild dizziness. Report persistent symptoms immediately.<br>
+                <strong>Lisinopril:</strong> May cause dry cough or mild dizziness. Report persistent symptoms
+                immediately.<br>
                 <strong>Atorvastatin:</strong> Alert Dr. Mercer if you experience unexplained muscle pain.
               </p>
             </div>
@@ -1396,13 +1684,15 @@
                   <td><strong>Lisinopril 10mg</strong></td>
                   <td>1 Tablet / Daily (Morning)</td>
                   <td>Administer with full glass of water. Track BP levels.</td>
-                  <td><span class="status-badge status-completed" style="background-color:rgba(16, 185, 129, 0.08);">60 Days Left</span></td>
+                  <td><span class="status-badge status-completed" style="background-color:rgba(16, 185, 129, 0.08);">60
+                      Days Left</span></td>
                 </tr>
                 <tr>
                   <td><strong>Atorvastatin 20mg</strong></td>
                   <td>1 Tablet / Daily (Bedtime)</td>
                   <td>Avoid grapefruit juices.</td>
-                  <td><span class="status-badge status-scheduled" style="background-color:rgba(0, 102, 255, 0.08);">15 Days Left</span></td>
+                  <td><span class="status-badge status-scheduled" style="background-color:rgba(0, 102, 255, 0.08);">15
+                      Days Left</span></td>
                 </tr>
               </tbody>
             </table>
@@ -1420,8 +1710,12 @@
             <div class="chat-sidebar-header">
               <h4>Clinician Contacts</h4>
               <div class="chat-search-input-box">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                <input type="text" placeholder="Search coordinators..." oninput="showToast('Filtering contacts roster...');">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input type="text" placeholder="Search coordinators..."
+                  oninput="showToast('Filtering contacts roster...');">
               </div>
             </div>
             <div class="chat-users-list">
@@ -1442,7 +1736,9 @@
               </div>
               <div class="chat-user-item">
                 <div class="chat-user-avatar-wrapper">
-                  <div class="doctor-avatar-box" style="width: 40px; height: 40px; font-size: 0.9rem; background-color: var(--color-secondary);">SJ</div>
+                  <div class="doctor-avatar-box"
+                    style="width: 40px; height: 40px; font-size: 0.9rem; background-color: var(--color-secondary);">SJ
+                  </div>
                   <span class="chat-status-dot"></span>
                 </div>
                 <div class="chat-user-meta-info">
@@ -1458,7 +1754,9 @@
               </div>
               <div class="chat-user-item online">
                 <div class="chat-user-avatar-wrapper">
-                  <div class="doctor-avatar-box" style="width: 40px; height: 40px; font-size: 0.9rem; background-color: var(--color-accent);">EV</div>
+                  <div class="doctor-avatar-box"
+                    style="width: 40px; height: 40px; font-size: 0.9rem; background-color: var(--color-accent);">EV
+                  </div>
                   <span class="chat-status-dot"></span>
                 </div>
                 <div class="chat-user-meta-info">
@@ -1479,10 +1777,14 @@
             <div class="chat-window-header">
               <div class="chat-active-user-details">
                 <!-- Mobile back button -->
-                <button class="chat-header-btn" id="chat-mobile-back-btn" style="margin-right: 0.5rem;" aria-label="Back to contacts">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <button class="chat-header-btn" id="chat-mobile-back-btn" style="margin-right: 0.5rem;"
+                  aria-label="Back to contacts">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
                 </button>
-                <div class="doctor-avatar-box" id="chat-active-avatar-initials" style="width: 44px; height: 44px; font-size: 1rem;">AM</div>
+                <div class="doctor-avatar-box" id="chat-active-avatar-initials"
+                  style="width: 44px; height: 44px; font-size: 1rem;">AM</div>
                 <div>
                   <h4 id="chat-active-name">Dr. Adrian Mercer</h4>
                   <p id="chat-active-specialty">Lead Cardiologist &bull; Online</p>
@@ -1490,30 +1792,52 @@
               </div>
               <div class="chat-header-actions">
                 <button class="chat-header-btn" id="chat-call-audio-btn" aria-label="Start Voice Call">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6.07-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6.07-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 2.59 3.4z" />
+                  </svg>
                 </button>
                 <button class="chat-header-btn" id="chat-call-video-btn" aria-label="Start Video Consult">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m22 8-6 4 6 4V8Z" />
+                    <rect width="14" height="12" x="2" y="6" rx="2" ry="2" />
+                  </svg>
                 </button>
-                <button class="chat-header-btn" onclick="showToast('Loading emergency response protocol...');" style="border-color: var(--color-danger); color: var(--color-danger);" aria-label="Emergency Call">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                <button class="chat-header-btn" onclick="showToast('Loading emergency response protocol...');"
+                  style="border-color: var(--color-danger); color: var(--color-danger);" aria-label="Emergency Call">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                    <line x1="12" x2="12" y1="9" y2="13" />
+                    <line x1="12" x2="12.01" y1="17" y2="17" />
+                  </svg>
                 </button>
               </div>
             </div>
 
             <!-- Messages area -->
-            <div id="patient-chat-history" style="flex: 1; padding: 2rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1.2rem; background-color: #fcfdfe;">
-              <div style="align-self: flex-start; background-color: #f1f5f9; color: var(--text-dark); padding: 0.8rem 1.2rem; border-radius: 16px 16px 16px 2px; max-width: 75%; font-size: 0.9rem; border: 1px solid #e2e8f0;">
-                <p>Hello Mr. Doe, I have reviewed your morning ECG telemetry chart. Everything is balanced. Please continue medications.</p>
-                <small style="display: block; margin-top: 0.3rem; color: var(--text-muted-dark); font-size: 0.7rem;">Dr. Adrian Mercer • Yesterday</small>
+            <div id="patient-chat-history"
+              style="flex: 1; padding: 2rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1.2rem; background-color: #fcfdfe;">
+              <div
+                style="align-self: flex-start; background-color: #f1f5f9; color: var(--text-dark); padding: 0.8rem 1.2rem; border-radius: 16px 16px 16px 2px; max-width: 75%; font-size: 0.9rem; border: 1px solid #e2e8f0;">
+                <p>Hello Mr. Doe, I have reviewed your morning ECG telemetry chart. Everything is balanced. Please
+                  continue medications.</p>
+                <small style="display: block; margin-top: 0.3rem; color: var(--text-muted-dark); font-size: 0.7rem;">Dr.
+                  Adrian Mercer • Yesterday</small>
               </div>
             </div>
 
             <!-- Shared Files Log preview -->
-            <div style="padding: 0.8rem 1.5rem; background-color: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; gap: 0.8rem; align-items: center; overflow-x: auto;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted-dark); text-transform: uppercase;">Shared files:</span>
-              <span style="font-size: 0.78rem; background: white; border: 1px solid #cbd5e1; border-radius: 4px; padding: 0.2rem 0.6rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;" onclick="showToast('Loading ECG_Telemetry_July28.pdf preview...');">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
+            <div
+              style="padding: 0.8rem 1.5rem; background-color: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; gap: 0.8rem; align-items: center; overflow-x: auto;">
+              <span
+                style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted-dark); text-transform: uppercase;">Shared
+                files:</span>
+              <span
+                style="font-size: 0.78rem; background: white; border: 1px solid #cbd5e1; border-radius: 4px; padding: 0.2rem 0.6rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"
+                onclick="showToast('Loading ECG_Telemetry_July28.pdf preview...');">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+                </svg>
                 ECG_July28.pdf
               </span>
             </div>
@@ -1530,12 +1854,20 @@
             </div>
 
             <!-- Chat Inputs -->
-            <div style="padding: 1.2rem 1.5rem; border-top: 1px solid #e2e8f0; display: flex; gap: 1rem; align-items: center; background-color: white;">
-              <button class="chat-header-btn" onclick="showToast('Attachment picker triggered. PDFs or telemetry files allowed.');" style="flex-shrink: 0;" aria-label="Upload files">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            <div
+              style="padding: 1.2rem 1.5rem; border-top: 1px solid #e2e8f0; display: flex; gap: 1rem; align-items: center; background-color: white;">
+              <button class="chat-header-btn"
+                onclick="showToast('Attachment picker triggered. PDFs or telemetry files allowed.');"
+                style="flex-shrink: 0;" aria-label="Upload files">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                </svg>
               </button>
-              <input type="text" id="patient-chat-input" placeholder="Type a message to your clinical team..." class="form-control" style="background: #f8fafc; border-color:#e2e8f0; padding-left: 1.5rem; flex: 1;">
-              <button id="patient-chat-submit" class="btn btn-primary btn-sm" style="padding: 0.7rem 1.8rem; border-radius: 8px;">Transmit</button>
+              <input type="text" id="patient-chat-input" placeholder="Type a message to your clinical team..."
+                class="form-control" style="background: #f8fafc; border-color:#e2e8f0; padding-left: 1.5rem; flex: 1;">
+              <button id="patient-chat-submit" class="btn btn-primary btn-sm"
+                style="padding: 0.7rem 1.8rem; border-radius: 8px;">Transmit</button>
             </div>
           </div>
         </div>
@@ -1552,28 +1884,41 @@
               <p>Total Expenses</p>
               <h3>$770.00</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Outstanding Balance</p>
               <h3 style="color: var(--color-danger);">$320.00</h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="16"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" x2="12" y1="8" y2="16" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Insurance Covered</p>
               <h3 style="color: var(--color-secondary);">$450.00</h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Claims Settled</p>
               <h3>2</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
           </div>
         </div>
 
@@ -1583,7 +1928,9 @@
             <div class="billing-outstanding-card">
               <p>Outstanding Balance</p>
               <h3 class="balance-num" id="billing-outstanding-balance-text">$320.00</h3>
-              <button class="btn btn-primary" id="billing-quick-pay-btn" style="padding: 0.7rem 2rem; border-radius: 8px; font-size: 0.88rem; width: 100%;">Quick Pay Now</button>
+              <button class="btn btn-primary" id="billing-quick-pay-btn"
+                style="padding: 0.7rem 2rem; border-radius: 8px; font-size: 0.88rem; width: 100%;">Quick Pay
+                Now</button>
             </div>
 
             <!-- Tax summary card -->
@@ -1592,9 +1939,12 @@
                 <h4>IRS Medical Tax Deductions</h4>
               </div>
               <p style="font-size: 0.78rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">
-                Download your accumulated 2026 expense statements. This details insurance write-offs, deductible out-of-pocket receipts, and HSA distributions.
+                Download your accumulated 2026 expense statements. This details insurance write-offs, deductible
+                out-of-pocket receipts, and HSA distributions.
               </p>
-              <button class="btn btn-outline-dark btn-sm" onclick="showToast('Exporting medical expense statement... Dispatched download.');">Download 1095-B Statement</button>
+              <button class="btn btn-outline-dark btn-sm"
+                onclick="showToast('Exporting medical expense statement... Dispatched download.');">Download 1095-B
+                Statement</button>
             </div>
 
             <!-- Refund requests logs -->
@@ -1603,7 +1953,8 @@
                 <h4>Refund Requests & Credits</h4>
               </div>
               <div style="font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.8rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem; background-color: #f8fafc; border-radius: 6px;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem; background-color: #f8fafc; border-radius: 6px;">
                   <span>Co-pay adjustment credit</span>
                   <span class="status-badge status-completed" style="font-size: 0.72rem;">Cleared ($30.00)</span>
                 </div>
@@ -1618,11 +1969,13 @@
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">July 15, 2026</span>
-                  <div class="timeline-desc">Cleared Invoice INV-2026-003 <p>Amount: $450.00 via HSA Card</p></div>
+                  <div class="timeline-desc">Cleared Invoice INV-2026-003 <p>Amount: $450.00 via HSA Card</p>
+                  </div>
                 </div>
                 <div class="timeline-node">
                   <span class="timeline-meta">July 28, 2026</span>
-                  <div class="timeline-desc">Published Invoice INV-2026-004 <p>Amount: $320.00 pending payment</p></div>
+                  <div class="timeline-desc">Published Invoice INV-2026-004 <p>Amount: $320.00 pending payment</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1637,11 +1990,15 @@
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">July 15, 2026</span>
-                  <div class="timeline-desc">Claim CLM-8821 (Metabolic Panel draw) <p>Status: Disbursed ($120.00 covered)</p></div>
+                  <div class="timeline-desc">Claim CLM-8821 (Metabolic Panel draw) <p>Status: Disbursed ($120.00
+                      covered)</p>
+                  </div>
                 </div>
                 <div class="timeline-node">
                   <span class="timeline-meta">July 28, 2026</span>
-                  <div class="timeline-desc">Claim CLM-8894 (ECG Telemetry checkup) <p>Status: Under Review ($320.00 pending approval)</p></div>
+                  <div class="timeline-desc">Claim CLM-8894 (ECG Telemetry checkup) <p>Status: Under Review ($320.00
+                      pending approval)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1701,7 +2058,10 @@
         <div class="table-card">
           <div class="search-filter-controls-row">
             <div class="search-field-wrapper">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
               <input type="text" placeholder="Search invoices..." oninput="showToast('Filtering billing list...');">
             </div>
             <div class="filter-selectors-right">
@@ -1731,8 +2091,10 @@
                   <td>ECG Telemetry Monitoring & Nurse Vitals Check</td>
                   <td>July 28, 2026</td>
                   <td>$320.00</td>
-                  <td><span class="status-badge status-scheduled" id="overview-outstanding-badge-top">Pending</span></td>
-                  <td><button class="btn btn-secondary btn-sm pay-invoice-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Pay Now</button></td>
+                  <td><span class="status-badge status-scheduled" id="overview-outstanding-badge-top">Pending</span>
+                  </td>
+                  <td><button class="btn btn-secondary btn-sm pay-invoice-btn"
+                      style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Pay Now</button></td>
                 </tr>
                 <tr>
                   <td><strong>INV-2026-003</strong></td>
@@ -1754,4 +2116,5 @@
   <script src="js/dashboard.js"></script>
   <script src="js/dashboard-premium.js"></script>
 </body>
+
 </html>

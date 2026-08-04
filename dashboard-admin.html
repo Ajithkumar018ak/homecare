@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/dashboard-premium.css">
 </head>
+
 <body id="admin-dashboard-root" style="overflow-y: auto; background-color: #f1f5f9;">
 
   <!-- MOBILE OVERLAY -->
@@ -16,15 +18,18 @@
   <!-- ADD DOCTOR DRAWER / CARD FORM OVERLAY -->
   <div class="checkout-modal-overlay" id="add-doctor-modal-overlay">
     <div class="checkout-modal-box animate-scale-in" style="max-width: 520px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem; margin-bottom: 1.5rem;">
         <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-dark);">Register New Clinician</h4>
-        <span style="font-size: 1.5rem; font-weight: 700; color: var(--text-muted-dark); cursor: pointer;" id="add-doctor-close-btn">&times;</span>
+        <span style="font-size: 1.5rem; font-weight: 700; color: var(--text-muted-dark); cursor: pointer;"
+          id="add-doctor-close-btn">&times;</span>
       </div>
       <form id="add-doctor-form-inner">
         <div class="grid grid-2">
           <div class="form-group">
             <label>FULL NAME</label>
-            <input type="text" class="form-control" id="new-doc-name" placeholder="Dr. Sarah Connor" style="padding-left: 1rem; background: white;" required>
+            <input type="text" class="form-control" id="new-doc-name" placeholder="Dr. Sarah Connor"
+              style="padding-left: 1rem; background: white;" required>
           </div>
           <div class="form-group">
             <label>DEPARTMENT SPECIALTY</label>
@@ -39,7 +44,8 @@
         <div class="grid grid-2" style="margin-top: 1rem;">
           <div class="form-group">
             <label>EXPERIENCE (YEARS)</label>
-            <input type="number" class="form-control" id="new-doc-experience" placeholder="8" style="padding-left: 1rem; background: white;" required>
+            <input type="number" class="form-control" id="new-doc-experience" placeholder="8"
+              style="padding-left: 1rem; background: white;" required>
           </div>
           <div class="form-group">
             <label>AVAILABILITY STATUS</label>
@@ -50,7 +56,9 @@
           </div>
         </div>
         <div style="display: flex; gap: 1rem; margin-top: 1.8rem;">
-          <button type="submit" class="btn btn-primary" style="flex: 1; padding: 0.8rem 1rem; font-size: 0.88rem; border-radius: 8px;">Add Clinician to Roster</button>
+          <button type="submit" class="btn btn-primary"
+            style="flex: 1; padding: 0.8rem 1rem; font-size: 0.88rem; border-radius: 8px;">Add Clinician to
+            Roster</button>
         </div>
       </form>
     </div>
@@ -61,35 +69,61 @@
     <aside class="dashboard-sidebar" style="border-right-color: rgba(16, 185, 129, 0.15);">
       <div class="sidebar-brand">
         <a href="index.html" class="logo">
-          <i class="logo-cross" style="color: var(--color-secondary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></i>
-          <span style="color: white; font-size: 1.4rem;">Admin Portal</span>
+          <img src="assets/logo.webp" alt="AuraCare Hub Logo" class="logo-img">
+
+
         </a>
       </div>
       <nav class="sidebar-menu">
         <div class="sidebar-item active" data-section="sec-analytics">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18" />
+            <path d="m19 9-5 5-4-4-3 3" />
+          </svg>
           <span>Analytics console</span>
         </div>
         <div class="sidebar-item" data-section="sec-patients">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
           <span>Manage Patients</span>
         </div>
         <div class="sidebar-item" data-section="sec-clinicians">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <line x1="16" x2="16" y1="2" y2="6" />
+            <line x1="8" x2="8" y1="2" y2="6" />
+            <line x1="3" x2="21" y1="10" y2="10" />
+          </svg>
           <span>Clinician Roster</span>
         </div>
         <div class="sidebar-item" data-section="sec-queue">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m19 11 2 2 4-4"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="m19 11 2 2 4-4" />
+          </svg>
           <span>Approve Appointments</span>
         </div>
         <div class="sidebar-item" data-section="sec-inventory">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="7" height="9" x="3" y="3" rx="1" />
+            <rect width="7" height="5" x="14" y="3" rx="1" />
+            <rect width="7" height="9" x="14" y="12" rx="1" />
+            <rect width="7" height="5" x="3" y="16" rx="1" />
+          </svg>
           <span>Inventory Tracker</span>
         </div>
       </nav>
       <div class="sidebar-footer">
-        <a href="index.html" class="sidebar-item" style="color: var(--color-danger); background: transparent; box-shadow: none;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        <a href="index.html" class="sidebar-item"
+          style="color: var(--color-danger); background: transparent; box-shadow: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+          </svg>
           <span>Sign Out Console</span>
         </a>
       </div>
@@ -106,14 +140,20 @@
             <span></span>
             <span></span>
           </button>
-          
+
           <!-- Breadcrumb & Date -->
           <div class="header-breadcrumb-area">
             <div class="breadcrumb" id="header-breadcrumb">
-              <span class="breadcrumb-item">AuraCare Admin</span> / <span class="breadcrumb-item active" id="current-page-breadcrumb">Analytics Console</span>
+              <span class="breadcrumb-item">AuraCare Admin</span> / <span class="breadcrumb-item active"
+                id="current-page-breadcrumb">Analytics Console</span>
             </div>
             <div class="current-date-badge" id="current-date-display">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
               <span id="live-date">August 03, 2026</span>
             </div>
           </div>
@@ -121,44 +161,63 @@
 
         <!-- Global search bar -->
         <div class="header-search-bar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
           <input type="text" id="global-dashboard-search" placeholder="Search patients, doctors, equipment...">
         </div>
 
         <div class="topbar-actions">
-          <div class="theme-switch-btn" onclick="showToast('Theme switching is preset to light mode for optimal clinical readability.');">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <div class="theme-switch-btn"
+            onclick="showToast('Theme switching is preset to light mode for optimal clinical readability.');">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
           </div>
 
           <div class="message-badge" onclick="showToast('Loading secure communications module...');">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
             <span class="badge-dot"></span>
           </div>
 
-          <div class="notification-badge" id="notification-bell-btn" onclick="showToast('Alert: Patient John Doe BP threshold high (140/92). Check review list.');">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <div class="notification-badge" id="notification-bell-btn"
+            onclick="showToast('Alert: Patient John Doe BP threshold high (140/92). Check review list.');">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
           </div>
 
           <div class="settings-shortcut-btn" onclick="showToast('Loading Admin profile configurations...');">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
           </div>
 
-          <div class="user-profile-menu">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="20" fill="var(--color-secondary)" />
-              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-weight="700" font-size="16">AD</text>
-            </svg>
-            <span>Director Vance (Admin)</span>
-          </div>
         </div>
       </div>
 
       <!-- SECTION: ANALYTICS -->
       <div id="sec-analytics" class="dashboard-section animate-fade-up">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
           <h3 style="font-size: 1.4rem; font-weight: 700;">Operations Performance Overview</h3>
           <div>
-            <button class="btn btn-outline-dark btn-sm" onclick="showToast('Compiling analytical performance spreadsheet...');">Export Dashboard Audit</button>
+            <button class="btn btn-outline-dark btn-sm"
+              onclick="showToast('Compiling analytical performance spreadsheet...');">Export Dashboard Audit</button>
           </div>
         </div>
 
@@ -167,10 +226,14 @@
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Active Beds Occupied</p>
-              <h3>882 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">/ 1000</span></h3>
+              <h3>882 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">/ 1000</span>
+              </h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -179,7 +242,12 @@
               <h3>42</h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -188,7 +256,10 @@
               <h3>240</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -197,7 +268,9 @@
               <h3>$45k</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
             </div>
           </div>
         </div>
@@ -209,7 +282,9 @@
               <h3>88.2%</h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -218,7 +293,9 @@
               <h3>92%</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -227,7 +304,9 @@
               <h3>14 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Today</span></h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -236,7 +315,10 @@
               <h3>1,240</h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -248,7 +330,11 @@
               <h3>28</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -257,7 +343,9 @@
               <h3>+12% <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">MoM</span></h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 6-6 4 4 8-8"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m3 17 6-6 4 4 8-8" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -266,16 +354,22 @@
               <h3>5 <span style="font-size: 0.85rem; font-weight: 500; color:var(--color-warning);">Alert</span></h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Low Stock Inventory Items</p>
-              <h3 style="color: var(--color-warning);">2 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Warning</span></h3>
+              <h3 style="color: var(--color-warning);">2 <span
+                  style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Warning</span></h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -400,16 +494,20 @@
               </div>
               <ul style="display:flex; flex-direction:column; gap:1.2rem; margin-top:0.5rem; font-size:0.9rem;">
                 <li style="display:flex; gap:1rem; align-items:center;">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-danger); animation: heartbeat 1s infinite; flex-shrink:0;"></span>
+                  <span
+                    style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-danger); animation: heartbeat 1s infinite; flex-shrink:0;"></span>
                   <span><strong>Patient John Doe (BP: 140/92)</strong>: Telemetry Cuff Alert - Aug 03, 08:12 AM</span>
                 </li>
                 <li style="display:flex; gap:1rem; align-items:center;">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-warning); flex-shrink:0;"></span>
+                  <span
+                    style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-warning); flex-shrink:0;"></span>
                   <span><strong>Bedside RN Jenkins:</strong> Shift check-in registered - Aug 03, 08:00 AM</span>
                 </li>
                 <li style="display:flex; gap:1rem; align-items:center;">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-secondary); flex-shrink:0;"></span>
-                  <span><strong>Device ICU-Bed-04:</strong> Sterilization complete. Ready for dispatch - Aug 03, 07:30 AM</span>
+                  <span
+                    style="width: 10px; height: 10px; border-radius: 50%; background-color: var(--color-secondary); flex-shrink:0;"></span>
+                  <span><strong>Device ICU-Bed-04:</strong> Sterilization complete. Ready for dispatch - Aug 03, 07:30
+                    AM</span>
                 </li>
               </ul>
             </div>
@@ -451,14 +549,19 @@
             </div>
 
             <!-- Quick Action Console Shortcuts -->
-            <div class="premium-info-card smooth-hover-glow" style="background: var(--bg-light-blue); border-color: rgba(0, 102, 255, 0.15);">
-              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.8rem;">Clinical Administration Shortcuts</h5>
+            <div class="premium-info-card smooth-hover-glow"
+              style="background: var(--bg-light-blue); border-color: rgba(0, 102, 255, 0.15);">
+              <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.8rem;">
+                Clinical Administration Shortcuts</h5>
               <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-                <button class="btn btn-primary btn-sm" style="width: 100%; text-align: left; display: flex; align-items: center; justify-content: space-between;" onclick="document.getElementById('add-doctor-modal-overlay').classList.add('active');">
+                <button class="btn btn-primary btn-sm"
+                  style="width: 100%; text-align: left; display: flex; align-items: center; justify-content: space-between;"
+                  onclick="document.getElementById('add-doctor-modal-overlay').classList.add('active');">
                   <span>Register New Doctor</span>
                   <span>+</span>
                 </button>
-                <button class="btn btn-outline-dark btn-sm" style="width: 100%; text-align: left; background: white;" onclick="document.querySelector('[data-section=\'sec-patients\']').click();">
+                <button class="btn btn-outline-dark btn-sm" style="width: 100%; text-align: left; background: white;"
+                  onclick="document.querySelector('[data-section=\'sec-patients\']').click();">
                   Check Telemetry Directory
                 </button>
               </div>
@@ -479,7 +582,10 @@
               <h3>1,240</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -488,7 +594,9 @@
               <h3>882</h3>
             </div>
             <div class="metric-icon icon-emerald">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -497,7 +605,9 @@
               <h3>358</h3>
             </div>
             <div class="metric-icon icon-sky">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 3 4 4 4-4M12 7v14"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m8 3 4 4 4-4M12 7v14" />
+              </svg>
             </div>
           </div>
           <div class="metric-card smooth-hover-glow">
@@ -506,7 +616,9 @@
               <h3 style="color: var(--color-danger);">14</h3>
             </div>
             <div class="metric-icon icon-blue">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -517,8 +629,12 @@
               <!-- Filter Controls -->
               <div class="search-filter-controls-row">
                 <div class="search-field-wrapper">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                  <input type="text" placeholder="Search patients..." oninput="showToast('Filtering patient table records...');">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                  <input type="text" placeholder="Search patients..."
+                    oninput="showToast('Filtering patient table records...');">
                 </div>
                 <div class="filter-selectors-right">
                   <select class="filter-select-element" onchange="showToast('Filtering admission status...');">
@@ -555,7 +671,8 @@
                       <td>Home ICU Program</td>
                       <td>UnitedHealth Gold</td>
                       <td>
-                        <button class="btn btn-outline-dark btn-sm" onclick="showToast('Loading medical file preview for John Doe...');">Review Chart</button>
+                        <button class="btn btn-outline-dark btn-sm"
+                          onclick="showToast('Loading medical file preview for John Doe...');">Review Chart</button>
                       </td>
                     </tr>
                     <tr>
@@ -565,7 +682,9 @@
                       <td>Stroke Joint Rehab</td>
                       <td>BlueShield PPO</td>
                       <td>
-                        <button class="btn btn-outline-dark btn-sm" onclick="showToast('Loading medical file preview for Eleanor Vance...');">Review Chart</button>
+                        <button class="btn btn-outline-dark btn-sm"
+                          onclick="showToast('Loading medical file preview for Eleanor Vance...');">Review
+                          Chart</button>
                       </td>
                     </tr>
                   </tbody>
@@ -591,11 +710,15 @@
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">Today, 08:30 AM</span>
-                  <div class="timeline-desc">John Doe: Wearable telemetry sync registered <p>BP cuff reports 120/80 mmHg</p></div>
+                  <div class="timeline-desc">John Doe: Wearable telemetry sync registered <p>BP cuff reports 120/80 mmHg
+                    </p>
+                  </div>
                 </div>
                 <div class="timeline-node completed">
                   <span class="timeline-meta">Today, 08:00 AM</span>
-                  <div class="timeline-desc">Eleanor Vance: Physiotherapy rehabilitation checkout <p>Assigned to David Vance, BSN</p></div>
+                  <div class="timeline-desc">Eleanor Vance: Physiotherapy rehabilitation checkout <p>Assigned to David
+                      Vance, BSN</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -608,11 +731,13 @@
               <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.8rem;">
                 <div>
                   <span style="color: var(--text-muted-dark); font-weight:600;">John Doe Contact:</span><br>
-                  <strong>Jane Doe (Spouse) &bull; <a href="tel:5550188" style="color: var(--color-primary);">(555) 0188</a></strong>
+                  <strong>Jane Doe (Spouse) &bull; <a href="tel:5550188" style="color: var(--color-primary);">(555)
+                      0188</a></strong>
                 </div>
                 <div style="border-top:1px solid #f1f5f9; padding-top:0.8rem;">
                   <span style="color: var(--text-muted-dark); font-weight:600;">Eleanor Vance Contact:</span><br>
-                  <strong>Robert Vance (Son) &bull; <a href="tel:5550189" style="color: var(--color-primary);">(555) 0189</a></strong>
+                  <strong>Robert Vance (Son) &bull; <a href="tel:5550189" style="color: var(--color-primary);">(555)
+                      0189</a></strong>
                 </div>
               </div>
             </div>
@@ -622,10 +747,13 @@
 
       <!-- SECTION: CLINICIAN ROSTER -->
       <div id="sec-clinicians" class="dashboard-section animate-fade-up" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <h3 style="font-size: 1.4rem; font-weight: 700;">Clinician Duty Roster & Performance</h3>
           <div>
-            <button class="btn btn-primary btn-sm" onclick="document.getElementById('add-doctor-modal-overlay').classList.add('active');">Register New Doctor</button>
+            <button class="btn btn-primary btn-sm"
+              onclick="document.getElementById('add-doctor-modal-overlay').classList.add('active');">Register New
+              Doctor</button>
           </div>
         </div>
 
@@ -636,28 +764,42 @@
               <p>Total Clinicians</p>
               <h3>42</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Active On Duty</p>
               <h3>35</h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>On Call</p>
               <h3>5</h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Off Duty</p>
               <h3>2</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" x2="9" y1="9" y2="15" />
+              </svg></div>
           </div>
         </div>
 
@@ -667,11 +809,16 @@
               <!-- Filter Controls -->
               <div class="search-filter-controls-row">
                 <div class="search-field-wrapper">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                  <input type="text" id="clinician-roster-search" placeholder="Search doctor names..." oninput="showToast('Filtering doctor rows...');">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                  <input type="text" id="clinician-roster-search" placeholder="Search doctor names..."
+                    oninput="showToast('Filtering doctor rows...');">
                 </div>
                 <div class="filter-selectors-right">
-                  <select class="filter-select-element" onchange="showToast('Filtering specialization departments...');">
+                  <select class="filter-select-element"
+                    onchange="showToast('Filtering specialization departments...');">
                     <option value="all">All Departments</option>
                     <option value="cardio">Cardiology</option>
                     <option value="neuro">Neurology</option>
@@ -733,11 +880,14 @@
               <div class="timeline-list">
                 <div class="timeline-node completed">
                   <span class="timeline-meta">Today, 08:00 AM</span>
-                  <div class="timeline-desc">Sarah Jenkins, RN logged in <p>Shift: 08:00 - 16:00 bedside duty</p></div>
+                  <div class="timeline-desc">Sarah Jenkins, RN logged in <p>Shift: 08:00 - 16:00 bedside duty</p>
+                  </div>
                 </div>
                 <div class="timeline-node completed">
                   <span class="timeline-meta">Today, 07:15 AM</span>
-                  <div class="timeline-desc">Dr. Mercer completed tele-consult <p>ECG reviews processed for patient Doe</p></div>
+                  <div class="timeline-desc">Dr. Mercer completed tele-consult <p>ECG reviews processed for patient Doe
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -764,10 +914,12 @@
 
       <!-- SECTION: QUEUE -->
       <div id="sec-queue" class="dashboard-section animate-fade-up" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <h3 style="font-size: 1.4rem; font-weight: 700;">Approve Upcoming Appointment Slots</h3>
           <div style="display: flex; gap: 0.8rem;">
-            <button class="btn btn-outline-dark btn-sm" onclick="showToast('Triggered bulk approvals for selected rows...');">Bulk Approve Selected</button>
+            <button class="btn btn-outline-dark btn-sm"
+              onclick="showToast('Triggered bulk approvals for selected rows...');">Bulk Approve Selected</button>
           </div>
         </div>
 
@@ -778,28 +930,42 @@
               <p>Pending Requests</p>
               <h3>12</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Approved Today</p>
               <h3>18</h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Rejected Slots</p>
               <h3>2</h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" x2="9" y1="9" y2="15" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Calendar Slots Rented</p>
               <h3>85%</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              </svg></div>
           </div>
         </div>
 
@@ -809,8 +975,12 @@
               <!-- Filter tools -->
               <div class="search-filter-controls-row">
                 <div class="search-field-wrapper">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                  <input type="text" placeholder="Search pending requests..." oninput="showToast('Filtering queue listings...');">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                  <input type="text" placeholder="Search pending requests..."
+                    oninput="showToast('Filtering queue listings...');">
                 </div>
                 <div class="filter-selectors-right">
                   <select class="filter-select-element" onchange="showToast('Filtering specialized requests...');">
@@ -826,7 +996,8 @@
                 <table class="data-table" id="admin-approval-queue-table">
                   <thead>
                     <tr>
-                      <th style="width: 40px;"><input type="checkbox" id="bulk-select-approve-checkbox" onclick="showToast('Selected all rows on current page.');"></th>
+                      <th style="width: 40px;"><input type="checkbox" id="bulk-select-approve-checkbox"
+                          onclick="showToast('Selected all rows on current page.');"></th>
                       <th>Requesting Patient</th>
                       <th>Target Specialist</th>
                       <th>Desired Date / Time</th>
@@ -844,8 +1015,10 @@
                       <td>Cardiology Review</td>
                       <td><span class="status-badge status-scheduled">Pending</span></td>
                       <td>
-                        <button class="btn btn-secondary btn-sm approve-apt-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Approve</button>
-                        <button class="btn btn-outline-dark btn-sm deny-apt-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; color:var(--color-danger); border-color:rgba(239, 68, 68, 0.2);">Deny</button>
+                        <button class="btn btn-secondary btn-sm approve-apt-btn"
+                          style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Approve</button>
+                        <button class="btn btn-outline-dark btn-sm deny-apt-btn"
+                          style="padding: 0.4rem 0.8rem; font-size: 0.75rem; color:var(--color-danger); border-color:rgba(239, 68, 68, 0.2);">Deny</button>
                       </td>
                     </tr>
                     <tr>
@@ -856,8 +1029,10 @@
                       <td>Stroke Joint Rehab</td>
                       <td><span class="status-badge status-scheduled">Pending</span></td>
                       <td>
-                        <button class="btn btn-secondary btn-sm approve-apt-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Approve</button>
-                        <button class="btn btn-outline-dark btn-sm deny-apt-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; color:var(--color-danger); border-color:rgba(239, 68, 68, 0.2);">Deny</button>
+                        <button class="btn btn-secondary btn-sm approve-apt-btn"
+                          style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">Approve</button>
+                        <button class="btn btn-outline-dark btn-sm deny-apt-btn"
+                          style="padding: 0.4rem 0.8rem; font-size: 0.75rem; color:var(--color-danger); border-color:rgba(239, 68, 68, 0.2);">Deny</button>
                       </td>
                     </tr>
                   </tbody>
@@ -875,7 +1050,9 @@
               <div class="timeline-list">
                 <div class="timeline-node">
                   <span class="timeline-meta">Next Checkpoint</span>
-                  <div class="timeline-desc">ECG Telemetry checkup due slot for John Doe <p>Pending Dr. Mercer availability confirmation</p></div>
+                  <div class="timeline-desc">ECG Telemetry checkup due slot for John Doe <p>Pending Dr. Mercer
+                      availability confirmation</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -902,10 +1079,13 @@
 
       <!-- SECTION: INVENTORY -->
       <div id="sec-inventory" class="dashboard-section animate-fade-up" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <h3 style="font-size: 1.4rem; font-weight: 700;">Medical Equipment & Pharmaceutical Inventory</h3>
           <div>
-            <button class="btn btn-outline-dark btn-sm" onclick="showToast('Assembling supply log report... Dispatched download.');">Download Inventory Report</button>
+            <button class="btn btn-outline-dark btn-sm"
+              onclick="showToast('Assembling supply log report... Dispatched download.');">Download Inventory
+              Report</button>
           </div>
         </div>
 
@@ -916,28 +1096,44 @@
               <p>Equipment Fleet</p>
               <h3>85 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Units</span></h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Medicine stock count</p>
-              <h3>1,200 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Caps</span></h3>
+              <h3>1,200 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Caps</span>
+              </h3>
             </div>
-            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="2" y2="22"/></svg></div>
+            <div class="metric-icon icon-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" x2="12" y1="2" y2="22" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Low Stock Warnings</p>
-              <h3 style="color: var(--color-warning);">2 <span style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Items</span></h3>
+              <h3 style="color: var(--color-warning);">2 <span
+                  style="font-size: 0.85rem; font-weight: 500; color:var(--text-muted-dark);">Items</span></h3>
             </div>
-            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg></div>
+            <div class="metric-icon icon-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              </svg></div>
           </div>
           <div class="metric-card smooth-hover-glow">
             <div class="metric-info">
               <p>Expired stock catalog</p>
               <h3>0</h3>
             </div>
-            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="metric-icon icon-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg></div>
           </div>
         </div>
 
@@ -947,8 +1143,12 @@
               <!-- Filter Controls -->
               <div class="search-filter-controls-row">
                 <div class="search-field-wrapper">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                  <input type="text" placeholder="Search equipment/medicines..." oninput="showToast('Filtering inventory levels...');">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                  <input type="text" placeholder="Search equipment/medicines..."
+                    oninput="showToast('Filtering inventory levels...');">
                 </div>
                 <div class="filter-selectors-right">
                   <select class="filter-select-element" onchange="showToast('Filtering inventory segments...');">
@@ -977,7 +1177,8 @@
                       <td>
                         <strong>Mechanical Ventilators (ResMed)</strong><br>
                         <small style="color: var(--text-muted-dark); display: flex; align-items: center; gap: 0.3rem;">
-                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">|||| | ||| 99012</span>
+                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">|||| |
+                            ||| 99012</span>
                         </small>
                       </td>
                       <td>
@@ -988,13 +1189,16 @@
                       <td>15 units</td>
                       <td>3 units</td>
                       <td>12 units</td>
-                      <td><input type="number" class="inventory-qty" value="15" style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;"></td>
+                      <td><input type="number" class="inventory-qty" value="15"
+                          style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;">
+                      </td>
                     </tr>
                     <tr>
                       <td>
                         <strong>ECG Telemetry cuffs (AuraHub V2)</strong><br>
                         <small style="color: var(--text-muted-dark); display: flex; align-items: center; gap: 0.3rem;">
-                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">|||| || | || 88124</span>
+                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">||||
+                            || | || 88124</span>
                         </small>
                       </td>
                       <td>
@@ -1005,13 +1209,16 @@
                       <td>50 units</td>
                       <td>15 units</td>
                       <td>35 units</td>
-                      <td><input type="number" class="inventory-qty" value="50" style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;"></td>
+                      <td><input type="number" class="inventory-qty" value="50"
+                          style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;">
+                      </td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Clinical ICU Bed Systems</strong><br>
                         <small style="color: var(--text-muted-dark); display: flex; align-items: center; gap: 0.3rem;">
-                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">|| |||| || | 77212</span>
+                          Barcode: <span style="font-family: monospace; font-size: 0.72rem; letter-spacing: 1px;">||
+                            |||| || | 77212</span>
                         </small>
                       </td>
                       <td>
@@ -1022,7 +1229,9 @@
                       <td>20 units</td>
                       <td>2 units</td>
                       <td>18 units</td>
-                      <td><input type="number" class="inventory-qty" value="20" style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;"></td>
+                      <td><input type="number" class="inventory-qty" value="20"
+                          style="width: 60px; padding: 4px; border:1px solid #ccc; border-radius:4px; text-align: center;">
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1034,12 +1243,18 @@
           <div style="display: flex; flex-direction: column; gap: 2rem;">
             <!-- Low stock alerts details -->
             <div class="premium-info-card" style="border-left: 4px solid var(--color-warning); background: #fffcf8;">
-              <h5 style="font-size: 0.88rem; font-weight: 700; color: var(--color-warning); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+              <h5
+                style="font-size: 0.88rem; font-weight: 700; color: var(--color-warning); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.4rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                  <line x1="12" x2="12" y1="9" y2="13" />
+                  <line x1="12" x2="12.01" y1="17" y2="17" />
+                </svg>
                 Active Low Stock Warnings
               </h5>
               <p style="font-size: 0.78rem; line-height: 1.5; color: var(--text-dark); margin: 0;">
-                <strong>Clinical ICU Bed Systems:</strong> Fleet levels drop below 15% threshold limits (2 units warehouse stock left). Re-order enqueued.<br>
+                <strong>Clinical ICU Bed Systems:</strong> Fleet levels drop below 15% threshold limits (2 units
+                warehouse stock left). Re-order enqueued.<br>
                 <strong>ResMed Ventilators:</strong> 3 units left in reserve.
               </p>
             </div>
@@ -1067,9 +1282,12 @@
                 <h4>Upcoming Medicine Expiry Alerts</h4>
               </div>
               <div style="font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.8rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem; background-color: #f8fafc; border-radius: 6px;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem; background-color: #f8fafc; border-radius: 6px;">
                   <span>Lisinopril 10mg batch #A92</span>
-                  <span class="status-badge status-scheduled" style="font-size: 0.72rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">30 Days Left</span>
+                  <span class="status-badge status-scheduled"
+                    style="font-size: 0.72rem; background-color: rgba(245, 158, 11, 0.08); color: var(--color-warning);">30
+                    Days Left</span>
                 </div>
               </div>
             </div>
@@ -1083,4 +1301,5 @@
   <script src="js/dashboard.js"></script>
   <script src="js/dashboard-admin-premium.js"></script>
 </body>
+
 </html>

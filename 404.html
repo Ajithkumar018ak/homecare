@@ -20,7 +20,7 @@
       padding-top: 0 !important;
       padding-bottom: 0 !important;
     }
-    
+
     .bg-deep-navy .container {
       background: rgba(15, 26, 44, 0.45);
       backdrop-filter: blur(20px);
@@ -50,6 +50,7 @@
       z-index: 1;
       animation: pulseGlow 8s ease-in-out infinite;
     }
+
     .bg-glow-1 {
       width: 400px;
       height: 400px;
@@ -57,6 +58,7 @@
       top: 10%;
       left: 15%;
     }
+
     .bg-glow-2 {
       width: 350px;
       height: 350px;
@@ -71,17 +73,20 @@
       filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.45));
       animation: svgPulse 3.5s ease-in-out infinite;
     }
+
     .bg-deep-navy svg circle {
       stroke: rgba(255, 255, 255, 0.1);
       stroke-dasharray: 282.7;
       transform-origin: 50px 50px;
       animation: rotateCircle 12s linear infinite;
     }
+
     .bg-deep-navy svg path:nth-of-type(1) {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation: drawECG 4s linear infinite;
     }
+
     .bg-deep-navy svg path:nth-of-type(2) {
       transform-origin: 50px 50px;
       animation: crossPulse 2.2s ease-in-out infinite;
@@ -93,16 +98,19 @@
       opacity: 0;
       transform: scale(0.85);
     }
+
     .bg-deep-navy h2 {
       animation: textSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
       opacity: 0;
       transform: translateY(20px);
     }
+
     .bg-deep-navy p {
       animation: textFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
       opacity: 0;
       transform: translateY(20px);
     }
+
     .bg-deep-navy .reveal.delay-300 {
       animation: buttonsEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
       opacity: 0;
@@ -118,16 +126,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .bg-deep-navy .btn-primary:hover {
       transform: translateY(-3px) !important;
       box-shadow: 0 8px 25px rgba(0, 102, 255, 0.5) !important;
     }
+
     .bg-deep-navy .btn-outline-light {
       background: rgba(255, 255, 255, 0.03) !important;
       border: 1px solid rgba(255, 255, 255, 0.15) !important;
       backdrop-filter: blur(5px);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
+
     .bg-deep-navy .btn-outline-light:hover {
       background: rgba(255, 255, 255, 0.1) !important;
       border-color: rgba(255, 255, 255, 0.3) !important;
@@ -136,12 +147,16 @@
 
     /* Particle float animation */
     @keyframes floatParticle {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translate(0, 0) rotate(0deg);
       }
+
       33% {
         transform: translate(30px, -50px) rotate(120deg);
       }
+
       66% {
         transform: translate(-30px, -20px) rotate(240deg);
       }
@@ -152,80 +167,105 @@
         opacity: 0;
         transform: scale(0.85) translateY(40px);
       }
+
       100% {
         opacity: 1;
         transform: scale(1) translateY(0);
       }
     }
+
     @keyframes floatCard {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-12px);
       }
     }
+
     @keyframes pulseGlow {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1) translate(0, 0);
         opacity: 0.12;
       }
+
       50% {
         transform: scale(1.2) translate(30px, -20px);
         opacity: 0.18;
       }
     }
+
     @keyframes svgPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
         filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.4));
       }
+
       50% {
         transform: scale(1.05);
         filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.7));
       }
     }
+
     @keyframes rotateCircle {
       100% {
         transform: rotate(360deg);
       }
     }
+
     @keyframes drawECG {
       0% {
         stroke-dashoffset: 1000;
       }
-      40%, 100% {
+
+      40%,
+      100% {
         stroke-dashoffset: 0;
       }
     }
+
     @keyframes crossPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
         opacity: 0.9;
       }
+
       50% {
         transform: scale(1.15);
         opacity: 1;
       }
     }
+
     @keyframes textScale {
       to {
         opacity: 1;
         transform: scale(1);
       }
     }
+
     @keyframes textSlideUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     @keyframes textFadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     @keyframes buttonsEntrance {
       to {
         opacity: 1;
@@ -239,11 +279,13 @@
         animation: none !important;
         transform: none !important;
       }
+
       .bg-deep-navy svg circle,
       .bg-deep-navy svg path,
       .bg-deep-navy svg {
         animation: none !important;
       }
+
       .bg-deep-navy h1,
       .bg-deep-navy h2,
       .bg-deep-navy p,
@@ -284,7 +326,7 @@
         </p>
         <div class="reveal delay-300" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
           <a href="index.html" class="btn btn-primary ripple">Redirect to Homepage</a>
-          <a href="contact.html" class="btn btn-outline-light">Contact Dispatcher</a>
+          <a href="index.html" class="btn btn-outline-light">Back to Home</a>
         </div>
       </div>
     </section>
@@ -293,11 +335,12 @@
 
 
   <script src="js/main.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const section = document.querySelector('.bg-deep-navy');
       const card = section.querySelector('.container');
-      
+
       // Inject background glows
       const glow1 = document.createElement('div');
       glow1.className = 'bg-glow-circle bg-glow-1';
@@ -340,7 +383,7 @@
         const cardY = cardRect.top + cardRect.height / 2;
         const rotateX = -(e.clientY - cardY) / 35;
         const rotateY = (e.clientX - cardX) / 35;
-        
+
         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
       });
 
@@ -359,19 +402,47 @@
           p.style.color = 'rgba(255,255,255,0.06)';
           p.style.fontSize = `${Math.random() * 8 + 8}px`;
         }
-        
+
         p.style.position = 'absolute';
         p.style.left = `${Math.random() * 100}%`;
         p.style.top = `${Math.random() * 100}%`;
         p.style.opacity = Math.random() * 0.4 + 0.1;
         p.style.pointerEvents = 'none';
         p.style.zIndex = '3';
-        
+
         // Random floating animation
         p.style.animation = `floatParticle ${Math.random() * 10 + 8}s ease-in-out infinite`;
         p.style.animationDelay = `${Math.random() * -10}s`;
-        
+
         section.appendChild(p);
+      }
+
+      // Dynamic Back Button redirection logic
+      const primaryBtn = document.querySelector('.reveal.delay-300 .btn-primary');
+      const secondaryBtn = document.querySelector('.reveal.delay-300 .btn-outline-light');
+      
+      const referrer = document.referrer.toLowerCase();
+      const urlParams = new URLSearchParams(window.location.search);
+      const fromParam = urlParams.get('from');
+      
+      if (fromParam === 'user' || referrer.includes('dashboard-user.html')) {
+        if (primaryBtn) {
+          primaryBtn.href = 'dashboard-user.html';
+          primaryBtn.textContent = 'Back to User Dashboard';
+        }
+        if (secondaryBtn) {
+          secondaryBtn.href = 'dashboard-user.html';
+          secondaryBtn.textContent = 'Return to Dashboard';
+        }
+      } else if (fromParam === 'admin' || referrer.includes('dashboard-admin.html')) {
+        if (primaryBtn) {
+          primaryBtn.href = 'dashboard-admin.html';
+          primaryBtn.textContent = 'Back to Admin Dashboard';
+        }
+        if (secondaryBtn) {
+          secondaryBtn.href = 'dashboard-admin.html';
+          secondaryBtn.textContent = 'Return to Dashboard';
+        }
       }
     });
   </script>

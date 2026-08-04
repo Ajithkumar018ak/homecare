@@ -94,13 +94,14 @@ function injectHeaderFooter() {
   <button class="btn btn-outline-light btn-sm login-trigger" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Login</button>
   <a href="contact.html#book" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Book Now</a>
 
-  <button class="mobile-toggle">
+  <button class="mobile-toggle" aria-label="Toggle Navigation">
     <span></span>
     <span></span>
     <span></span>
   </button>
 </div>
       </div>
+      <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
     `;
 
     // Handle Light Header specifics
@@ -124,32 +125,40 @@ function injectHeaderFooter() {
     // Mobile menu toggle
     const toggle = headerContainer.querySelector('.mobile-toggle');
     const menu = headerContainer.querySelector('.nav-links');
+    const overlay = headerContainer.querySelector('#mobile-nav-overlay');
+
+    function closeMenu() {
+      if (toggle) toggle.classList.remove('active');
+      if (menu) menu.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
+    }
 
     if (toggle && menu) {
-
       toggle.addEventListener('click', () => {
-
         toggle.classList.toggle('active');
         menu.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
 
         // Lock / Unlock background scroll
-        document.body.classList.toggle('menu-open');
-
+        if (menu.classList.contains('active')) {
+          document.body.classList.add('menu-open');
+          document.documentElement.classList.add('menu-open');
+        } else {
+          document.body.classList.remove('menu-open');
+          document.documentElement.classList.remove('menu-open');
+        }
       });
+
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
 
       // Close menu after clicking any menu item
       menu.querySelectorAll('a').forEach(link => {
-
-        link.addEventListener('click', () => {
-
-          toggle.classList.remove('active');
-          menu.classList.remove('active');
-          document.body.classList.remove('menu-open');
-
-        });
-
+        link.addEventListener('click', closeMenu);
       });
-
     }
 
 
