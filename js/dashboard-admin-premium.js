@@ -78,7 +78,14 @@ function initAdminLayout() {
     profileMenu.onclick = () => {
       window.location.href = '404.html?from=admin';
     };
-
+    profileMenu.innerHTML = `
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="border-radius: 50%; background: #e2e8f0; padding: 4px; color: var(--color-secondary); display: inline-block; vertical-align: middle;">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
+      <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Jane Smith (Admin)</span>
+    `;
+    topbarActions.appendChild(profileMenu);
 
     function toggleSidebar() {
       if (window.innerWidth <= 1024) {
@@ -151,6 +158,7 @@ function initAdminLayout() {
       dateDisplay.textContent = todayStr;
     }
   }
+}
 
   function closeAdminModals() {
     const addDocModal = document.getElementById('add-doctor-modal-overlay');

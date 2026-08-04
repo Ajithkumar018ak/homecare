@@ -92,7 +92,7 @@ function injectHeaderFooter() {
 
 <div class="nav-actions">
   <button class="btn btn-outline-light btn-sm login-trigger" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Login</button>
-  <a href="contact.html#book" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Book Now</a>
+  <a href="404.html" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Book Now</a>
 
   <button class="mobile-toggle" aria-label="Toggle Navigation">
     <span></span>
