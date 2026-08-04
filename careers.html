@@ -478,15 +478,18 @@
             <form id="careers-form">
               <div class="form-group">
                 <label style="color: var(--text-light);">Full Name</label>
+
                 <div class="form-control-wrapper">
-                  <i style="color: var(--text-muted-light);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
+                  <i style="color: var(--text-muted-light);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                       <circle cx="12" cy="7" r="4" />
-                    </svg></i>
+                    </svg>
+                  </i>
+
                   <input type="text" placeholder="Sarah Jenkins" class="form-control"
                     style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: white;"
-                    required>
+                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
                 </div>
               </div>
               <div class="form-group">

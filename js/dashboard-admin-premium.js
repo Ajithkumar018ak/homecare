@@ -79,15 +79,13 @@ function initAdminLayout() {
       window.location.href = '404.html?from=admin';
     };
     profileMenu.innerHTML = `
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="border-radius: 50%; background: #e2e8f0; padding: 4px; color: var(--color-secondary); display: inline-block; vertical-align: middle;">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-      </svg>
-      <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Jane Smith (Admin)</span>
+      <img src="assets/admin-avatar.webp" alt="Administrator avatar" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=100';">
+      <span>Admin Vance</span>
     `;
     topbarActions.appendChild(profileMenu);
+  }
 
-    function toggleSidebar() {
+  function toggleSidebar() {
       if (window.innerWidth <= 1024) {
         sidebar.classList.toggle('active');
         hamburgerBtn.classList.toggle('active');
@@ -160,39 +158,39 @@ function initAdminLayout() {
   }
 }
 
-  function closeAdminModals() {
-    const addDocModal = document.getElementById('add-doctor-modal-overlay');
-    if (addDocModal) addDocModal.classList.remove('active');
+function closeAdminModals() {
+  const addDocModal = document.getElementById('add-doctor-modal-overlay');
+  if (addDocModal) addDocModal.classList.remove('active');
+}
+
+/* ==========================================================================
+   CLINICIAN DIRECTORY & ADD CLINICIAN MOCK
+   ========================================================================== */
+function initClinicianDirectory() {
+  const addDocClose = document.getElementById('add-doctor-close-btn');
+  const addDocModal = document.getElementById('add-doctor-modal-overlay');
+  const addDocForm = document.getElementById('add-doctor-form-inner');
+
+  if (addDocClose && addDocModal) {
+    addDocClose.addEventListener('click', closeAdminModals);
   }
 
-  /* ==========================================================================
-     CLINICIAN DIRECTORY & ADD CLINICIAN MOCK
-     ========================================================================== */
-  function initClinicianDirectory() {
-    const addDocClose = document.getElementById('add-doctor-close-btn');
-    const addDocModal = document.getElementById('add-doctor-modal-overlay');
-    const addDocForm = document.getElementById('add-doctor-form-inner');
+  if (addDocForm) {
+    addDocForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    if (addDocClose && addDocModal) {
-      addDocClose.addEventListener('click', closeAdminModals);
-    }
+      const docName = document.getElementById('new-doc-name').value;
+      const docSpecialty = document.getElementById('new-doc-specialty').value;
+      const docExp = document.getElementById('new-doc-experience').value;
+      const docAvail = document.getElementById('new-doc-availability').value;
 
-    if (addDocForm) {
-      addDocForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+      if (!docName || !docExp) return;
 
-        const docName = document.getElementById('new-doc-name').value;
-        const docSpecialty = document.getElementById('new-doc-specialty').value;
-        const docExp = document.getElementById('new-doc-experience').value;
-        const docAvail = document.getElementById('new-doc-availability').value;
-
-        if (!docName || !docExp) return;
-
-        // Add to doctor roster table visually
-        const tableBody = document.querySelector('#admin-doctors-table-list tbody');
-        if (tableBody) {
-          const row = document.createElement('tr');
-          row.innerHTML = `
+      // Add to doctor roster table visually
+      const tableBody = document.querySelector('#admin-doctors-table-list tbody');
+      if (tableBody) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
           <td><strong>${docName}</strong></td>
           <td>${docSpecialty} Department</td>
           <td>0 Patients</td>
@@ -201,106 +199,106 @@ function initAdminLayout() {
           <td><button class="btn btn-outline-dark btn-sm duty-toggle">${docAvail === 'Available' ? 'Go Off Duty' : 'Go On Call'}</button></td>
         `;
 
-          tableBody.appendChild(row);
+        tableBody.appendChild(row);
 
-          // Re-bind duty toggles for new elements
-          bindDutyToggle(row.querySelector('.duty-toggle'));
-        }
-
-        showToast(`Registered clinician: ${docName}. Saved successfully.`);
-        addDocForm.reset();
-        closeAdminModals();
-      });
-    }
-  }
-
-  function bindDutyToggle(button) {
-    if (!button) return;
-    button.addEventListener('click', () => {
-      const badge = button.closest('tr').querySelector('.status-badge');
-      if (badge.textContent.trim() === 'Available' || badge.textContent.trim() === 'On Duty') {
-        badge.textContent = 'Off Duty';
-        badge.className = 'status-badge status-cancelled';
-        button.textContent = 'Go On Call';
-        showToast('Clinician set to Off Duty.');
-      } else {
-        badge.textContent = 'Available';
-        badge.className = 'status-badge status-completed';
-        button.textContent = 'Go Off Duty';
-        showToast('Clinician activated.');
+        // Re-bind duty toggles for new elements
+        bindDutyToggle(row.querySelector('.duty-toggle'));
       }
+
+      showToast(`Registered clinician: ${docName}. Saved successfully.`);
+      addDocForm.reset();
+      closeAdminModals();
     });
   }
+}
 
-  /* ==========================================================================
-     INVENTORY & STOCK MANAGEMENT
-     ========================================================================== */
-  function initInventoryManagement() {
-    const qtyInputs = document.querySelectorAll('.inventory-qty');
-    qtyInputs.forEach(input => {
-      input.addEventListener('change', () => {
-        const row = input.closest('tr');
-        const name = row.cells[0].querySelector('strong').textContent.trim();
-        const newVal = input.value;
+function bindDutyToggle(button) {
+  if (!button) return;
+  button.addEventListener('click', () => {
+    const badge = button.closest('tr').querySelector('.status-badge');
+    if (badge.textContent.trim() === 'Available' || badge.textContent.trim() === 'On Duty') {
+      badge.textContent = 'Off Duty';
+      badge.className = 'status-badge status-cancelled';
+      button.textContent = 'Go On Call';
+      showToast('Clinician set to Off Duty.');
+    } else {
+      badge.textContent = 'Available';
+      badge.className = 'status-badge status-completed';
+      button.textContent = 'Go Off Duty';
+      showToast('Clinician activated.');
+    }
+  });
+}
 
-        // Update progress bar level visually based on random calculations
-        const progressFill = row.querySelector('.progress-bar-fill-premium');
-        if (progressFill) {
-          const pct = Math.min(Math.max(Math.round((parseInt(newVal) / 100) * 100), 5), 100);
-          progressFill.style.width = `${pct}%`;
-          if (pct < 20) {
-            progressFill.className = 'progress-bar-fill-premium progress-bar-fill-warning';
-          } else {
-            progressFill.className = 'progress-bar-fill-premium progress-bar-fill-emerald';
-          }
+/* ==========================================================================
+   INVENTORY & STOCK MANAGEMENT
+   ========================================================================== */
+function initInventoryManagement() {
+  const qtyInputs = document.querySelectorAll('.inventory-qty');
+  qtyInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      const row = input.closest('tr');
+      const name = row.cells[0].querySelector('strong').textContent.trim();
+      const newVal = input.value;
+
+      // Update progress bar level visually based on random calculations
+      const progressFill = row.querySelector('.progress-bar-fill-premium');
+      if (progressFill) {
+        const pct = Math.min(Math.max(Math.round((parseInt(newVal) / 100) * 100), 5), 100);
+        progressFill.style.width = `${pct}%`;
+        if (pct < 20) {
+          progressFill.className = 'progress-bar-fill-premium progress-bar-fill-warning';
+        } else {
+          progressFill.className = 'progress-bar-fill-premium progress-bar-fill-emerald';
         }
+      }
 
-        showToast(`Console Updated: ${name} fleet levels are set to ${newVal} units.`);
+      showToast(`Console Updated: ${name} fleet levels are set to ${newVal} units.`);
+    });
+  });
+}
+
+/* ==========================================================================
+   BULK APPROVALS QUEUE SYSTEM
+   ========================================================================== */
+function initApprovalQueue() {
+  const bulkCheckbox = document.getElementById('bulk-select-approve-checkbox');
+  const itemsCheckboxes = document.querySelectorAll('.bulk-item-check');
+
+  if (bulkCheckbox) {
+    bulkCheckbox.addEventListener('change', () => {
+      itemsCheckboxes.forEach(cb => {
+        cb.checked = bulkCheckbox.checked;
       });
     });
   }
+}
 
-  /* ==========================================================================
-     BULK APPROVALS QUEUE SYSTEM
-     ========================================================================== */
-  function initApprovalQueue() {
-    const bulkCheckbox = document.getElementById('bulk-select-approve-checkbox');
-    const itemsCheckboxes = document.querySelectorAll('.bulk-item-check');
-
-    if (bulkCheckbox) {
-      bulkCheckbox.addEventListener('change', () => {
-        itemsCheckboxes.forEach(cb => {
-          cb.checked = bulkCheckbox.checked;
-        });
+/* ==========================================================================
+   ADMIN STATISTICS CHARTS ANIMATIONS
+   ========================================================================== */
+function initAdminCharts() {
+  const chartRow = document.querySelector('.billing-chart-bars-row');
+  if (chartRow) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateAdminBillingChart();
+          observer.unobserve(entry.target);
+        }
       });
-    }
+    }, { threshold: 0.1 });
+    observer.observe(chartRow);
   }
+}
 
-  /* ==========================================================================
-     ADMIN STATISTICS CHARTS ANIMATIONS
-     ========================================================================== */
-  function initAdminCharts() {
-    const chartRow = document.querySelector('.billing-chart-bars-row');
-    if (chartRow) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateAdminBillingChart();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      observer.observe(chartRow);
-    }
-  }
-
-  function animateAdminBillingChart() {
-    const bars = document.querySelectorAll('.billing-chart-bar-fill');
-    bars.forEach(bar => {
-      const val = bar.getAttribute('data-height');
-      bar.style.height = '0';
-      setTimeout(() => {
-        bar.style.height = `${val}px`;
-      }, 150);
-    });
-  }
+function animateAdminBillingChart() {
+  const bars = document.querySelectorAll('.billing-chart-bar-fill');
+  bars.forEach(bar => {
+    const val = bar.getAttribute('data-height');
+    bar.style.height = '0';
+    setTimeout(() => {
+      bar.style.height = `${val}px`;
+    }, 150);
+  });
+}

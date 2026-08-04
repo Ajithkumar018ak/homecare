@@ -11,6 +11,14 @@
   --color-glass-border: rgba(226, 232, 240, 0.8);
   --color-dark-glass-bg: rgba(15, 26, 44, 0.85);
   --color-dark-glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Original background variables to safeguard dashboards */
+  --bg-deep-navy: #07111F;
+  --bg-slate-navy: #0F1A2C;
+  --bg-soft-white: #F8FAFC;
+  --bg-pure-white: #FFFFFF;
+  --bg-light-blue: #EDF7FF;
+  --bg-dark-blue: #0B1D33;
 }
 
 * {
@@ -67,7 +75,7 @@ body.sidebar-open .dashboard-main {
   margin-left: var(--sidebar-width);
   height: 100vh;
   overflow-y: auto;
-  padding: calc(var(--header-height) + 1.5rem) 2rem 3rem 2rem;
+  padding: calc(var(--header-height) + 24px) 2rem 3rem 2rem;
   transition: var(--transition-premium);
   display: flex;
   flex-direction: column;
@@ -144,16 +152,16 @@ body.sidebar-open .dashboard-main {
   right: 0;
   height: var(--header-height);
   z-index: 999;
-  background: var(--color-glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--color-glass-border);
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
   transition: var(--transition-premium);
+  border-radius: 0 !important;
+  margin: 0 !important;
 }
 
 /* Topbar left container */
@@ -1947,12 +1955,15 @@ body.sidebar-open .dashboard-main {
     left: 0;
     width: 100%;
     padding: 0 1.5rem;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
   }
 
   .dashboard-main {
     margin-left: 0;
     width: 100%;
-    padding: calc(var(--header-height) + 1.5rem) 1.5rem 2rem 1.5rem;
+    padding: calc(var(--header-height) + 20px) 1.5rem 2rem 1.5rem;
   }
 
   .hamburger-menu {
@@ -1981,6 +1992,10 @@ body.sidebar-open .dashboard-main {
     align-items: center !important;
     justify-content: space-between !important;
     border-bottom: 1px solid rgba(226, 232, 240, 0.6) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
   }
 
   .topbar-left {
@@ -2082,7 +2097,7 @@ body.sidebar-open .dashboard-main {
   }
 
   .dashboard-main {
-    padding: calc(var(--header-height) + 1rem) 1rem 2rem 1rem !important;
+    padding: calc(var(--header-height) + 16px) 1rem 2rem 1rem !important;
     gap: 1.2rem !important;
     overflow-x: hidden !important;
     width: 100% !important;
@@ -2319,7 +2334,7 @@ body.sidebar-open .dashboard-main {
   }
 
   body#user-dashboard-root .dashboard-main {
-    padding: calc(var(--header-height) + 1rem) 16px 2rem 16px !important;
+    padding: calc(var(--header-height) + 16px) 16px 2rem 16px !important;
     overflow-x: hidden !important;
     width: 100% !important;
   }
@@ -2399,6 +2414,10 @@ body.sidebar-open .dashboard-main {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
   }
 
   body#user-dashboard-root .topbar-left {
@@ -2476,8 +2495,8 @@ body.sidebar-open .dashboard-main {
     width: 100% !important;
   }
 
-  body#user-dashboard-root .form-group + div[style*="display: flex"],
-  body#user-dashboard-root .form-group + div[style*="display:flex"],
+  body#user-dashboard-root .form-group+div[style*="display: flex"],
+  body#user-dashboard-root .form-group+div[style*="display:flex"],
   body#user-dashboard-root form div[style*="display: flex"],
   body#user-dashboard-root form div[style*="display:flex"] {
     flex-direction: column !important;
@@ -2554,21 +2573,27 @@ body.sidebar-open .dashboard-main {
   }
 
   /* Typography sizes */
-  body#user-dashboard-root h1, body#user-dashboard-root .h1 {
+  body#user-dashboard-root h1,
+  body#user-dashboard-root .h1 {
     font-size: 24px !important;
     line-height: 1.3 !important;
   }
-  body#user-dashboard-root h2, body#user-dashboard-root .h2 {
+
+  body#user-dashboard-root h2,
+  body#user-dashboard-root .h2 {
     font-size: 22px !important;
     line-height: 1.35 !important;
   }
-  body#user-dashboard-root h3, body#user-dashboard-root .h3 {
+
+  body#user-dashboard-root h3,
+  body#user-dashboard-root .h3 {
     font-size: 20px !important;
     line-height: 1.4 !important;
   }
 }
 
 @media (max-width: 768px) {
+
   /* Prevent horizontal scrolling and constrain width */
   html,
   body#user-dashboard-root {
@@ -2584,16 +2609,16 @@ body.sidebar-open .dashboard-main {
   }
 
   /* Prevent grid items and cards from stretching horizontally */
-  body#user-dashboard-root .grid > div,
-  body#user-dashboard-root .grid-2 > div,
-  body#user-dashboard-root .grid-3 > div,
-  body#user-dashboard-root .grid-4 > div,
-  body#user-dashboard-root .overview-details-layout > div,
-  body#user-dashboard-root .appointments-grid-layout > div,
-  body#user-dashboard-root .reports-grid-layout > div,
-  body#user-dashboard-root .meds-grid-layout > div,
-  body#user-dashboard-root .billing-grid-layout > div,
-  body#user-dashboard-root .metrics-row > div,
+  body#user-dashboard-root .grid>div,
+  body#user-dashboard-root .grid-2>div,
+  body#user-dashboard-root .grid-3>div,
+  body#user-dashboard-root .grid-4>div,
+  body#user-dashboard-root .overview-details-layout>div,
+  body#user-dashboard-root .appointments-grid-layout>div,
+  body#user-dashboard-root .reports-grid-layout>div,
+  body#user-dashboard-root .meds-grid-layout>div,
+  body#user-dashboard-root .billing-grid-layout>div,
+  body#user-dashboard-root .metrics-row>div,
   body#user-dashboard-root .table-card,
   body#user-dashboard-root .premium-info-card,
   body#user-dashboard-root .billing-outstanding-card,
@@ -2630,6 +2655,10 @@ body.sidebar-open .dashboard-main {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
   }
 
   body#user-dashboard-root .topbar-left {
@@ -2685,6 +2714,7 @@ body.sidebar-open .dashboard-main {
    ADMIN DASHBOARD MOBILE OVERHAUL (320px - 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+
   /* Prevent horizontal scrolling and constrain width */
   html,
   body#admin-dashboard-root {
@@ -2700,7 +2730,7 @@ body.sidebar-open .dashboard-main {
   }
 
   body#admin-dashboard-root .dashboard-main {
-    padding: calc(var(--header-height) + 1rem) 16px 2rem 16px !important;
+    padding: calc(var(--header-height) + 16px) 16px 2rem 16px !important;
     overflow-x: hidden !important;
     width: 100% !important;
   }
@@ -2718,12 +2748,12 @@ body.sidebar-open .dashboard-main {
   }
 
   /* Prevent grid items and cards from stretching horizontally */
-  body#admin-dashboard-root .grid > div,
-  body#admin-dashboard-root .grid-2 > div,
-  body#admin-dashboard-root .grid-3 > div,
-  body#admin-dashboard-root .grid-4 > div,
-  body#admin-dashboard-root .overview-details-layout > div,
-  body#admin-dashboard-root .metrics-row > div,
+  body#admin-dashboard-root .grid>div,
+  body#admin-dashboard-root .grid-2>div,
+  body#admin-dashboard-root .grid-3>div,
+  body#admin-dashboard-root .grid-4>div,
+  body#admin-dashboard-root .overview-details-layout>div,
+  body#admin-dashboard-root .metrics-row>div,
   body#admin-dashboard-root .table-card,
   body#admin-dashboard-root .premium-info-card,
   body#admin-dashboard-root .time-slot-block,
@@ -2830,8 +2860,8 @@ body.sidebar-open .dashboard-main {
     justify-content: center !important;
   }
 
-  body#admin-dashboard-root .form-group + div[style*="display: flex"],
-  body#admin-dashboard-root .form-group + div[style*="display:flex"],
+  body#admin-dashboard-root .form-group+div[style*="display: flex"],
+  body#admin-dashboard-root .form-group+div[style*="display:flex"],
   body#admin-dashboard-root form div[style*="display: flex"],
   body#admin-dashboard-root form div[style*="display:flex"] {
     flex-direction: column !important;
@@ -2854,6 +2884,10 @@ body.sidebar-open .dashboard-main {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
   }
 
   body#admin-dashboard-root .topbar-left {
@@ -2929,15 +2963,20 @@ body.sidebar-open .dashboard-main {
   }
 
   /* Typography sizes */
-  body#admin-dashboard-root h1, body#admin-dashboard-root .h1 {
+  body#admin-dashboard-root h1,
+  body#admin-dashboard-root .h1 {
     font-size: 24px !important;
     line-height: 1.3 !important;
   }
-  body#admin-dashboard-root h2, body#admin-dashboard-root .h2 {
+
+  body#admin-dashboard-root h2,
+  body#admin-dashboard-root .h2 {
     font-size: 22px !important;
     line-height: 1.35 !important;
   }
-  body#admin-dashboard-root h3, body#admin-dashboard-root .h3 {
+
+  body#admin-dashboard-root h3,
+  body#admin-dashboard-root .h3 {
     font-size: 20px !important;
     line-height: 1.4 !important;
   }
@@ -2949,5 +2988,130 @@ body.sidebar-open .dashboard-main {
   }
 }
 
+/* ==========================================================================
+   ENTERPRISE HEALTHCARE CTA BUTTONS
+   ========================================================================== */
+.btn-cta-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border-radius: 10px !important;
+  height: 44px !important;
+  padding: 0 1.25rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--color-primary, #0066ff) 0%, var(--color-primary-dark, #0052cc) 100%) !important;
+  border: none !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 2px 4px rgba(0, 102, 255, 0.1) !important;
+  white-space: nowrap !important;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2) !important;
+  opacity: 0.95 !important;
+}
+
+.btn-cta-primary:active {
+  transform: translateY(0) !important;
+}
+
+.btn-cta-primary svg {
+  stroke: currentColor !important;
+  flex-shrink: 0 !important;
+}
+
+.btn-cta-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border-radius: 10px !important;
+  height: 44px !important;
+  padding: 0 1.25rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--text-dark, #1e293b) !important;
+  background: transparent !important;
+  border: 1.5px solid #e2e8f0 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  white-space: nowrap !important;
+}
+
+.btn-cta-secondary:hover {
+  transform: translateY(-2px) !important;
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.btn-cta-secondary:active {
+  transform: translateY(0) !important;
+}
+
+.btn-cta-secondary svg {
+  stroke: currentColor !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100% !important;
+    display: flex !important;
+  }
+
+  .shortcuts-flex-container {
+    flex-direction: column !important;
+  }
+
+  .shortcuts-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+}
 
 
+
+
+@media (max-width:768px) {
+
+  .topbar-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .settings-shortcut-btn {
+    display: flex !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex-shrink: 0 !important;
+    order: 2;
+  }
+
+  .notification-badge {
+    flex-shrink: 0 !important;
+    order: 1;
+  }
+
+  .profile-dropdown,
+  .profile-section,
+  .user-profile {
+    display: none !important;
+  }
+}

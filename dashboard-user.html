@@ -127,10 +127,8 @@
     <!-- SIDEBAR -->
     <aside class="dashboard-sidebar">
       <div class="sidebar-brand">
-        <a href="index.html" class="logo">
+        <a href="dashboard-user.html" class="logo">
           <img src="assets/logo.webp" alt="AuraCare Hub Logo" class="logo-img">
-
-
         </a>
       </div>
       <nav class="sidebar-menu">
@@ -307,6 +305,12 @@
                   </div>
                 </div>
               </div>
+              <div style="padding: 0.8rem; border-top: 1px solid #f1f5f9; text-align: center;">
+                <a href="404.html?from=user" class="btn-cta-secondary" style="width: 100%; height: 36px; font-size: 0.8rem; padding: 0 0.8rem; box-sizing: border-box; justify-content: center;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                  View All Notifications
+                </a>
+              </div>
             </div>
           </div>
 
@@ -333,11 +337,15 @@
             <h2>Welcome back, user</h2>
             <p>Your AuraCare patient health indexes are steady today. You have completed 2 out of your 3 primary
               treatment checklist steps. Keep up the great progress!</p>
-            <div class="welcome-banner-actions" style="margin-top: 1.2rem;">
+            <div class="welcome-banner-actions" style="margin-top: 1.2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
               <button class="btn btn-outline-light btn-sm"
                 onclick="document.querySelector('[data-section=\'sec-appointments\']').click();">Book Consult</button>
               <button class="btn btn-secondary btn-sm"
                 onclick="document.querySelector('[data-section=\'sec-meds\']').click();">Track Intake</button>
+              <a href="404.html?from=user" class="btn btn-secondary btn-sm" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.25); color: white;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m12 8-4 4 4 4M16 12H8"/></svg>
+                View Full Health Summary
+              </a>
             </div>
           </div>
           <div class="health-score-circle-container">
@@ -373,7 +381,13 @@
           </div>
         </div>
 
-        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">Daily Health Summary</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; width: 100%;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">Daily Health Summary</h3>
+          <a href="404.html?from=user" class="btn-cta-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+            View Trends
+          </a>
+        </div>
 
         <!-- Metrics Rows (12 metrics total) -->
         <div class="metrics-row" style="margin-bottom: 2rem;">
@@ -526,8 +540,12 @@
           <div style="display: flex; flex-direction: column; gap: 2rem;">
             <!-- Roster Personnel (Existing) -->
             <div class="table-card">
-              <div class="table-header">
-                <h3>Assigned Bedside Roster</h3>
+              <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <h3 style="margin: 0;">Assigned Bedside Roster</h3>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  View Care Team
+                </a>
               </div>
               <div class="data-table-wrapper">
                 <table class="data-table">
@@ -537,6 +555,7 @@
                       <th>Specialty</th>
                       <th>Roster Schedule</th>
                       <th>Duty</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -545,12 +564,14 @@
                       <td>Lead Cardiologist</td>
                       <td>Mon & Wed consults</td>
                       <td><span class="status-badge status-scheduled">On Call</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-message"></i> Contact Doctor</a></td>
                     </tr>
                     <tr>
                       <td><strong>Sarah Jenkins, RN</strong></td>
                       <td>Bedside Nurse</td>
                       <td>Daily 09:00 - 17:00</td>
                       <td><span class="status-badge status-completed">Active Duty</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-message"></i> Contact Nurse</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -559,8 +580,12 @@
 
             <!-- Treatment Checkpoints (Existing) -->
             <div class="table-card">
-              <div class="table-header">
-                <h3>Upcoming Treatment Checkpoints</h3>
+              <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <h3 style="margin: 0;">Upcoming Treatment Checkpoints</h3>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17v-4h6v4"/></svg>
+                  View Treatment Plan
+                </a>
               </div>
               <div class="data-table-wrapper">
                 <table class="data-table">
@@ -569,6 +594,7 @@
                       <th>Treatment Item</th>
                       <th>Scheduled Date</th>
                       <th>Physician Lead</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -576,11 +602,13 @@
                       <td><strong>Lab Blood Draw Swab</strong></td>
                       <td>Aug 08, 08:30 AM</td>
                       <td>Lab Tech Dispatch</td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-clock-rotate-left"></i> Reschedule</a></td>
                     </tr>
                     <tr>
                       <td><strong>ECG Telemetry Calibrate</strong></td>
                       <td>Aug 15, 11:00 AM</td>
                       <td>Dr. Mercer</td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-xmark"></i> Cancel</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -589,8 +617,12 @@
 
             <!-- Chart Card -->
             <div class="table-card">
-              <div class="table-header">
-                <h3>ECG 7-Day Telemetry Chart (BPM Range)</h3>
+              <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <h3 style="margin: 0;">ECG 7-Day Telemetry Chart (BPM Range)</h3>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  View ECG History
+                </a>
               </div>
               <div class="chart-container">
                 <div class="chart-bar-wrapper">
@@ -626,8 +658,12 @@
 
             <!-- Recent Activity list -->
             <div class="table-card">
-              <div class="table-header">
-                <h3>Recent Clinical Activity</h3>
+              <div class="table-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; width: 100%;">
+                <h3 style="margin: 0;">Recent Clinical Activity</h3>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                  View Activity Log
+                </a>
               </div>
               <div class="data-table-wrapper">
                 <table class="data-table">
@@ -637,6 +673,7 @@
                       <th>Category</th>
                       <th>Date / Time</th>
                       <th>Verification</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -645,18 +682,21 @@
                       <td>Medication</td>
                       <td>Today, 08:15 AM</td>
                       <td><span class="status-badge status-completed">Success</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i> View Details</a></td>
                     </tr>
                     <tr>
                       <td><strong>Downloaded ECG Telemetry PDF report</strong></td>
                       <td>Report View</td>
                       <td>Yesterday, 04:30 PM</td>
                       <td><span class="status-badge status-completed">Success</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i> View Report</a></td>
                     </tr>
                     <tr>
                       <td><strong>UnitedHealth Insurance Claim CLM-8821 Disbursed</strong></td>
                       <td>Financial</td>
                       <td>July 15, 2026</td>
                       <td><span class="status-badge status-completed">Disbursed</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-file-invoice-dollar"></i> View Invoice</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -665,8 +705,12 @@
 
             <!-- FAQ Accordions Panel -->
             <div class="premium-info-card">
-              <div class="card-title-header">
-                <h4>Frequently Asked Questions</h4>
+              <div class="card-title-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem; width: 100%;">
+                <h4 style="margin: 0;">Frequently Asked Questions</h4>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+                  View All FAQs
+                </a>
               </div>
               <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                 <div class="faq-accordion-item">
@@ -861,6 +905,16 @@
                   <span style="color: var(--text-muted-dark); font-weight: 600;">Nurse Dispatch Hotline:</span>
                   <a href="tel:5550199" style="color: var(--color-primary); font-weight: 700;">(555) 0199</a>
                 </div>
+                <div class="shortcuts-flex-container" style="display: flex; gap: 0.6rem; margin-top: 0.4rem; flex-wrap: wrap; width: 100%;">
+                  <a href="404.html?from=user" class="btn-cta-secondary" style="flex: 1; min-width: 130px; height: 38px; font-size: 0.8rem; padding: 0 0.8rem; justify-content: center; box-sizing: border-box;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Contact Support
+                  </a>
+                  <a href="404.html?from=user" class="btn-cta-secondary" style="flex: 1; min-width: 130px; height: 38px; font-size: 0.8rem; padding: 0 0.8rem; justify-content: center; box-sizing: border-box;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    View Insurance Details
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -870,9 +924,15 @@
                 Health Record Summary</h5>
               <p style="font-size: 0.78rem; color: var(--text-muted-dark); margin-bottom: 1rem;">Export all telemetry
                 readings, diagnoses, and compliance scores.</p>
-              <button class="btn btn-primary btn-sm" style="width: 100%;"
-                onclick="showToast('Assembling health summary... Dispatched telemetry download.');">Download Health
-                Report</button>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                <button class="btn btn-primary btn-sm" style="width: 100%;"
+                  onclick="showToast('Assembling health summary... Dispatched telemetry download.');">Download Health
+                  Report</button>
+                <a href="404.html?from=user" class="btn-cta-secondary" style="width: 100%; height: 38px; font-size: 0.8rem; padding: 0 0.8rem; box-sizing: border-box; justify-content: center;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  View Report
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -882,11 +942,15 @@
       <div id="sec-appointments" class="dashboard-section animate-fade-up" style="display: none;">
         <div
           style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-          <h3 style="font-size: 1.4rem; font-weight: 700;">Manage Roster Appointments</h3>
-          <div style="display: flex; gap: 1rem;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">Manage Roster Appointments</h3>
+          <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap;">
             <button class="btn btn-primary btn-sm"
               onclick="document.getElementById('dash-book-panel').style.display='block'; this.style.display='none';">Book
               New Appointment</button>
+            <a href="404.html?from=user" class="btn-cta-secondary" style="height: 32px; font-size: 0.8rem; padding: 0 0.8rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
+              Book Appointment
+            </a>
           </div>
         </div>
 
@@ -1151,8 +1215,10 @@
                   <td>2026-08-05</td>
                   <td>09:00 AM</td>
                   <td><span class="status-badge status-completed">Completed</span></td>
-                  <td><button class="btn btn-outline-dark btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;"
-                      disabled>Review Vitals</button></td>
+                  <td>
+                    <button class="btn btn-outline-dark btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;" disabled>Review Vitals</button>
+                    <a href="404.html?from=user" class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 4px; text-decoration: none; display: inline-block;">View Report</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -1367,7 +1433,13 @@
 
       <!-- SECTION: MEDICATION -->
       <div id="sec-meds" class="dashboard-section animate-fade-up" style="display: none;">
-        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem;">Medication Prescription Schedule</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">Medication Prescription Schedule</h3>
+          <a href="404.html?from=user" class="btn-cta-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Manage Medications
+          </a>
+        </div>
 
         <!-- Medication Summary Statistics -->
         <div class="metrics-row" style="margin-bottom: 2rem;">
@@ -1444,7 +1516,10 @@
                       <p>1 Tablet / Daily (Morning) &bull; Take with water</p>
                     </div>
                   </div>
-                  <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary);">BP Regulator</span>
+                  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary);">BP Regulator</span>
+                    <a href="404.html?from=user" class="btn btn-outline-dark btn-xs" style="padding: 0.2rem 0.5rem; font-size: 0.7rem; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;"><i class="fa-solid fa-prescription"></i> View Rx</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1474,7 +1549,10 @@
                       <p>1 Capsule / Daily &bull; Food intake suggested</p>
                     </div>
                   </div>
-                  <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary);">Bone Health</span>
+                  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary);">Bone Health</span>
+                    <a href="404.html?from=user" class="btn btn-outline-dark btn-xs" style="padding: 0.2rem 0.5rem; font-size: 0.7rem; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;"><i class="fa-solid fa-prescription"></i> View Rx</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1503,7 +1581,10 @@
                       <p>1 Softgel &bull; Promotes cardiovascular health</p>
                     </div>
                   </div>
-                  <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary);">Cardio Care</span>
+                  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-secondary);">Cardio Care</span>
+                    <a href="404.html?from=user" class="btn btn-outline-dark btn-xs" style="padding: 0.2rem 0.5rem; font-size: 0.7rem; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;"><i class="fa-solid fa-prescription"></i> View Rx</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1546,6 +1627,7 @@
                       <th>Prescription</th>
                       <th>Scheduled Slot</th>
                       <th>Status Check</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1553,6 +1635,7 @@
                       <td><strong>Vitamin D3 2000 IU</strong></td>
                       <td>July 28, 02:00 PM</td>
                       <td><span class="status-badge status-cancelled">Missed</span></td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-rotate-right"></i> Log Intake</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1571,6 +1654,7 @@
                       <th>Prescription Course</th>
                       <th>Physician Lead</th>
                       <th>Completion Date</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1578,6 +1662,7 @@
                       <td><strong>Amoxicillin 500mg (Antibiotic)</strong></td>
                       <td>Dr. Adrian Mercer</td>
                       <td>June 15, 2026</td>
+                      <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-eye"></i> View Summary</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1677,6 +1762,7 @@
                   <th>Dosage Schedule</th>
                   <th>Instructions</th>
                   <th>Refill Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -1686,6 +1772,7 @@
                   <td>Administer with full glass of water. Track BP levels.</td>
                   <td><span class="status-badge status-completed" style="background-color:rgba(16, 185, 129, 0.08);">60
                       Days Left</span></td>
+                  <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-arrows-rotate"></i> Request Refill</a></td>
                 </tr>
                 <tr>
                   <td><strong>Atorvastatin 20mg</strong></td>
@@ -1693,6 +1780,7 @@
                   <td>Avoid grapefruit juices.</td>
                   <td><span class="status-badge status-scheduled" style="background-color:rgba(0, 102, 255, 0.08);">15
                       Days Left</span></td>
+                  <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-arrows-rotate"></i> Request Refill</a></td>
                 </tr>
               </tbody>
             </table>
@@ -1702,7 +1790,13 @@
 
       <!-- SECTION: MESSAGES -->
       <div id="sec-messages" class="dashboard-section animate-fade-up" style="display: none;">
-        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem;">Roster Message Room</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">Roster Message Room</h3>
+          <a href="404.html?from=user" class="btn-cta-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Open Inbox
+          </a>
+        </div>
 
         <div class="chat-workspace-grid">
           <!-- Left list pane -->
@@ -2102,7 +2196,7 @@
                   <td>July 15, 2026</td>
                   <td>$450.00</td>
                   <td><span class="status-badge status-completed">Paid</span></td>
-                  <td>-</td>
+                  <td><a href="404.html?from=user" class="btn btn-outline-dark btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none;"><i class="fa-solid fa-file-invoice"></i> View Invoice</a></td>
                 </tr>
               </tbody>
             </table>
