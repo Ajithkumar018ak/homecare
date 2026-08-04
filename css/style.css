@@ -1464,3 +1464,338 @@ body.menu-open {
   opacity: 1;
   visibility: visible;
 }
+
+
+
+
+/* =====================================================
+   GLOBAL RESPONSIVE FIX
+===================================================== */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+img,
+video,
+iframe{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+    padding-inline:20px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:991px){
+
+.section{
+    padding:70px 0;
+}
+
+.grid-2,
+.grid-3,
+.grid-4{
+    grid-template-columns:1fr;
+}
+
+h1{
+    font-size:2.5rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+h3{
+    font-size:1.4rem;
+}
+
+.glass-card,
+.glass-card-light{
+    padding:24px;
+}
+
+.footer-grid-5{
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.trust-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+html{
+    font-size:15px;
+}
+
+.section{
+    padding:60px 0;
+}
+
+.container{
+    padding-inline:18px;
+}
+
+.grid,
+.grid-2,
+.grid-3,
+.grid-4{
+    grid-template-columns:1fr;
+}
+
+.row{
+    flex-direction:column;
+}
+
+h1{
+    font-size:2rem;
+    line-height:1.2;
+}
+
+h2{
+    font-size:1.7rem;
+}
+
+h3{
+    font-size:1.3rem;
+}
+
+p{
+    font-size:.95rem;
+}
+
+button,
+.btn{
+    width:100%;
+    justify-content:center;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+}
+
+.glass-card,
+.glass-card-light{
+    padding:20px;
+}
+
+.footer-grid-5{
+    grid-template-columns:1fr;
+}
+
+.footer-bottom-premium{
+    flex-direction:column;
+    gap:18px;
+    text-align:center;
+}
+
+.footer-bottom-links{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.trust-grid{
+    grid-template-columns:1fr;
+}
+
+.logo-img{
+    width:80px;
+}
+
+.logo span{
+    font-size:1.3rem;
+}
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+html{
+    font-size:14px;
+}
+
+.container{
+    padding-inline:16px;
+}
+
+.section{
+    padding:50px 0;
+}
+
+h1{
+    font-size:1.8rem;
+}
+
+h2{
+    font-size:1.5rem;
+}
+
+h3{
+    font-size:1.2rem;
+}
+
+.logo-img{
+    width:70px;
+}
+
+.glass-card,
+.glass-card-light{
+    padding:18px;
+}
+
+.footer-title::after{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.footer-social-links,
+.footer-badge-container{
+    justify-content:center;
+}
+
+.footer-links-item a,
+.footer-services-link{
+    align-self:center;
+}
+
+.footer-contact-card{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+}
+
+}
+
+/* =====================================================
+   MOBILE NAVIGATION FIX
+===================================================== */
+
+@media (max-width:991px){
+
+.mobile-toggle{
+    display:flex;
+    z-index:1002;
+}
+
+.nav-links{
+
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    max-width:80%;
+    height:100dvh;
+
+    background:#07111F;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-start;
+    justify-content:flex-start;
+
+    gap:18px;
+
+    padding:90px 22px 30px;
+
+    overflow-y:auto;
+
+    transition:right .35s ease;
+
+    z-index:1001;
+
+    overscroll-behavior:contain;
+
+}
+
+.nav-links.active{
+    right:0;
+}
+
+.nav-link{
+    width:100%;
+    padding:10px 0;
+    font-size:16px;
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:0;
+}
+
+.nav-actions .btn{
+    display:none;
+}
+
+.mobile-menu-extra{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+}
+
+/* =====================================================
+   NO HORIZONTAL SCROLL
+===================================================== */
+
+section,
+div,
+article,
+main,
+header,
+footer{
+    max-width:100%;
+}
+
+table{
+    display:block;
+    overflow:auto;
+}
+
+pre{
+    overflow:auto;
+}
+
+body.menu-open{
+    overflow:hidden;
+    position:fixed;
+    width:100%;
+}
+
+
+
+
+
