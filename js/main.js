@@ -83,6 +83,12 @@ function injectHeaderFooter() {
       <span>stackly@healthcare.com</span>
     </a>
 
+
+    <a href="https://maps.google.com/?q=Chennai,Tamil+Nadu,India" class="mobile-contact" target="_blank">
+  <i class="fa-solid fa-location-dot"></i>
+  <span>Chennai, Tamil Nadu, India</span>
+</a>
+
     <a href="tel:+919875409805" class="mobile-contact">
       <i class="fa-solid fa-phone"></i>
       <span>+91 98754-09805</span>
@@ -470,14 +476,14 @@ function initModals() {
                   <label>Patient ID / Email</label>
                   <div class="form-control-wrapper">
                     <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></i>
-                    <input type="email" placeholder="patient@auracare.com" class="form-control" value="patient@auracare.com" required>
+                    <input type="email" placeholder="Enter Your Email" class="form-control" >
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Access Code</label>
                   <div class="form-control-wrapper">
                     <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></i>
-                    <input type="password" placeholder="••••••••" class="form-control" value="123456" required>
+                    <input type="password" placeholder="••••••••" class="form-control" >
                   </div>
                 </div>
                 <div class="form-options">
@@ -485,7 +491,7 @@ function initModals() {
                     <input type="checkbox" checked>
                     <span>Keep me authenticated</span>
                   </label>
-                  <a href="404.html" class="form-link forgot-trigger">Recover Pin</a>
+                  <a href="404.html">Recover Pin</a>
                 </div>
                 <button type="submit" class="btn btn-primary ripple" style="width: 100%;">Sign In Patient Dashboard</button>
               </form>
@@ -498,14 +504,14 @@ function initModals() {
                   <label>Clinical Code</label>
                   <div class="form-control-wrapper">
                     <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i>
-                    <input type="email" placeholder="administrator@auracare.com" class="form-control" value="admin@auracare.com" required>
+                    <input type="email" placeholder="administrator@auracare.com" class="form-control" >
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Security Key</label>
                   <div class="form-control-wrapper">
                     <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></i>
-                    <input type="password" placeholder="••••••••" class="form-control" value="admin123" required>
+                    <input type="password" placeholder="••••••••" class="form-control" >
                   </div>
                 </div>
                 <div class="form-options">
@@ -543,6 +549,26 @@ function initModals() {
                     <input type="tel" placeholder="+1 (555) 000-0000" class="form-control" required>
                   </div>
                 </div>
+
+                <div class="form-group">
+  <label>Password</label>
+  <div class="form-control-wrapper">
+    <i>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </i>
+    <input type="password" placeholder="Create password" class="form-control" required>
+  </div>
+</div>
+
+<div class="form-options" style="margin-bottom: 1rem;">
+  <label style="display:flex; align-items:center; gap:8px; font-size:14px; cursor:pointer;">
+    <input type="checkbox" required>
+    <span>I agree to the terms and conditions</span>
+  </label>
+</div>
                 <button type="submit" class="btn btn-primary ripple" style="width: 100%;">Submit Care Application</button>
               </form>
             </div>
@@ -557,7 +583,7 @@ function initModals() {
                     <input type="email" placeholder="john@example.com" class="form-control" required>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary ripple" style="width: 100%; margin-bottom: 1.5rem;">Request Reset Key</button>
+                <button type="404.html" class="btn btn-primary ripple" style="width: 100%; margin-bottom: 1.5rem;">Request Reset Key</button>
                 <div style="text-align: center;"><a href="404.html" class="form-link back-to-login" style="font-size: 0.9rem;">Back to Authentication</a></div>
               </form>
             </div>
