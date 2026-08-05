@@ -1967,3 +1967,119 @@ body.menu-open{
 }
 
 
+
+/* Register Modal Mobile Fix */
+@media (max-width: 768px) {
+
+  .modal-content {
+    width: calc(100% - 32px);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .auth-form {
+    width: 100%;
+  }
+
+  .modal-pane {
+    width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-control-wrapper {
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .form-control-wrapper i {
+    left: 12px;
+  }
+
+  .form-control-wrapper input {
+    padding-left: 40px;
+  }
+
+  .form-options {
+    margin-top: 0.5rem;
+  }
+
+  .form-options label {
+    font-size: 13px !important;
+    line-height: 1.4;
+  }
+
+  .form-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .btn.btn-primary {
+    height: 46px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: calc(100% - 32px);
+    max-height: 85vh;
+    overflow: hidden;
+  }
+
+  .modal-pane {
+    max-height: calc(85vh - 40px);
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+
+  /* Smooth scrollbar */
+  .modal-pane::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .modal-pane::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
+
+
+.location-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media(max-width:768px){
+  .location-image img{
+    height:220px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .profile-avatar,
+  .avatar-circle {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.8rem !important;
+    flex-shrink: 0;
+  }
+}
