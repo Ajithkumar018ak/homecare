@@ -137,12 +137,12 @@
 }
 
 .bg-soft-white .service-card {
-  background: #F8FAFC;
+  background: #828a9244;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.636);
 }
 .bg-soft-white .service-card:hover {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
   transform: translateY(-8px);
