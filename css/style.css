@@ -1852,3 +1852,69 @@ body.menu-open{
 
 
 
+
+
+
+/* Hero Section Mobile Fix */
+@media (max-width: 768px) {
+
+  .bg-deep-navy .grid.grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .bg-deep-navy h1 {
+    font-size: 2.3rem !important;
+    line-height: 1.25 !important;
+    text-align: center;
+  }
+
+  .bg-deep-navy p {
+    text-align: center;
+  }
+
+  .bg-deep-navy .hero-actions {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  .bg-deep-navy .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bg-deep-navy img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bg-deep-navy [style*="display: flex; gap: 3rem; margin-top: 3.5rem"] {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem !important;
+    text-align: center;
+  }
+
+  .bg-deep-navy [style*="display: flex; gap: 3rem; margin-top: 3.5rem"] > div {
+    flex: 1 1 100px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .bg-deep-navy {
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .bg-deep-navy h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .bg-deep-navy p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+}
