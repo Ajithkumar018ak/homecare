@@ -68,133 +68,97 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ==========================================================================
    LAYOUT, SIDEBAR TOGGLES & FLOATING OVERLAYS
    ========================================================================== */
-function initLayoutControllers() {
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const sidebar = document.querySelector('.dashboard-sidebar');
-  const mainContent = document.querySelector('.dashboard-main');
-  const topbar = document.querySelector('.dashboard-topbar');
-  const overlay = document.getElementById('sidebar-overlay');
+document.addEventListener("DOMContentLoaded", function () {
 
-  if (!hamburgerBtn || !sidebar) return;
+  const sidebar = document.querySelector(".dashboard-sidebar");
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const overlay = document.querySelector(".dashboard-overlay");
+  const mainContent = document.querySelector(".dashboard-main");
+  const topbar = document.querySelector(".dashboard-topbar");
 
-  // Inject User Profile Menu if missing
-  const topbarActions = document.querySelector('.topbar-actions');
-  if (topbarActions && !document.querySelector('.user-profile-menu')) {
-    const profileMenu = document.createElement('div');
-    profileMenu.className = 'user-profile-menu';
-    profileMenu.onclick = () => {
-      window.location.href = '404.html?from=user';
-    };
-    profileMenu.innerHTML = `
-      <img src="assets/patient-avatar.webp" alt="Patient avatar" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100';">
-      <span>Patient User</span>
-    `;
-    topbarActions.appendChild(profileMenu);
+  if (!sidebar || !hamburgerBtn) {
+    console.log("Sidebar or Hamburger Not Found");
+    return;
+  }
+
+  function openSidebar() {
+    sidebar.classList.add("active");
+    hamburgerBtn.classList.add("active");
+
+    if (overlay) overlay.classList.add("active");
+
+    document.body.classList.add("sidebar-open");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("active");
+    hamburgerBtn.classList.remove("active");
+
+    if (overlay) overlay.classList.remove("active");
+
+    document.body.classList.remove("sidebar-open");
   }
 
   function toggleSidebar() {
-      if (window.innerWidth <= 1024) {
-        // Mobile Drawer Toggle
-        sidebar.classList.toggle('active');
-        hamburgerBtn.classList.toggle('active');
-        if (overlay) overlay.classList.toggle('active');
 
-        // Disable scrolling behind drawer
-        if (sidebar.classList.contains('active')) {
-          document.body.style.overflow = 'hidden';
-          document.body.classList.add('sidebar-open');
-        } else {
-          document.body.style.overflow = '';
-          document.body.classList.remove('sidebar-open');
-        }
+    if (window.innerWidth <= 1024) {
+
+      if (sidebar.classList.contains("active")) {
+        closeSidebar();
       } else {
-        // Desktop Collapsed Sidebar Toggle
-        sidebar.classList.toggle('collapsed');
-        if (mainContent) mainContent.classList.toggle('collapsed');
-        if (topbar) topbar.classList.toggle('collapsed');
-        hamburgerBtn.classList.toggle('active');
+        openSidebar();
       }
-    }
 
-    function closeMobileSidebar() {
-      sidebar.classList.remove('active');
-      hamburgerBtn.classList.remove('active');
-      if (overlay) overlay.classList.remove('active');
-      document.body.style.overflow = '';
-      document.body.classList.remove('sidebar-open');
-    }
+    } else {
 
-    hamburgerBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleSidebar();
-    });
+      sidebar.classList.toggle("collapsed");
 
-    if (overlay) {
-      overlay.addEventListener('click', closeMobileSidebar);
-    }
+      if (mainContent)
+        mainContent.classList.toggle("collapsed");
 
-    // Close sidebar on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeMobileSidebar();
-        closeAllModals();
-      }
-    });
+      if (topbar)
+        topbar.classList.toggle("collapsed");
 
-    // Close mobile sidebar on sidebar menu item clicks
-    const menuItems = sidebar.querySelectorAll('.sidebar-menu .sidebar-item');
-    menuItems.forEach(item => {
-      item.addEventListener('click', () => {
-        // Sync Breadcrumb text
-        const pageTitle = item.querySelector('span').textContent;
-        const breadcrumbActive = document.getElementById('current-page-breadcrumb');
-        if (breadcrumbActive) {
-          breadcrumbActive.textContent = pageTitle;
-        }
-
-        // Auto close drawer on mobile
-        if (window.innerWidth <= 1024) {
-          closeMobileSidebar();
-        }
-      });
-    });
-
-    // Render Live Clock Date
-    const dateDisplay = document.getElementById('live-date');
-    if (dateDisplay) {
-      const options = { month: 'long', day: 'numeric', year: 'numeric' };
-      const todayStr = new Date().toLocaleDateString('en-US', options);
-      dateDisplay.textContent = todayStr;
-    }
-
-    // Handle Notifications Dropdown Click Toggle
-    const notificationBadge = document.getElementById('notification-bell-btn');
-    if (notificationBadge) {
-      notificationBadge.addEventListener('click', (e) => {
-        e.stopPropagation();
-        notificationBadge.classList.toggle('active');
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!notificationBadge.contains(e.target)) {
-          notificationBadge.classList.remove('active');
-        }
-      });
     }
   }
-}
 
-function closeAllModals() {
-  const checkoutModal = document.getElementById('checkout-modal-overlay');
-  if (checkoutModal) checkoutModal.classList.remove('active');
+  hamburgerBtn.onclick = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleSidebar();
+  };
 
-  const videoCall = document.getElementById('video-call-overlay');
-  if (videoCall) stopCall(videoCall);
+  if (overlay) {
+    overlay.onclick = closeSidebar;
+  }
 
-  const voiceCall = document.getElementById('voice-call-overlay');
-  if (voiceCall) stopCall(voiceCall);
-}
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeSidebar();
+    }
+  });
 
+  window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 1024) {
+      closeSidebar();
+    }
+
+  });
+
+  document.querySelectorAll(".sidebar-item").forEach(function (item) {
+
+    item.addEventListener("click", function () {
+
+      if (window.innerWidth <= 1024) {
+        closeSidebar();
+      }
+
+    });
+
+  });
+
+});
 /* ==========================================================================
    APPOINTMENTS CALENDAR RENDER & BOOKING ENGINE
    ========================================================================== */
@@ -788,3 +752,147 @@ function animateBillingChart() {
     }, 150);
   });
 }
+
+
+
+// ===============================
+// Sidebar Elements
+// ===============================
+const sidebar = document.querySelector(".dashboard-sidebar");
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const overlay = document.querySelector(".sidebar-overlay");
+const mainContent = document.querySelector(".dashboard-main");
+const topbar = document.querySelector(".dashboard-topbar");
+
+// ===============================
+// Toggle Sidebar
+// ===============================
+function toggleSidebar() {
+
+  if (!sidebar || !hamburgerBtn) return;
+
+  // Mobile
+  if (window.matchMedia("(max-width:1024px)").matches) {
+
+    const isOpen = sidebar.classList.toggle("active");
+
+    hamburgerBtn.classList.toggle("active", isOpen);
+
+    if (overlay) {
+      overlay.classList.toggle("active", isOpen);
+    }
+
+    document.body.classList.toggle("sidebar-open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+  }
+
+  // Desktop
+  else {
+
+    sidebar.classList.toggle("collapsed");
+
+    if (mainContent) {
+      mainContent.classList.toggle("collapsed");
+    }
+
+    if (topbar) {
+      topbar.classList.toggle("collapsed");
+    }
+
+    hamburgerBtn.classList.toggle("active");
+  }
+}
+
+// ===============================
+// Close Mobile Sidebar
+// ===============================
+function closeMobileSidebar() {
+
+  if (!sidebar || !hamburgerBtn) return;
+
+  sidebar.classList.remove("active");
+  hamburgerBtn.classList.remove("active");
+
+  if (overlay) {
+    overlay.classList.remove("active");
+  }
+
+  document.body.classList.remove("sidebar-open");
+  document.body.style.overflow = "";
+}
+
+// ===============================
+// Hamburger Click
+// ===============================
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleSidebar();
+  });
+}
+
+// ===============================
+// Overlay Click
+// ===============================
+if (overlay) {
+  overlay.addEventListener("click", closeMobileSidebar);
+}
+
+// ===============================
+// ESC Key
+// ===============================
+document.addEventListener("keydown", function (e) {
+
+  if (e.key === "Escape") {
+
+    closeMobileSidebar();
+
+    if (typeof closeAllModals === "function") {
+      closeAllModals();
+    }
+  }
+
+});
+
+// ===============================
+// Close on Menu Click (Mobile)
+// ===============================
+document.querySelectorAll(".sidebar-menu .sidebar-item").forEach(item => {
+
+  item.addEventListener("click", function () {
+
+    const span = this.querySelector("span");
+    const breadcrumb = document.getElementById("current-page-breadcrumb");
+
+    if (span && breadcrumb) {
+      breadcrumb.textContent = span.textContent;
+    }
+
+    if (window.matchMedia("(max-width:1024px)").matches) {
+      closeMobileSidebar();
+    }
+
+  });
+
+});
+
+// ===============================
+// Resize Fix
+// ===============================
+window.addEventListener("resize", function () {
+
+  if (!window.matchMedia("(max-width:1024px)").matches) {
+
+    sidebar.classList.remove("active");
+
+    if (overlay) {
+      overlay.classList.remove("active");
+    }
+
+    document.body.classList.remove("sidebar-open");
+    document.body.style.overflow = "";
+  }
+
+});

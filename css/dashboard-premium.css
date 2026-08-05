@@ -3115,3 +3115,39 @@ body.sidebar-open .dashboard-main {
     display: none !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  body#admin-dashboard-root .dashboard-topbar {
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  body#admin-dashboard-root .topbar-left {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  body#admin-dashboard-root .header-breadcrumb-area {
+    max-width: 150px;
+    overflow: hidden;
+  }
+
+  body#admin-dashboard-root .topbar-actions {
+    display: flex !important;
+    position: relative !important;
+    z-index: 10 !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  body#admin-dashboard-root .settings-shortcut-btn {
+    display: flex !important;
+    position: relative !important;
+    right: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

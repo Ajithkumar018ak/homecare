@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Check if we are on a dashboard page
+
   const sidebarItems = document.querySelectorAll('.sidebar-item');
   if (sidebarItems.length === 0) return;
 
+  initHamburgerMenu();
   initSidebarNavigation();
   initDashboardCharts();
-  
-  // Initialize Page-Specific Logic
+
   if (document.getElementById('user-dashboard-root')) {
     initUserDashboard();
-  } else if (document.getElementById('admin-dashboard-root')) {
+  } 
+  else if (document.getElementById('admin-dashboard-root')) {
     initAdminDashboard();
   }
-});
 
+});
 /* ==========================================================================
    SIDEBAR VIEW SWITCHER
    ========================================================================== */
@@ -277,4 +278,93 @@ function initAdminDashboard() {
       showToast(`Inventory updated: ${name} is now ${newVal} units.`);
     });
   });
+}
+
+
+
+function initHamburgerMenu(){
+
+  const hamburger = document.getElementById('hamburger-btn');
+  const sidebar = document.querySelector('.dashboard-sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+
+
+  if(!hamburger || !sidebar) return;
+
+
+  function openSidebar(){
+
+    sidebar.classList.add('active');
+    hamburger.classList.add('active');
+
+    if(overlay){
+      overlay.classList.add('active');
+    }
+
+    document.body.classList.add('sidebar-open');
+
+  }
+
+
+  function closeSidebar(){
+
+    sidebar.classList.remove('active');
+    hamburger.classList.remove('active');
+
+    if(overlay){
+      overlay.classList.remove('active');
+    }
+
+    document.body.classList.remove('sidebar-open');
+
+  }
+
+
+  hamburger.addEventListener('click',()=>{
+
+    if(sidebar.classList.contains('active')){
+      closeSidebar();
+    }
+    else{
+      openSidebar();
+    }
+
+  });
+
+
+
+  // outside click
+  if(overlay){
+
+    overlay.addEventListener('click',closeSidebar);
+
+  }
+
+
+
+  // sidebar menu click close mobile
+  document.querySelectorAll('.sidebar-item')
+  .forEach(item=>{
+
+    item.addEventListener('click',()=>{
+
+      if(window.innerWidth <= 768){
+        closeSidebar();
+      }
+
+    });
+
+  });
+
+
+
+  // ESC close
+  document.addEventListener('keydown',(e)=>{
+
+    if(e.key==="Escape"){
+      closeSidebar();
+    }
+
+  });
+
 }
